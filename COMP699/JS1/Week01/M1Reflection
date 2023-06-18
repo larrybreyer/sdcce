@@ -1,0 +1,9 @@
+I learned how to order a textbook from Murach Books.  I have not learned how long it will take the USPS to deliver it.  I was already quite familiar with Git and GitHub.  I created a new repo for this class.  But, I only know a little Visual Studio Code(VSC).  
+
+In Module 1, I learned how to plug VCS into GitHub.
+
+I learned that my version of VSC (1.78.2 from Homebrew) is arranged differently than in the "Working with GitHub within Visual Studio Code Cheat Sheet". 
+
+But things worked out anyway because I cloned the GitHub repo before starting up VSC.  I opened a file in the repo in VSC and observed VSC run a command, "git rev-parse --show-toplevel" which allowed it to get to the ./git directory and find what it needed to connect to GitHub.
+
+
