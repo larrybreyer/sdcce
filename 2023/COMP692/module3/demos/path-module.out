@@ -1,0 +1,14 @@
+path-module.js
+/Users/larry/log/tools/node/COMP692/module3/demos
+Base file name: path-module.js
+Directory name: /Users/larry/log/tools/node/COMP692/module3/demos
+File extension: .js
+{
+  root: '/',
+  dir: '/Users/larry/log/tools/node/COMP692/module3/demos',
+  base: 'path-module.js',
+  ext: '.js',
+  name: 'path-module'
+}
+path-module.js
+/Users/larry/log/tools/node/COMP692/module3/demos/test/hello.html

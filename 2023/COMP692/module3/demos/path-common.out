@@ -1,0 +1,14 @@
+path-common.js
+/Users/larry/log/tools/node/COMP692/module3/demos
+Base file name: path-common.js
+Directory name: /Users/larry/log/tools/node/COMP692/module3/demos
+File extension: .js
+{
+  root: '/',
+  dir: '/Users/larry/log/tools/node/COMP692/module3/demos',
+  base: 'path-common.js',
+  ext: '.js',
+  name: 'path-common'
+}
+path-common.js
+/Users/larry/log/tools/node/COMP692/module3/demos/test/hello.html

@@ -1,0 +1,19 @@
+{
+  "name": "module02",
+  "version": "1.0.0",
+  "description": "This is my first package file",
+  "main": "app.js",
+  "type": "commonjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Breyer",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
