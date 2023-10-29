@@ -1,3 +1,4 @@
+#!/usr/bin/env zx
 // For this script to work, ../package.json "type" must be "module"
 import path from 'path'
 import { fileURLToPath } from 'url'

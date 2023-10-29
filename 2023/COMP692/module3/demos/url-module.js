@@ -1,3 +1,4 @@
+#!/usr/bin/env zx
 import url from 'url'
 
 const myUrl = new URL('http:/www.website.com:8000/hello.html?id=100&status=active')

@@ -1,3 +1,4 @@
+#!/usr/bin/env zx
 import os from 'os'
 
 // Platform

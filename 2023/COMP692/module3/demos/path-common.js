@@ -1,3 +1,4 @@
+#!/usr/bin/env zx
 // For this script to work, ../package.json "type" must be "commonjs"
 
 const path = require('path')

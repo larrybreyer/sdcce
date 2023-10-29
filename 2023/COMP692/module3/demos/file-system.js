@@ -1,5 +1,5 @@
+#!/usr/bin/env zx
 //  This code is for type = module, not commonjs
-
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
