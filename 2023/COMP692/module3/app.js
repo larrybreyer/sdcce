@@ -1,17 +1,13 @@
-//  COMMONJS
-//  const message = require('./message')
-//  console.log(message)
-//  console.log(message.name)
-//  console.log(message.role)
+import Logger from './logger.js'
 
-//  const Message = require('./message')
-//  const message1 = new Message('Zak Ruvalcaba', 'Instructor')
-//  message1.sayHello()
+const logger = new Logger()
 
-//  ES6 MODULE LOADER
-import Message from './message.js'
-//  import { Message } from './message.js'
+logger.on('message', data => {
+    console.log('Called Listener', data)
+})
 
-const message1 = new Message('Zak Ruvalcaba', 'Instructor')
-message1.sayHello()
+logger.log('Hello World')
+logger.log('Hi')
+logger.log('Hello')
 
+// vim: ai et ts=4 nu
