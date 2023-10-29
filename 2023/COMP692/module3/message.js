@@ -32,5 +32,9 @@ class Message {
     }
 }
 
-export default Message
+const msg = new Message("Larry","Oberver")
+
+// Message.sayHello("Larry","Oberver")
+msg.sayHello()
+// export default Message
 //  export { Message }
