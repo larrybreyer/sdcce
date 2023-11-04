@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9 - Assignment 08 - Arrays</title>
+</head>
+<body>
+<h1> Summer 2023 - COMP 699 - Module 9 - Assignment 8 - Arrays </h1>
+<pre name="instruct">
+<h4>To prepare for this assigment, display the Console as follows:</h4>
+  To view the Console, right-click in this window and select "Inspect".
+  Move the cursor to the Inspector menu bar and click on "Console".
+  To clear the Console window click on the ⊘ symbol.
+<code>
+    const five_favorite_movies = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won"
+    ];
+</code>
+</pre>
+<hr>
+
+<h3>//STEP 1</h3>
+<pre name="instruct">
+Create a string array that contains your five favorite movies. 
+Then, use the console to display the second movie in your array.
+<code>
+    let movies = five_favorite_movies;
+    console.log(movies[1]);
+</code>
+</pre>
+<button onclick="step01()">Run Step 1</button>
+
+<hr>
+<h3>//STEP 2</h3>
+<pre name="instruct">
+Declare an array called movies using the function constructor method. Add
+the length of 5 into the constructor. Then, assign one of your favorite
+movies to each index in the array until you have 5 total movies in your
+array. Then, use the console to display the first movie in your array.
+<code>
+    let movies = new Array(5);
+    movies[0] = five_favorite_movies[0];
+    movies[1] = five_favorite_movies[1];
+    movies[2] = five_favorite_movies[2];
+    movies[3] = five_favorite_movies[3];
+    movies[4] = five_favorite_movies[4];
+    
+    console.log(movies[0]);
+</code>
+</pre>
+<button onclick="step02()">Run Step 2</button>
+
+<hr>
+<h3>//STEP 3</h3>
+<pre name="instruct">
+Copy your code from step 2. Add a new movie into the 3rd position within
+your array. Then, use the console to display the length of the array. You
+should now have 6 total movies stored in the array.
+<code>
+    let movies = new Array(5);
+    movies[0] = five_favorite_movies[0];
+    movies[1] = five_favorite_movies[1];
+    movies[2] = five_favorite_movies[2];
+    movies[3] = five_favorite_movies[3];
+    movies[4] = five_favorite_movies[4];
+    let slice1 = movies.slice(0,3);
+    let slice2 = movies.slice(3,5);
+    movies = slice1;
+    movies = movies.concat('Braveheart');
+    movies = movies.concat(slice2);
+
+    console.log(movies.length);
+</code>
+</pre>
+<button onclick="step03()">Run Step 3</button>
+
+<hr>
+<h3>//STEP 4</h3>
+<pre name="instruct">
+Declare an array called movies using literal notation. Then, assign one of
+your favorite movies to each index in the array until you have 5 total
+movies in your array. Now, use the delete operator to remove the first
+movie in the array. Use the console to display the contents of the array.
+<code>
+    let movies = five_favorite_movies;
+    movies.shift();
+    console.log(movies);
+</code>
+</pre>
+<button onclick="step04()">Run Step 4</button>
+
+<hr>
+<h3>//STEP 5</h3>
+<pre name="instruct">
+Declare an array called movies using literal notation. Then, assign one of
+your favorite movies to each index in the array until you have 7 total
+movies in your array. Now, use a for/in loop to iterate through the array
+and display each movie within the console window.
+<code>
+    const movies = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    for (let movie in movies){ console.log(movies[movie])};
+</code>
+</pre>
+<button onclick="step05()">Run Step 5</button>
+
+
+<hr>
+<h3>//STEP 6</h3>
+<pre name="instruct">
+Copy the code from step 5. Now, use a for/of loop to iterate through the
+array and display each movie within the console window.
+<code>
+    const movies = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    for (let movie of movies){ console.log(movie)};
+</code>
+</pre>
+<button onclick="step06()">Run Step 6</button>
+
+<hr>
+<h3>//STEP 7</h3>
+<pre name="instruct">
+Copy the code from step 5. Using the for/of loop to iterate through the
+array, display each movie within the console window in a sorted view.
+<code>
+    const movies = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+   for (let movie of movies.sort()){ console.log(movie)};
+</code>
+</pre>
+<button onclick="step07()">Run Step 7</button>
+
+<hr>
+<h3>//STEP 8</h3>
+<pre name="instruct">
+Copy the code from step 5. Under the existing array, create a new array
+called leastFavMovies. Populate the array with the 3 movies that you
+regret watching. Display both arrays within the console window so that
+it's formatted to look like this (note the spacing, you must include that
+too):
+        Movies I like:
+
+        Movie 1
+        Movie 2
+        Movie 3
+        ...
+
+        Movies I regret watching:
+
+        Movie 1
+        Movie 2
+        Movie 3
+        ...
+<code>
+    const movies = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];
+    
+    console.log("\nMovies I like:\n\n");
+    for (let movie of movies){ console.log(movie)};
+    console.log("\nMovies I regret watching:\n\n");
+    for (let movie of leastFavMovies){ console.log(movie)};
+</code>
+</pre>
+<button onclick="step08()">Run Step 8</button>
+
+<hr>
+<h3>//STEP 9</h3>
+<pre name="instruct">
+Copy the code from step 8. Now, use the concat() method to merge the two
+arrays together into a single array called movies. Use the console window
+to display the list in reverse sorted order.
+<code>
+    const movies1 = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];
+    
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    for (let movie of movies.reverse()){ console.log(movie)};
+</code>
+</pre>
+<button onclick="step09()">Run Step 9</button>
+
+<hr>
+<h3>//STEP 10</h3>
+<pre name="instruct">
+Copy the code from step 9. Use an array function to return just the last
+item in the array and display it within the console window.
+<code>
+    const movies1 = [ 
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+    
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[movies.length - 1]);
+</code>
+</pre>
+<button onclick="step10()">Run Step 10</button>
+
+<hr>
+<h3>//STEP 11</h3>
+<pre name="instruct">
+Copy the code from step 10. Remove the previous method and this time use a
+method to return just the first item in the array and display it within
+the console window.
+<code>
+    const movies1 = [ 
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[0]);
+</code>
+</pre>
+<button onclick="step11()">Run Step 11</button>
+
+<hr>
+<h3>//STEP 12</h3>
+<pre name="instruct">
+Programmatically retrieve the movies in your array that you do not like
+and return their indices. Then, using those indices, programmatically add
+movies that you do like.
+<code>
+    const movies = [ 
+        "The Ridiculous 6 (2015)",
+        "The Magnificent 7",
+        "Some Like It Hot",
+        "Lawrence of Arabia",
+        "How The West Was Won",
+        "Harvey",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)",
+        "Ben Hur",
+        "2001: A Space Odyssey" 
+    ];  
+
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+
+    const goodMovies = [ 
+        "Operation Mincemeat",
+        "Darkest Hour",
+        "Dunkirk"
+    ];  
+
+    // list of indices of movies I don't like
+    badlist = []; 
+
+    console.log("Movie list:");
+    // compare all movies to the bad ones
+    for ( let i = 0; i < movies.length; i++) {
+        console.log(movies[i]);
+        for (let bad of leastFavMovies ) { 
+            if (movies[i] == bad ) { 
+                // Add bad movie to bad list
+                badlist.push(i);
+                //  console.log(movies[i]);
+            }   
+        }   
+    }   
+    //  console.log(badlist);
+    // Replace bad movies with good movies
+    for ( let i = 0; i < goodMovies.length ; i++) {
+        movies[badlist[i]] = goodMovies[i];
+        // console.log(movies[badlist[i]]);
+    }
+    // Print out the result to the console.
+    console.log("\nMovie list with replacements:");
+    for (let movie of movies) {
+        console.log(movie);
+    }
+</code>
+</pre>
+<button onclick="step12()">Run Step 12</button>
+
+<hr>
+<h3>//STEP 13</h3>
+<pre name="instruct">
+Create a multi-dimensional array that contains your 5 favorite movies and
+their ranking from 1-5. The array should look something like this:
+
+    movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3],
+                 ["Movie 4", 4], ["Movie 5", 5]];
+
+Now, loop through the array and filter out and display only the movie
+names. You must use the filter() method and you'll need to filter out the
+names by their primitive data type.
+<code>
+    function checkTypeof(data) {
+        return typeof data == "string";
+    }
+    
+    movies = [["Movie 1", 1], 
+              ["Movie 2", 2], 
+              ["Movie 3", 3], 
+              ["Movie 4", 4], 
+              ["Movie 5", 5]];
+    
+    flatten = movies.flat();
+    console.log(flatten.filter(checkTypeof));
+</code>
+</pre>
+<button onclick="step13()">Run Step 13</button>
+
+<hr>
+<h3>//STEP 14</h3>
+<pre name="instruct">
+Create a string array called employees using literal notation and populate
+the array with several employee names. Then, create an anonymous function
+called showEmployee. The function should accept a parameter. Call this
+function, passing in the employees array into the function as a parameter.
+Make sure to display the result in the console window. Within the
+function, loop through the passed in array and display the result so that
+it looks exactly like this in the console window:
+
+    Employees:
+
+        ZAK
+        JESSICA
+        MARK
+        FRED
+        SALLY
+<code>
+    employees = ["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
+    
+    const showEmployee = function (list ) {
+        console.log("Employees:\n\n");
+        for ( let i = 0 ; i < list.length; i++ ) {
+            console.log(list[i]);
+        }   
+        
+    } 
+    
+    showEmployee(employees);
+</code>
+</pre>
+<button onclick="step14()">Run Step 14</button>
+
+<hr>
+<h3>//STEP 15</h3>
+<pre name="instruct">
+Write a JavaScript function to filter false, null, 0 and blank values from
+an array.
+
+TestData: console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
+
+ExpectedResult: [58, "abcd", true]
+<code>
+i    function filterValues(oldList) {
+        let newList = []; 
+        for ( let data of oldList ) { 
+            if(data != false && data != null && data != 0 && data != '') {
+                newList.push(data);
+            }   
+        }   
+        return newList;
+    }   
+    console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
+</code>
+</pre>
+<button onclick="step15()">Run Step 15</button>
+
+<hr>
+<h3>//STEP 16</h3>
+<pre name="instruct">
+Write a JavaScript function to get a random item from an array. So if I
+create a numeric array with 10 numbers and then pass that array into my
+function, the function should randomly return one of those numbers.
+<code>
+    let numbers = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
+    
+    function RNG(list) {
+        return list[Math.floor(Math.random() * list.length)];
+    }   
+    
+    console.log(RNG(numbers));
+</code>
+</pre>
+<button onclick="step16()">Run Step 16</button>
+
+<hr>
+<h3>//STEP 17</h3>
+<pre name="instruct">
+Write a JavaScript function to get the largest number from a numeric
+array.
+<code>
+    let numbers = [0, 10, -20, 300, 4, 50, 6, 70, 8, 90];
+    let max = 0
+
+    for (let i = 0; i< numbers.length; i++) {
+        if ( numbers[i] > max ) {
+            max = numbers[i];
+        }
+    }
+
+    console.log(max);
+</code>
+</pre>
+<button onclick="step17()">Run Step 17</button>
+    
+    <script src="js/arrays-practice.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+=== imac2.breyer.com === vim: ft=sec tw=78 nohls
+File:   ~/breyer/log/2023/06/20230626txt
+From:   ~/Desktop/Docs/CompTIA/COMP_699/M3/M3Assignment.txt
+——————————————————————————————————————————————————————————————————————————————
+
+                            %Module 3 Assignment %
+
+Solve these JavaScript conditional logic problems.
+
+-
+Larger or Smaller?-
+
+Usage: Use simple conditional statements
+
+Create an application that accepts two integers within two separate prompts.
+Then, display only the larger of the two within the browser window.
+Note:   Don't forget to handle the fact that the two could be equal.
+
+-
+The Word Translator-
+
+Usage: Use simple conditional statements
+
+Create an application that prompts the user for a language code ("es", "de",
+"en", and "fr"). If they enter one of the four codes, display the translated
+version of "Hello World" for the given language within the console window. If
+the user enters anything but those four language codes, the application should
+default to English. The result should be (for example):
+
+    Hello World translated in French is: Bonjour le monde
+
+-
+The "Coin Flip" Game-
+
+Usage: Use nested conditional statements
+
+In this part of the assignment you will explore what you've learned so far
+about variables, prompts, conditionals, operators, math, and more to create a
+"coin flip game". To complete the game follow the steps outlined below:
+
+ 1. Begin your application by creating a variable called "coinFlip" and set it
+    equal to a random number. You will have to use a Math method to get this
+    number:
+
+        let randomNum = Math.round(Math.random());
+
+ 2. Prompt the user to select "Heads or Tails" and set the result to a new
+    variable called "choice".
+
+ 3. Use a conditional to check the result of the coin flip. If it's less than a
+    certain number, it will be heads. If it's greater than a certain number, it
+    will be tails.
+
+ 4. If the result is heads and the user selects heads, display the following
+    message within an alert:
+
+        The flip was heads and you chose heads...you win!
+
+ 5. If the result is heads and the user selects tails, display the following
+    message within an alert:
+
+        The flip was heads but you chose tails...you lose!
+
+ 6. If the result is tails and the user selects heads, display the following
+    message within an alert:
+
+        The flip was tails but you chose heads...you lose!
+
+ 7. If the result is tails and the user selects tails, display the following
+    message within an alert:
+
+        The flip was tails and you chose tails...you win!
+
+-
+The "Grade Assigner" Application-
+
+Usage: Use else if statements
+
+ 1. Collect a number between 1 and 100 from the user.
+
+ 2. Make sure that number is between 1 and 100, if it is not, let the user know
+    that only numbers between 1 and 100 are accepted.
+
+ 3. If the score is between 60 and 69, write out "You received a D" into the
+    console.
+
+    If the score is between 70 and 79, write out "You received a C" into the
+    console.
+
+    If the score is between 80 and 89, write out "You received a B" into the
+    console.
+
+    If the score is between 90 and 100, write out "You received an A" into the
+    console.
+
+    If the score is less than 60, write out "You received an F" into the
+    console.
+
+-
+The "Hitchhiker's Guide to the Galaxy" Game-
+
+Usage:  Use a combination of simple conditional, nested "if/else if", and
+        "switch" statements
+
+In this classic "Hitchhiker's Guide to the Galaxy" game, you will build an
+application that begins the user on a journey where the path they take can
+determine the outcome of the player. To complete the game follow the steps
+outlined below:
+
+ 1. Prompt the user and ask them if they are ready to play the game. If they
+    say "yes", continue. If they say "no" or anything other than "no", thank
+    them and ask them to play again sometime.
+
+ 2. Alert the user within the following:
+
+    You are in a dark, dingy, and humid cave searching for the lost treasure of
+    Captain Chingadera. You are disoriented, lost, hungry and extremely
+    thirsty.  You see a speck of light in the distance ahead of you, something
+    shimmering to your right, and the sound of running water to your left. Your
+    back is against the wall.
+
+
+ 3. Then prompt the user with the following:
+
+    Which direction would you like to head (please enter forward, left, or
+    right).
+
+ 4. Using a switch statement, evaluate the direction that the user selected.
+
+    left: alert, "Your thirst has gotten the better of you. You trip on a rock,
+    hit your head, and fall into a pool of water and drown!"
+
+    forward: alert, "You walk 100 yards and safely make your way out of the
+    cave."
+
+    right: alert, "You found the gold! You walk into a small room and see
+    thousands of gold coins, jewels, chalices, and more. You jump into the pile
+    of gold in celebration and immediately a hidden door slams down and traps
+    you in the room forever!"
+
+
+ 5. If the user selects anything other than forward, left, or right alert the
+    user
+
+    "The ghost of Captain Chingadera has condemned you to eternal damnation and
+    you shall now burn in the hot excoriation for lifeless lowlifes for not
+    choosing the correct option."
+
+
+ 6. The game is now over. Ask the user to "rate the game between 1 and 10".
+    If the user enters a number not between 1 and 10, thank the user for
+    playing and end the game, If the user enters a number between 6 and 10,
+    thank the user and ask them to play again. If the user enters a number
+    between 1 and 5, thank the user and tell them that you are working hard to
+    improve the game.
+
+——————————————————————————————————————————————————————————————————————————————
+
