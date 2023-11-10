@@ -25,3 +25,16 @@ Note:   If you append -g after the pkg, it will install into global space.
         This could be a good thing with Homebrew.
 
 
+Remember!!  Need to modify package.json
+
+Before:
+
+  "main": "index.js",
+  "scripts": {
+
+After:
+
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+
