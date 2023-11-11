@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lecture6": "nodemon lecture6/app.js"
+    "lecture6": "nodemon lecture6/app.js",
+    "lecture7": "nodemon lecture7/app.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,10 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
     "nodemon": "^3.0.1"
   }
 }
