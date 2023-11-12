@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "lecture6": "nodemon lecture6/app.js",
-    "lecture7": "nodemon lecture7/app.js"
+    "lecture7": "nodemon lecture7/app.js",
+    "lecture8": "nodemon lecture8/app.js"
   },
   "keywords": [],
   "author": "",
