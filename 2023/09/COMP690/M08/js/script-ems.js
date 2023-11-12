@@ -1,59 +1,69 @@
-// CREATE AN ARRAY OF EMPLOYEES
+"use strict";
 
+const $ = selector => document.querySelector(selector);
 
-// CHECK TO SEE IF STORAGE OBJECT EXISTS WHEN THE PAGE LOADS
-// IF DOES, RETURN STORAGE OBJECT INTO ARRAY INSTEAD OF POPULATED ARRAY
+// GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
+let form = document.getElementById('addForm')
+let list = document.getElementById('employees')
 
-
-// GET DOM ELEMENTS
-
-
-// BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
-
+// SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
+let rows = list.rows.length -1
 
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
+    e.preventDefault()
 
     // GET THE VALUES FROM THE TEXT BOXES
+    let empid = document.getElementById('id').value
+    let empnm = document.getElementById('name').value
+    let empex = document.getElementById('extension').value
+    let empem = document.getElementById('email').value
+    let empdp = document.getElementById('department').value
 
-    // ADD THE NEW EMPLOYEE TO A NEW ARRAY OBJECT
+    // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
+    let row = list.insertRow(list.rows.length)
 
-    // PUSH THE NEW ARRAY TO THE *EXISTING* EMPLOYEES ARRAY
+    // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    let cellid = row.insertCell(0)
+    let cellnm = row.insertCell(1)
+    let cellex = row.insertCell(2)
+    let cellem = row.insertCell(3)
+    let celldp = row.insertCell(4)
+    // let cellde = row.insertCell(5)
 
-    // BUILD THE GRID
+    // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
+    cellid.innerHTML = empid
+    cellnm.innerHTML = empnm
+    cellex.innerHTML = empex
+    cellem.innerHTML = empem
+    celldp.innerHTML = empdp
+
+    // CREATE THE DELETE BUTTON
+    let deleteButton = document.createElement('button')
+    // add bootstrap classes for a button
+    deleteButton.className = 'btn btn-danger btn-sm float-right delete'
+    // create text node for delete button and set it to 'X'
+    let textDelete = document.createTextNode('X')
+    // append text node to delete button
+    deleteButton.appendChild(textDelete)
+    row.append(deleteButton)
 
     // RESET THE FORM
+    form.reset()
 
     // SET FOCUS BACK TO THE ID TEXT BOX
+    $("#id").select()
 
-});
+    // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
+    rows = list.rows.length -1
+
+})
 
 // DELETE EMPLOYEE
-empTable.addEventListener('click', (e) => {
-    // CONFIRM THE DELETE
-
-        // GET THE SELECTED ROWINDEX FOR THE TR (PARENTNODE.PARENTNODE)
-
-        // REMOVE EMPLOYEE FROM ARRAY
-
-        // BUILD THE GRID
-
-});
-
-// BUILD THE EMPLOYEES GRID
-function buildGrid() {
-    // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
-
-    // REBUILD THE TBODY FROM SCRATCH
-
-    // LOOP THROUGH THE ARRAY OF EMPLOYEES
-    // REBUILDING THE ROW STRUCTURE
-
-    // BIND THE TBODY TO THE EMPLOYEE TABLE
-
-    // UPDATE EMPLOYEE COUNT
-
-    // STORE THE ARRAY IN STORAGE
-
-};
+list.addEventListener('click', (e) => {
+    if (confirm('are you sure you want to delete this entry?')) {
+        list.deleteRow(e.target.parentNode.rowIndex)
+    }
+})
+// vim: ai et ts=2 nu
