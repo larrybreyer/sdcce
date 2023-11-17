@@ -8,9 +8,6 @@
   },
   "keywords": [],
   "author": "",
-  "type": "module",
-  "license": "ISC",
-  "dependencies": {
-    "mongodb": "^6.3.0"
-  }
+  "type" : "module",
+  "license": "ISC"
 }
