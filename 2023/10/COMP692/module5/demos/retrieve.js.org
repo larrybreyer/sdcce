@@ -23,4 +23,5 @@ async function retrieveAll() {
 }   
 retrieveAll()
 
-// vim: ai ts=4 et nu
+// vim: ft=javascript ai ts=4 et nu
+
