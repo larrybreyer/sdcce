@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 import {} from 'dotenv/config'
 
-const uri = process.env.DB
+const uri = process.env.DB_URI
 const client = new MongoClient(uri)
 
 async function retrieveAll() {
@@ -9,9 +9,9 @@ async function retrieveAll() {
         await client.connect(uri)
         console.log('Connected to database...')
         
-        let database = client.db('sample_airbnb')
+        let database = client.db('vectacorp')
         let result = await database
-            .collection('listingsAndReviews')
+            .collection('employees')
             .find({})
             .toArray()
         console.log(result)
