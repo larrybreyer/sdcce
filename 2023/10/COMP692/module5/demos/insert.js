@@ -6,10 +6,10 @@ const client = new MongoClient(uri);
 async function main() {
 
 let employee = {
-    name: 'Jodie Bird',
-    extension: 1115,
-    email: 'Jodie@vectacorp.com',
-    title: 'CEO',
+    name: 'Zak Ruvalcaba',
+    extension: 1119,
+    email: 'zak@vectacorp.com',
+    title: 'CFO',
     dateHired: Date.now(),
     currentlyEmployed: true
 };
