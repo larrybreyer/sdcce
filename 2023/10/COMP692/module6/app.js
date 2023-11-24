@@ -3,9 +3,11 @@ import express from 'express'
 import {} from 'dotenv/config'
 import routes from './routes/routes.js'
 import connectDB from './db/connect.js'
+import bodyParser from 'body-parser'
 
 const app = express()
 
+app.use(bodyParser.json());
 app.use('/api/v1/employees', routes)
 
 const PORT = process.env.PORT || 5000

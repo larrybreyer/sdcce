@@ -1,5 +1,3 @@
-import Employee from '../models/Employee.js'
-
 const getAllEmployees = (req, res) => {
     res.send('Get all employees')
 }
