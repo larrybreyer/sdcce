@@ -1,0 +1,115 @@
+Worked around Zak Ruvalcaba's "code".  This next failure when using Postman
+does not reference any of our code.  Whatever the failure is, it is deep in the
+bowls of this junk.
+
+———————————————————————————————————————————————————
+% nodemon app.js
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node app.js`
+Thu Nov 23 18:40:27 PST 2023
+Conencted to MongoDB
+Listening on port: 5001
+[nodemon] restarting due to changes...
+[nodemon] starting `node app.js`
+Thu Nov 23 18:41:29 PST 2023
+Connected to MongoDB
+Listening on port: 5001
+/usr/local/lib/node_modules/mongoose/lib/document.js:3187
+    this.$__.validationError = new ValidationError(this);
+                               ^
+
+ValidationError: Employee validation failed: title: Title required, email: Email required, extension: Extension required, name: Name required
+    at Document.invalidate (/usr/local/lib/node_modules/mongoose/lib/document.js:3187:32)
+    at /usr/local/lib/node_modules/mongoose/lib/document.js:2980:17
+    at /usr/local/lib/node_modules/mongoose/lib/schemaType.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  errors: {
+    title: ValidatorError: Title required
+        at validate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1365:13)
+        at SchemaType.doValidate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1349:7)
+        at /usr/local/lib/node_modules/mongoose/lib/document.js:2972:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Title required',
+        type: 'required',
+        path: 'title',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'title',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    email: ValidatorError: Email required
+        at validate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1365:13)
+        at SchemaType.doValidate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1349:7)
+        at /usr/local/lib/node_modules/mongoose/lib/document.js:2972:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Email required',
+        type: 'required',
+        path: 'email',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    extension: ValidatorError: Extension required
+        at validate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1365:13)
+        at SchemaType.doValidate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1349:7)
+        at /usr/local/lib/node_modules/mongoose/lib/document.js:2972:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Extension required',
+        type: 'required',
+        path: 'extension',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'extension',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    name: ValidatorError: Name required
+        at validate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1365:13)
+        at SchemaType.doValidate (/usr/local/lib/node_modules/mongoose/lib/schemaType.js:1349:7)
+        at /usr/local/lib/node_modules/mongoose/lib/document.js:2972:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Name required',
+        type: 'required',
+        path: 'name',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Employee validation failed'
+}
+
+Node.js v21.2.0
+[nodemon] app crashed - waiting for file changes before starting...
+
+
+=== imac2.breyer.com === vim: ft=sec tw=78 nohls
+
