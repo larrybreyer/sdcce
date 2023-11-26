@@ -30,7 +30,8 @@ const EmployeesSchema = new mongoose.Schema({
   currentlyEmployed: {
     type: Boolean,
     default: true
-  }
+  },
+}, { collection: 'employees'
 });
 
 export default mongoose.model('Employee', EmployeesSchema);

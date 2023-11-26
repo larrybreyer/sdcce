@@ -33,12 +33,36 @@ const createEmployee = async (req, res) => {
     }
 }
 
-const updateEmployee = (req, res) => {
-    res.send('Update an existing employee')
+const updateEmployee = async (req, res) => {
+    try {
+        let {id:employeeId} = req.params
+        const employee = await Employee.findOneAndUpdate(
+            {_id: employeeId}, 
+            req.body,
+            { new: true, runValidators: true }
+        )
+        if (!employee) {
+            return  res.status(404).json(
+              {msg: `No employee with ID ${employeeId} found.`})
+        }
+        res.status(200).json({msg: 'Successfully updated employee'})
+    } catch (err) {
+        res.status(500).json({msg: err})
+    }
 }
 
-const deleteEmployee = (req, res) => {
-    res.send('Delete an employee')
+const deleteEmployee = async (req, res) => {
+    try {
+        let {id:employeeId} = req.params
+        const employee = await Employee.findOneAndDelete({_id: employeeId})
+        if (!employee) {
+            return  res.status(404).json(
+              {msg: `No employee with ID ${employeeId} found.`})
+        }
+        res.status(200).json({msg: 'Employee successfully deleted'})
+    } catch (err) {
+        res.status(500).json({msg: err})
+    }
 }          
 
 export {
