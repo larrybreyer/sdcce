@@ -12,9 +12,9 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.json());
 // app.use('/api/v1/employees', routes)
 
-app.get('/', (req, res) => res.render('index'))
-app.get('/add', (req, res) => res.render('add'))
-app.use((req, res) => res.status(404).render('404'))
+app.get('/', (req, res) => res.render('index', { title: 'Home' }))
+app.get('/add', (req, res) => res.render('add', { title: 'Add Employee' }))
+app.use((req, res) => res.status(404).render('404', { title: 'Page Not Found' }))
 
 const PORT = process.env.PORT || 5000
 
