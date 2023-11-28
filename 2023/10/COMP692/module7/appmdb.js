@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/',routes)
 
-app.get('/add', (req, res) => res.render('add', { title: 'Add Employee!' }))
 app.use((req, res) => res.status(404).render('404', { title: 'Page Not Found!' }))
 
 const PORT = process.env.PORT || 5000
