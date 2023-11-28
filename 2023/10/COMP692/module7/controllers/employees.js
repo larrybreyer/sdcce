@@ -3,7 +3,8 @@ import Employee from '../models/Employee.js'
 const getAllEmployees = async (req, res) => {
     try {
         const employees = await Employee.find({})
-        res.status(200).json({employees})
+        res.render('index', { title: 'Home!', employees })
+        // res.status(200).json({employees})
         // res.status(200).json({employees, count: employees.length})
     } catch (err) {
         res.status(500).json({msg: err})

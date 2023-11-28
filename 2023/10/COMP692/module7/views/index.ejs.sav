@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
+<head>
+	<meta charset="UTF-8">
+  <!--  Zak has something Microsoft specific here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vecta Corp | <%= title %></title>
+</head>
 <body>
   <h1>Welcome to the website</h1>
-  <%- include('./partials/nav.ejs') %>
   <% if (employees.length > 0) { %>
-  <table class='table table-striped'>
+  <table>
     <tr>
       <td><strong>Name</strong></td>
       <td><strong>Extension</strong></td>
@@ -29,5 +33,4 @@
 
 <!--
 vim: ft=html nu ai et ts=2
-
 -->

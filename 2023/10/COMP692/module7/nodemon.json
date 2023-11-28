@@ -1,5 +1,6 @@
 {
   "events": {
-    "start": "date"
+    "start": "date",
+    "verbose": true
   }
 }
