@@ -4,19 +4,14 @@ const getAllEmployees = async (req, res) => {
     try {
         const employees = await Employee.find({})
         res.render('index', { 
-          title: 'Home', employees 
+          title: 'Home', employees ,
+          message: req.flash('message')
         })
         // res.status(200).json({employees})
         // res.status(200).json({employees, count: employees.length})
     } catch (err) {
         res.status(500).json({msg: err})
     }
-}
-
-const createEmployeeView = async (req,res) => {
-   res.render('add', { 
-      title: 'Add Employee' 
-   })
 }
 
 const getEmployee = async (req, res) => {
@@ -32,6 +27,13 @@ const getEmployee = async (req, res) => {
     }
 }
 
+const createEmployeeView = async (req,res) => {
+   res.render('add', { 
+      title: 'Add Employee' ,
+      message: req.flash('message')
+   })
+}
+
 const createEmployee = async (req, res) => {
     try {
         const employee = await Employee.create({
@@ -40,7 +42,9 @@ const createEmployee = async (req, res) => {
           email: req.body.email,
           title: req.body.title
         })
-        res.status(201).json({msg: 'Employee added successfully' })
+        req.flash('message', 'Employee added successfully')
+        res.redirect('/add')
+        //  res.status(201).json({msg: 'Employee added successfully' })
     } catch (err) {
         res.status(500).json({msg: err})
     }
@@ -72,7 +76,9 @@ const deleteEmployee = async (req, res) => {
             return  res.status(404).json(
               {msg: `No employee with ID ${employeeId} found.`})
         }
-        res.status(200).json({msg: 'Employee successfully deleted'})
+        req.flash('message', 'Employee successfully deleted')
+        res.redirect('/')
+        //  res.status(200).json({msg: 'Employee successfully deleted'})
     } catch (err) {
         res.status(500).json({msg: err})
     }

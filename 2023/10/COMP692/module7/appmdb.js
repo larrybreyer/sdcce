@@ -3,6 +3,8 @@ import {} from 'dotenv/config'
 import routes from './routes/routes.js'
 import connectDB from './db/connect.js'
 import bodyParser from 'body-parser'
+import session from 'express-session'
+import flash from 'connect-flash'
 
 const app = express()
 
@@ -11,8 +13,15 @@ app.set('view engine', 'ejs')
 // app.use('views','public')
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use('/',routes)
+app.use(session({
+    secret: 'secret',
+    cookie: {magAge: 60000},
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(flash())
 
+app.use('/',routes)
 app.use((req, res) => res.status(404).render('404', { title: 'Page Not Found!' }))
 
 const PORT = process.env.PORT || 5000

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <%- include('./partials/head.ejs') %>
 <body>
   <h1>Welcome to the website</h1>
   <%- include('./partials/nav.ejs') %>
   <% if (employees.length > 0) { %>
+  <h4>Employees (<%= employees.length %>)</h4>
+  <% if (message.length > 0) { %>
+      <div class='alert alert-success my-3'><%=message %></div>
+  <% } %>
   <table class='table table-striped'>
     <tr>
       <td><strong>Name</strong></td>
       <td><strong>Extension</strong></td>
       <td><strong>Email</strong></td>
       <td><strong>Title</strong></td>
+      <td>&nbsp;</td>
     </tr>
     <% employees.forEach(employee => { %>
     <tr>
@@ -18,6 +23,10 @@
             <td><%= employee.ext %></td>
             <td><%= employee.email %></td>
             <td><%= employee.title %></td>
+            <td class='text-end'>
+              <button id='<%= employee.id %>' 
+                   class='btn btn-danger btn-sm delete'>DELETE</button>
+            </td>
     </tr>
     <% }) %>
   </table>
@@ -25,6 +34,18 @@
     <p>There are no employees to view</p>
   <% } %>
 </body>
+<script>
+  let table = document.querySelector('table')
+  table.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete')) {
+      let id = e.target.id
+      let url = `http://localhost:5001/${id}`
+      
+      fetch(url, {method: 'DELETE' })
+        .then(() => window.location.reload())
+    }
+  })
+</script>
 </html>
 
 <!--
