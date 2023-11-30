@@ -1,6 +1,6 @@
 import express from 'express'
 import {getAllEmployees, getEmployee, createEmployeeView, 
-        createEmployee, updateEmployee, deleteEmployee} 
+        createEmployee, updateEmployee, updateEmployeeView, deleteEmployee} 
         from '../controllers/employees.js'
 const router = express.Router()
 router.route('/')
@@ -8,9 +8,11 @@ router.route('/')
 router.route('/add')
     .get(createEmployeeView)    // Display the Form page
     .post(createEmployee)       // Send the data to MongoDB
+router.route('/update/:id')
+    .get(updateEmployeeView)    
+    .patch(updateEmployee)
 router.route('/:id')
     .get(getEmployee)
-    .patch(updateEmployee)
     .delete(deleteEmployee)
 
 export default router

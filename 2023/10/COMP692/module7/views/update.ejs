@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<%- include('./partials/head.ejs') %>
+<body>
+  <h1>Update Employee</h1>
+  <%- include('./partials/nav.ejs') %>
+  <h4>Update Employee</h4>
+  <!-- form:post,,  -->
+  <div action='/add' method='post' class='container-fluid'>
+    <!-- div.row,,  -->
+    <div class='row'>
+      <!-- div.col-md-12,,  -->
+      <div class='col-md-12'>
+        <input id='empId' type='hidden' name='empId' class='form-control'
+            value='<%= employee.id %>'>
+        <label>Name:
+          <input id='name' type='text' name='name' class='form-control'
+            value='<%= employee.name %>'>
+        </label>
+        <br>
+        <label>Extension:
+          <input id='extension' type='text' maxlength='4' name='extension' 
+              value = '<%= employee.extension %>' class='form-control'>
+        </label>
+        <br>
+        <label>Email:
+          <input id='email' type='text' name='email' class='form-control'
+              value='<%= employee.email %>'>
+        </label>
+        <br>
+        <label>Title:
+          <input id='title' type='text' name='title' class='form-control'
+              value='<%= employee.title %>'>
+        </label>
+        <br><br>
+          <button class='btn btn-primary'>Update Employee</button>
+      </div>
+    </div>
+  </div>
+  <% if (message.length > 0) { %>
+      <div class='alert alert-success mt-3'><%=message %></div>
+  <% } %>
+  <script>
+    let btn = document.querySelector('button')
+    btn.addEventListener('click', () => {
+      let id = document.getElementById('empId').value
+      let name = document.getElementById('name').value
+      let extension = document.getElementById('extension').value
+      let email = document.getElementById('email').value
+      let title = document.getElementById('title').value
+
+      let url = `http://localhost:5001/update/${id}`
+
+      fetch( url, {
+        method: 'PATCH',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json; charset=UTF-8'
+        },
+        body: JSON.stringify({
+          'name':      name,
+          'extension': extension,
+          'email':     email,
+          'title':     title
+        })
+      }).then(() => window.location.reload())
+
+    })
+  </script>
+</body>
+</html>
+
+<!--
+vim: ft=html nu ai et ts=2
+-->

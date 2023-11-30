@@ -50,6 +50,25 @@ const createEmployee = async (req, res) => {
     }
 }
 
+
+const updateEmployeeView = async (req, res) => {
+    try {
+        let {id:employeeId} = req.params
+        const employee = await Employee.findOne({_id: employeeId})
+        if (!employee) {
+            return  res.status(404).json( {msg: `No employee with ID ${employeeId} found.`})
+        }
+        res.render('update', {
+          title: 'Update Employee',
+          employee,
+          message: req.flash('message')
+        })
+        //  res.status(200).json({employee})
+    } catch (err) {
+        res.status(500).json({msg: err})
+    }
+}
+
 const updateEmployee = async (req, res) => {
     try {
         let {id:employeeId} = req.params
@@ -62,7 +81,9 @@ const updateEmployee = async (req, res) => {
             return  res.status(404).json(
               {msg: `No employee with ID ${employeeId} found.`})
         }
-        res.status(200).json({msg: 'Successfully updated employee'})
+        req.flash('message', 'Successfully updated employee')
+        res.render('/update', employeeId)
+        //  res.status(200).json({msg: 'Successfully updated employee'})
     } catch (err) {
         res.status(500).json({msg: err})
     }
@@ -89,6 +110,7 @@ export {
     getEmployee,
     createEmployeeView,
     createEmployee,
+    updateEmployeeView,
     updateEmployee,
     deleteEmployee
 } 

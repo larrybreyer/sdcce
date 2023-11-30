@@ -11,6 +11,7 @@
   <% } %>
   <table class='table table-striped'>
     <tr>
+      <td>&nbsp;</td>
       <td><strong>Name</strong></td>
       <td><strong>Extension</strong></td>
       <td><strong>Email</strong></td>
@@ -19,8 +20,12 @@
     </tr>
     <% employees.forEach(employee => { %>
     <tr>
+            <td>
+              <button id='<%= employee.id %>' 
+                   class='btn btn-primary btn-sm update'>UPDATE</button>
+            </td>
             <td><%= employee.name %></td>
-            <td><%= employee.ext %></td>
+            <td><%= employee.extension %></td>
             <td><%= employee.email %></td>
             <td><%= employee.title %></td>
             <td class='text-end'>
@@ -37,12 +42,14 @@
 <script>
   let table = document.querySelector('table')
   table.addEventListener('click', (e) => {
+    let id = e.target.id
     if (e.target.classList.contains('delete')) {
-      let id = e.target.id
       let url = `http://localhost:5001/${id}`
-      
       fetch(url, {method: 'DELETE' })
         .then(() => window.location.reload())
+    } else if (e.target.classList.contains('update')) {
+      let url = `http://localhost:5001/update/${id}`
+      window.location.href = url
     }
   })
 </script>
