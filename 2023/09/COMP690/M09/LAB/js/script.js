@@ -14,3 +14,5 @@ xhr.onreadystatechange = () => {
 }
 xhr.open('Get','data/team.xml')  
 xhr.send()
+xhr.onerror = () => {console.log('There was an error.')}
+xhr.onerror = (e) => {console.log('e.message')}
