@@ -13,8 +13,4 @@ xhr.onreadystatechange = () => {
     }
 }
 xhr.open('Get','data/team.xml')  
-<<<<<<< HEAD
 xhr.send()
-=======
-xhr.send()
->>>>>>> 768f2225fdba2834510be57ec7da4f7aa7b154fd
