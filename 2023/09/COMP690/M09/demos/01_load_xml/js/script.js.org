@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'data/team.xml', true);
+xhr.open('GET', '../data/team.xml', true);
 xhr.send();
 xhr.addEventListener('readystatechange', () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
