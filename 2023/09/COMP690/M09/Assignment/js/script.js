@@ -1,3 +1,4 @@
+
 // CREATE AN ARRAY OF EMPLOYEES
 let arrEmployees = [
     [34123413, "Zak Ruvalcaba", 3424, "zak@vectacorp.com", "Executive"],
@@ -6,6 +7,10 @@ let arrEmployees = [
     [14545423, "Robin Banks", 7867, "robin@vectacorp.com", "Marketing"],
     [13413453, "Sue Wedge", 1235, "sue@vectacorp.com", "QA"]
 ]
+
+// SAVE ARRAY OF EMPLOYEES
+const myJSON = JSON.stringify(arrEmployees)
+console.log(myJSON)
 
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
