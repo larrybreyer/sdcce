@@ -1,3 +1,4 @@
+// imported by js/script.js
 export async function fetchUsers() {
     let users = []
     try {
