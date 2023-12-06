@@ -5,9 +5,10 @@ export async function fetchUsers() {
             './data/employees.json'
         );
     
-        fetchPromise.then((response) => {
+        await fetchPromise.then((response) => {
           const jsonPromise = response.json();
           jsonPromise.then((data) => {
+            console.log(data);
             return data;
           });
         });
