@@ -1,3 +1,4 @@
+import { fetchUsers } from './modules/init.js'
 
 // CREATE AN ARRAY OF EMPLOYEES
 let arrEmployees = [
@@ -8,9 +9,24 @@ let arrEmployees = [
     [13413453, "Sue Wedge", 1235, "sue@vectacorp.com", "QA"]
 ]
 
-// SAVE ARRAY OF EMPLOYEES
-const myJSON = JSON.stringify(arrEmployees)
-console.log(myJSON)
+let row = {}
+let empArray = []
+
+for ( let i = 0; i < arrEmployees.length; i++ ) {
+    row = {"empid":arrEmployees[i][0],
+	    "name":arrEmployees[i][1],
+	    "ext":arrEmployees[i][2],
+	    "email":arrEmployees[i][3],
+	    "dept":arrEmployees[i][4]
+    }
+    empArray.push(row)
+}
+// LOG data/employees.json
+//  console.log(JSON.stringify(empArray,null,'\t'))
+
+let users = await fetchUsers()
+console.log(`fetchUsers returned ${users}`)
+console.log('No data.  Using empArray instead.')
 
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
@@ -40,15 +56,15 @@ function buildGrid(arrEmployees) {
     let tbody = document.createElement('tbody')
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
-    for (let employee of arrEmployees) {
+    for (let employee of empArray) {
         tbody.innerHTML += 
         `
         <tr>
-            <td>${employee[0]}</td>
-            <td>${employee[1]}</td>
-            <td>${employee[2]}</td>
-            <td><a href="mailto:${employee[3]}">${employee[3]}</a></td>
-            <td>${employee[4]}</td>
+            <td>${employee.empid}</td>
+            <td>${employee.name}</td>
+            <td>${employee.ext}</td>
+            <td><a href="mailto:${employee.email}">${employee.email}</a></td>
+            <td>${employee.dept}</td>
             <td><button class="btn btn-sm btn-danger delete">X</button></td>
         </tr>
         `
@@ -58,3 +74,4 @@ function buildGrid(arrEmployees) {
     // UPDATE EMPLOYEE COUNT
     empCount.value = `(${arrEmployees.length})`
 }
+// vim: ai ts=4 et nu
