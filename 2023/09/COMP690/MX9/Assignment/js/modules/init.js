@@ -1,9 +1,7 @@
 // imported by js/script.js
-export async function fetchUsers(data) {
+export async function fetchUsers() {
     try {
-        const fetchPromise = fetch(
-            './data/employees.json'
-        );
+        const fetchPromise = fetch('./data/employees.json');
     
         await fetchPromise.then((response) => {
           const jsonPromise = response.json();

@@ -25,8 +25,17 @@ for ( let i = 0; i < arrEmployees.length; i++ ) {
 //  console.log(JSON.stringify(empArray,null,'\t'))
 
 let users = []
+<<<<<<< HEAD
 await fetchUsers(users)
 console.log(`fetchUsers returned ${users}`)
+=======
+let usersPromise = fetchUsers()
+console.log(`fetchUsers returned ${usersPromise}`)
+await usersPromise.then((data) => {
+    console.log(data)
+    users = data;
+})
+>>>>>>> ae30cc3f10a00684c73b79b6a85c596c263122f8
 console.log('No data.  Using empArray instead.')
 
 // GET DOM ELEMENTS
