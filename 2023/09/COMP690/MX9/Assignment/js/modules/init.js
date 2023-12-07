@@ -1,5 +1,5 @@
 // imported by js/script.js
-export async function fetchUsers() {
+export async function fetchUsers(data) {
     try {
         const fetchPromise = fetch(
             './data/employees.json'

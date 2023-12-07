@@ -24,7 +24,8 @@ for ( let i = 0; i < arrEmployees.length; i++ ) {
 // LOG data/employees.json
 //  console.log(JSON.stringify(empArray,null,'\t'))
 
-let users = await fetchUsers()
+let users = []
+fetchUsers(users)
 console.log(`fetchUsers returned ${users}`)
 console.log('No data.  Using empArray instead.')
 
