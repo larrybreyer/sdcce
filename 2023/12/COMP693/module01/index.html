@@ -12,7 +12,11 @@
 	<div id="content"></div>	
 	<script>
     ReactDOM.render(
-		  React.createElement('div', {title: 'Outer div'}, 'Hello World!'),
+		  React.createElement(
+			'div', 
+			{title: 'Outer div'}, 
+			'Hello World!'
+		),
       document.getElementById("content")
     )
 	</script>
