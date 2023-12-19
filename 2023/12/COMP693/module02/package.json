@@ -1,8 +1,8 @@
 {
   "name": "module01",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
+  "description": "",
   "scripts": {
     "start": "nodemon app.js",
     "compile": "babel src --presets @babel/react src --out-dir public",
