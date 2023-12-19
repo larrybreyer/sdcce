@@ -1,7 +1,6 @@
 {
   "name": "module01",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -20,5 +19,6 @@
   },
   "dependencies": {
     "express": "^4.18.1"
-  }
+  },
+  "description": ""
 }
