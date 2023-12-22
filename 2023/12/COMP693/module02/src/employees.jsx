@@ -1,52 +1,80 @@
+const employees = [
+  {
+    id: 1,
+    name: 'Zak Ruvalcaba', 
+    extension: 1124, 
+    email: 'zak@vectacorp.com',
+    title: 'Chief Executive Officer',
+    dateHired: new Date('2018-08-15'),
+    isEmployed: true,
+  },
+  {
+    id: 2,
+    name: 'Sally Smith', 
+    extension: 1125, 
+    email: 'sally@vectacorp.com',
+    title: 'Director of Sales',
+    dateHired: new Date('2015-06-03'),
+    isEmployed: true,
+  },
+]
 
 class EmployeeFilter extends React.Component {
   render() {
-    return ( <div>This is a placeholder for the employee filter.</div>)
+    return (
+      <div>This is a placeholder for the employee filter.</div>
+    )
   }
 }
 
-class EmployeeTable extends React.Component {
+class BorderWrap extends React.Component {
   render() {
-    const rowStyle = {border: "4px solid orange", padding: 4}
+    const borderedStyle = {border: "1px solid silver", padding: 6};
     return (
-      <table style={{width: "800px", borderCollapse: "collapse"}}>
-        <thead>
-          <tr>
-            <th style={rowStyle}>Name</th>
-            <th style={rowStyle}>Extension</th>
-            <th style={rowStyle}>Email</th>
-            <th style={rowStyle}>Title</th>
-          </tr>
-        </thead>
-        <tbody>
-          <EmployeeRow  
-            rowStyle = {rowStyle}
-            employee_name="Zak Ruvalcaba" 
-            employee_ext={1124}
-            employee_email="zak@vectacorp.com"
-            employee_title="Chief Executive Officer" />
-          <EmployeeRow  
-            rowStyle = {rowStyle}
-            employee_name="Sally Smith" 
-            employee_ext={1125}
-            employee_email="sally@vectacorp.com"
-            employee_title="Director of Sales" />
-        </tbody>
-      </table>
+      <div style={borderedStyle}>
+        {this.props.children}
+      </div>
     )
   }
 }
 
 class EmployeeRow extends React.Component {
   render() {
-    const style = this.props.rowStyle
+    const employee = this.props.employee
     return (
       <tr>
-        <td style={style}>{this.props.employee_name}</td>
-        <td style={style}>{this.props.employee_ext}</td>
-        <td style={style}>{this.props.employee_email}</td>
-        <td style={style}>{this.props.employee_title}</td>
+        <td>{employee.name}</td>
+        <td>{employee.extension}</td>
+        <td>{employee.email}</td>
+        <td>{employee.title}</td>
+        <td>{employee.dateHired.toDateString()}</td>
+        <td>{employee.isEmployed ? 'Yes' : 'No'}</td>
       </tr>
+    )
+  }
+}
+
+class EmployeeTable extends React.Component {
+  render() {
+    const EmployeeRows = employees.map(
+      employee => <EmployeeRow key={employee.id} employee={employee}/>
+    )
+    return (
+      <table className="bordered-table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Extension</th>
+          <th>Email</th>
+          <th>Title</th>
+          <th>Date Hired</th>
+          <th>Currently Employed?</th>
+        </tr>
+        </thead>
+        <tbody>
+          {EmployeeRows}
+        </tbody>
+      </table>
     )
   }
 }
@@ -63,12 +91,14 @@ class EmployeeList extends React.Component {
   render() {
     return (
             <React.Fragment>
+        <BorderWrap>
           <h1>Employee Management Application</h1>
           <EmployeeFilter />
           <hr />
           <EmployeeTable />
           <hr />
           <EmployeeAdd />
+        </BorderWrap>
             </React.Fragment>
     )
   }
@@ -77,4 +107,3 @@ class EmployeeList extends React.Component {
 ReactDOM.render(<EmployeeList />, document.getElementById('content'))
 
 // vim: ft=javascriptreact ai ts=2 et nu
-

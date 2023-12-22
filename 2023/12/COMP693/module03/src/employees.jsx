@@ -138,3 +138,5 @@ ReactDOM.render(
     </React.StrictMode>, 
     document.getElementById('content')
 )
+
+// vim: ft=javascriptreact ai ts=2 et nu
