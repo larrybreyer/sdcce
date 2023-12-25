@@ -39,7 +39,9 @@ const updateEmployee = async (req, res) => {
             runValidators: true
         })
         if (!employee) {
-            return res.status(404).json({ msg: `No employee with id ${employeeId} found.` })
+            return res.status(404).json({ 
+		msg: `No employee with id ${employeeId} found.` 
+	    })
         }
         res.status(200).json({ msg: 'Successfully updated employee' })
     } catch (err) {
