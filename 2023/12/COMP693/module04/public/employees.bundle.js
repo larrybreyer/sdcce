@@ -262,7 +262,7 @@ var EmployeeList = /*#__PURE__*/function (_React$Component) {
     }
   }]);
   return EmployeeList;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component)); // vim: ai ts=2 et nu
 
 
 /***/ }),
