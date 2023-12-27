@@ -1,27 +1,36 @@
+import webpack from 'webpack'
+
 import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const isProduction = 'production'
+const isProduction = process.env.NODE_ENV == 'production'
 
 const config = {
-    entry: './src/employees.jsx',
-    output: {
-        filename: 'employees.bundle.js',
-        path: path.resolve(__dirname, 'public'),
+    entry: {
+        employees: './src/employees.jsx',
     },
-    plugins: {
-	    // ADD ANY WEBPACK PLUGINS HERE
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'public'),
     },
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
             },
         ],
     },
+    optimization: {
+        splitChunks: {
+            name: 'vendor',
+            chunks: 'all',
+        },
+    },
+    devtool: 'source-map'
 }
 
 export default function() {
@@ -32,4 +41,3 @@ export default function() {
     }
     return config
 }
-// vim: ai ts=2 et nu
