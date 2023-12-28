@@ -1,3 +1,5 @@
+import webpack from 'webpack'
+
 import path from 'path'
 import { fileURLToPath } from 'url'
 
