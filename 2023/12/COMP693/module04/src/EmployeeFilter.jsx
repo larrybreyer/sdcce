@@ -7,3 +7,5 @@ export default class EmployeeFilter extends React.Component {
 		)
 	}
 }
+// vim: ai ts=2 et nu
+

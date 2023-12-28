@@ -106,3 +106,4 @@ export default class EmployeeList extends React.Component {
 		)
 	}
 }
+// vim: ai ts=2 et nu
