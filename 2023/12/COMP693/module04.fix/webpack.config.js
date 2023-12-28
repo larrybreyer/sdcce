@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const isProduction = process.env.NODE_ENV == 'production'
+const isProduction = 'production'
 
 const config = {
     entry: {
@@ -41,3 +41,4 @@ export default function() {
     }
     return config
 }
+// vim: ft=javascript ai ts=2 et nu

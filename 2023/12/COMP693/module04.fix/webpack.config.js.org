@@ -41,3 +41,4 @@ export default function() {
     }
     return config
 }
+// vim: ft=javascript ai ts=2 et nu

@@ -23,5 +23,3 @@ const init = async () => {
     }
 }
 init()
-
-// vim: ai ts=2 et nu
