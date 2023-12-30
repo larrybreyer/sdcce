@@ -7,7 +7,8 @@ const root = createRoot(document.getElementById('content'))
 root.render(
   <React.StrictMode>
     <Router>
-		  <Page />
-	  </Router>
+      <Page />
+    </Router>
   </React.StrictMode>,
 )
+// vim: ai ts=2 et nu

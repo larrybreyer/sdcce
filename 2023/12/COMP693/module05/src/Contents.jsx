@@ -8,13 +8,14 @@ import EmployeeEdit from './EmployeeEdit.jsx'
 const NotFound = () => <h1>Page Not Found</h1>
 
 export default function Contents() {
-	return (
-        <Routes>        
-            <Route path="/employees" element={<EmployeeList />} />
-            <Route path="/edit/:id" element={<EmployeeEdit />} />
-            <Route path="/report" element={<EmployeeReport />} />
-            <Route path="/" element={<Navigate replace to="/employees" />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-	)
+  return (
+    <Routes>
+      <Route path="/employees" element={<EmployeeList />} />
+      <Route path="/edit/:id" element={<EmployeeEdit />} />
+      <Route path="/report" element={<EmployeeReport />} />
+      <Route path="/" element={<Navigate replace to="/employees" />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
 }
+// vim: ai ts=2 et nu

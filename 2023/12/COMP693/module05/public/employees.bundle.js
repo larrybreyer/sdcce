@@ -47,6 +47,7 @@ function Contents() {
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NotFound, null)
   }));
 }
+// vim: ai ts=2 et nu
 
 /***/ }),
 
@@ -149,6 +150,7 @@ function EmployeeEdit() {
     id = _useParams.id;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "This is a placeholder for editing employee: ".concat(id));
 }
+// vim: ai ts=2 et nu
 
 /***/ }),
 
@@ -349,6 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 function EmployeeReport() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This is a placeholder for the employee report."));
 }
+// vim: ai ts=2 et nu
 
 /***/ }),
 
@@ -385,6 +388,7 @@ function NavBar() {
 function Page() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Contents_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
+// vim: ai ts=2 et nu
 
 /***/ }),
 
@@ -406,6 +410,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('content'));
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Page_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+// vim: ai ts=2 et nu
 
 /***/ })
 
