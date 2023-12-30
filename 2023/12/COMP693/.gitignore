@@ -1,3 +1,5 @@
 node_modules
 base
 module05.lnk
+*.bundle.js
+*.bundle.js.map
