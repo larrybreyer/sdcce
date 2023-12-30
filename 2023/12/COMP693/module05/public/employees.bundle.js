@@ -150,6 +150,7 @@ function EmployeeEdit() {
     id = _useParams.id;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "This is a placeholder for editing employee: ".concat(id));
 }
+// vim: ai ts=2 et nu
 
 /***/ }),
 

@@ -7,3 +7,4 @@ export default function EmployeeEdit() {
 		<h2>{`This is a placeholder for editing employee: ${id}`}</h2>
 	)
 }
+// vim: ai ts=2 et nu
