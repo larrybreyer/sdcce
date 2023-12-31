@@ -3,3 +3,4 @@ base
 module05.lnk
 *.bundle.js
 *.bundle.js.map
+*.LICENSE.txt
