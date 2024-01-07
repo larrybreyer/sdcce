@@ -12,6 +12,7 @@ function part1step1() {
         // User hit Cancel
         console.log("User hit 'Cancel'");
     } else {
+        alert(`Your name is ${person.length} characters long.`)
         console.log(person.length);
     }
 }
@@ -32,7 +33,7 @@ function part1step2() {
         if (indexString == null) {
             alert("User hit 'Cancel'");
         } else {
-            alert(person.charAt(parseInt(indexString) - 1));
+            alert(`The character in position ${indexString} is '${person.charAt(parseInt(indexString) - 1)}'`);
         }
     }
 }
@@ -70,7 +71,7 @@ function part1step4() {
 
 
 function part1step5() {
-    theString = "The quick brown fox jumps over the lazy dog";
+    theString = "The quick brown fox jumps over the lazy fox";
     theMessage = "the index of the last occurence of 'fox' in \n'" + 
         theString + "'\nis ";
     alert(theMessage+theString.lastIndexOf("fox"));
