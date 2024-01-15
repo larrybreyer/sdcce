@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M12 Assignment - The Music Player Application</title>
-    <script src="js/player.js"></script>
+    <script src="js/player.js" defer></script>
 </head>
 <body>
     <h1>The Music Player</h1>
     <!-- ADD DROP DOWN MENU -->
+    <label for="songs">Choose a song:</label>
+    <select id="selectSong" name="selectSong">
+    </select>
+
     <!-- ADD PLAY BUTTON -->
+    <button onclick="playSong()">Play</button>
+
     <!-- ADD SHOW FAVORITE ALBUM BUTTON -->
+    <br>
+    <br>
+    <button onclick="favAlbum()">show my favorite album</button>
     <p id="favoriteAlbum"></p>
 </body>
 </html>
+
+<!--  vim: ai ts=4 et nu 
+-->
