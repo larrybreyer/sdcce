@@ -9,14 +9,10 @@
 </head>
 
 <body>
-  <main>
-    <h1>Zak's Life in a Slide Show</h1>
-    <p><img src="images/wakeboard.jpg" id="image" alt=""></p>
-    <p><span id="caption">He likes to wakeboard</span></p>
-
-    <!-- Add the "Set Speed" button -->
-    <button id="setSpeedButton">Set Speed</button>
-  </main>
+<main>
+  <h1>Zak's Life in a Slide Show</h1>
+  <p><img src="images/wakeboard.jpg" id="image" alt=""></p>
+  <p><span id="caption">He likes to wakeboard</span></p>
+</main>
 </body>
 </html>
-

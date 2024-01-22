@@ -64,11 +64,10 @@ window.addEventListener("load", () => {
     // BEGIN THE SLIDE SHOW
     slideshow.loadImages(slides).startSlideShow($("image"), $("caption"));
 
-    // Get the "Set Speed" button element
-    const setSpeedButton = $('setSpeedButton');
-
-    // Add a click event listener to the "Set Speed" button
-    setSpeedButton.addEventListener('click', () => {
+    // Add a button for setting the speed
+    const setSpeedButton = document.createElement("button");
+    setSpeedButton.textContent = "Set Speed";
+    setSpeedButton.onclick = () => {
         const newSpeed = prompt("Enter the new speed (in milliseconds):");
         if (newSpeed !== null) {
             const parsedSpeed = parseInt(newSpeed, 10);
@@ -78,5 +77,8 @@ window.addEventListener("load", () => {
                 alert("Invalid input. Please enter a positive number.");
             }
         }
-    });
+    };
+
+    // Append the set speed button to the document
+    document.body.appendChild(setSpeedButton);
 });
