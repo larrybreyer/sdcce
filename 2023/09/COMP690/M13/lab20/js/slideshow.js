@@ -12,7 +12,8 @@ const slideshow = {
     setSpeed: function (newSpeed) {
         this.speed = newSpeed
         clearInterval(this.timer); // Clear the existing timer
-        this.timer = setInterval(this.displayNextImage.bind(this), this.speed); // Set a new timer with the updated speed
+ 	// Set a new timer with the updated speed
+        this.timer = setInterval(this.displayNextImage.bind(this), this.speed)
     },
 
     // Public method to get the speed
@@ -45,7 +46,7 @@ const slideshow = {
         let image = this.img.cache[this.img.counter]
         this.nodes.image.src = image.src
         this.nodes.caption.innerHTML = image.title
-    },
+    }
 }
 
 // WIRE UP SLIDESHOW ON LOAD
