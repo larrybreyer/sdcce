@@ -2,6 +2,7 @@
     Project: Lab 01: My First JavaScript Application
     Date: 2/4/21
     Author: Zak Ruvalcaba
+    2024/02/11 Modified by Robert Breyer
 */
 
 // Declare the variable and collect a number from the user
