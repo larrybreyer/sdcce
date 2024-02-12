@@ -1,0 +1,46 @@
+/* CSS rules */
+body {
+    color: white;
+    background-color: black;
+    font-family: monospace, "Courier New", Tahoma, Arial, sans-serif;
+}
+
+header {
+    background-color: lightskyblue;
+    /* padding is inside */
+    padding: 20px;
+}
+
+/* #id, no space, section is superfluous since id is unique */
+section#branding {
+    text-align: center;
+    border: solid 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+/*  CSS comment  
+
+h1 {
+    color: #6c9;
+}
+
+*/
+
+/* descendant selector, overrides embedded style */
+header h1 {
+    color: #6c9;
+    font-size: 40px;
+    /* margin is outside */
+    margin: 0;
+    
+}
+header h2 {
+    font-style: italic;
+    margin: 0;
+}
+aside h2 {
+    font-style: italic;
+}
+
+/* end descendant selector */
