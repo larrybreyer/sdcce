@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+}
+header h1{
+    background-color: #aaf;
+    font-family: monospace;
+}
+
+article#chrome {
+    background-color: lightyellow;
+}
+
+article#firefox {
+    background-color: lightcoral;
+}
+
+article#edge {
+    background-color: lightblue;
+}
