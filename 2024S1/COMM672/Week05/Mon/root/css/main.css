@@ -1,0 +1,62 @@
+body {  /* element selector */
+    font-family: Georgia, serif;
+    width: 800px;
+    /* border: red solid 1px; */
+    margin: auto;
+    background-image: url(../images/texture.gif);
+}
+
+h1, h2 {  /* element selector, group selector */
+    font-family: Verdana, sans-serif;
+}
+
+header {
+    background: #1aa391;
+    color: white;
+    padding: 5px 0;  /* top/bottom  right/left */
+}
+
+header h1 {
+    font-size: 40px;
+    /* bottom right/left top */
+    margin: 10px 0 2px;
+}
+
+header h2 {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    /* bottom right/left top */
+    margin: 2px 0 10px;    
+}
+
+header h1, header h2 {
+    padding: 0 10px;
+}
+
+nav {
+    text-align:  center;
+    padding: 10px 0;
+    border-top: solid 2px white;
+}
+
+
+a:link {color: #86388a}
+
+article {
+    background: white;
+}
+
+footer {
+    color: white;
+    background: #1aa391;
+    padding: 20px;
+    text-align: right;
+}
+
+footer a:link {
+    color: white;
+}
+
+/*  vim: nu ts=4 et ai
+*/
