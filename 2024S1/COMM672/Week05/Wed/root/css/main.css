@@ -1,0 +1,122 @@
+body {  /* element selector */
+    font-family: Georgia, serif;
+    width: 800px;
+    /* border: red solid 1px; */
+    margin: auto;
+    background-image: url(../images/texture.gif);
+}
+
+h1, h2 {  /* element selector, group selector */
+    font-family: Verdana, sans-serif;
+}
+
+a:link {color: #1aa391}
+a:visited {color: #333}
+a:hover {color: #118bea}
+a:active {color: #368827}
+
+header {
+    background: #1aa391;
+    color: white;
+    padding: 5px 0;  /* top/bottom  right/left */
+}
+
+header h1 {
+    font-size: 40px;
+    /* bottom right/left top */
+    margin: 10px 0 2px;
+    text-shadow: -3px -3px 5px #333;
+}
+
+header h2 {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    /* bottom right/left top */
+    margin: 2px 0 10px;    
+}
+
+header h1, header h2 {
+    padding: 0 10px;
+}
+
+nav {
+    text-align:  center;
+    padding: 10px 0;
+    border-top: solid 2px white;
+}
+nav a:link {
+    background-color: white;
+    border: solid 1px #c9f2ed;
+    color: #1aa391;
+    padding: 2px 6px;
+    text-decoration: none;
+    margin: 6px 10px 0;  /* top left/right bottom */
+    display: inline-block;  /* required for width to work */
+    width: 130px;
+}
+
+nav a:visited {
+    background-color: #666;
+}
+
+nav a:hover {
+    background-color: #c9f2ed;
+    color: #1aa391;
+    border-color: #1aa391;
+}
+
+nav a:active {
+    background-color: white;
+    color: #666;
+}
+
+main {
+    background-color: white;
+    padding: 20px 10px;
+    box-shadow: 10px 20px 10px #96c;
+}
+
+img {
+    float: left;
+    margin-right: 10px; /* margin or padding if no border */
+}
+
+.onRight {
+    float: right;
+    margin-left: 10px; /* margin or padding if no border */
+}
+
+
+article {
+    border-bottom: solid 1px #4ddfcc;
+    margin-bottom: 20px;
+}
+
+article span {
+    clear: left;
+}
+
+/*
+article:after {
+    content: 'hello';
+}
+*/
+
+footer {
+    background-color: #1aa391;
+    color: white;
+    text-align: right;
+    padding: 10px 10px 5px;;
+}
+
+footer a:link, footer: a:visited { 
+    color: #c952ed;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/*  vim: nu ts=4 et ai
+*/
