@@ -1,6 +1,6 @@
 // vim: ai ts=2 et
 
-let score = prompt("Enter your score");
+let score = parseInt(prompt("Enter your score"));
 
 if ( score >= 1 && score <= 100 ) {
   if ( score >= 60 && score <= 69) {
