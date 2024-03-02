@@ -5,9 +5,48 @@ html { font-size: 10px; }
 body {
   font-family: Verdana, Arial, sans-serif;
   text-align: center;
+  width: 800px;
  }
+
+header h1 {
+  padding: 50px;
+  text-transform: uppercase;
+  /* background-color: white; */
+  color: black;
+  background: linear-gradient(to right, white 50%, black 50%)
+}
+
+header h1 span {
+  /* background-color: black; */
+  color: white;
+}
 
 h1 {
   font-size: 4rem;
   margin: 0;
  }
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.black,.white {
+  padding: 50px;
+  display: inline-block; 
+  width: 50%;
+}
+
+.both {
+  padding: 50px;
+  color: white;
+  background-image: repeating-linear-gradient(
+    45deg,
+    black,
+    black 10px,
+    white 10px,
+    white 20px
+    )
+}
+/* vim: ai ts=2 et nu
+*/
