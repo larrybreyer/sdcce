@@ -1,0 +1,13 @@
+* { box-sizing: border-box;} /* universal selector */
+
+html { font-size: 10px; }
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  text-align: center;
+ }
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+ }
