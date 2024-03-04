@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 rgba(147, 147, 147, 0.5);
+}
+
+header {
+  padding: 50px 0;
+  background: linear-gradient(to right, #000000, #ffffff);
+}
+
+main {
+  display: flex;
+}
+
+.black,
+.white {
+  width: 50%;
+  padding: 50px 0;
+  text-shadow: 0 10px 10px rgba(147, 147, 147, 0.5);
+}
+
+.black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.both {
+  width: 100%;
+  padding: 50px 0;
+  background: linear-gradient(to right, #ffffff, #000000);
+  text-shadow: -1px -1px 0 #000, 1px 1px 0 #000, -1px 1px 0 #000;
+}
+
+footer {
+  padding: 50px 0;
+}
+
+p {
+  margin: 0;
+}
