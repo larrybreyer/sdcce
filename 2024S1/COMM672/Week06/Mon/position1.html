@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Positioning and float</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <style type="text/css">
+    h1 {
+      color: #ccc;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      border: solid 1px orangered;
+      margin: 0 auto 20px;
+    }
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: orange;
+      border: solid 1px gray;
+      padding: 15px;
+      margin: 15px;
+    }
+    /* descendant selector */
+    #float .box {
+      float: left;
+            
+    }
+    .clearIt {
+      /* clear: left; */
+      clear: both;
+    }
+    /* pseudo-class selectors */
+    /* nth-of-type(), nth-child(), last-of-type, last-child */
+    #float .box:nth-of-type(2) {   
+      background-color: lightblue;
+      float: right;
+    }
+
+    #position {
+      position: relative;
+    }
+
+    #position .box {
+      background-color: darkseagreen;
+    }
+
+    #position .box:nth-of-type(1) {   
+      background-color: palevioletred;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      z-index: 10 ;
+    }
+
+    #position .box:nth-of-type(2) {   
+      background-color: aquamarine;
+      position: absolute;
+      top: 20px;
+      left: 160px;
+      z-index: 1 ;
+    }
+
+  </style>
+</head>
+<body>
+	<h1>Positioning vs float</h1>
+  <div class="container" id="float">
+    <h2>Float</h2>
+    <div class="box">
+      <h3>Child 1</h3>
+    </div>
+    <div class="box">
+      <h3>Child 2</h3>
+    </div>
+    <div class="box">
+      <h3>Child 3</h3>
+    </div>
+
+    <p class="clearIt">hi there!</p>
+  </div>
+
+
+  <div class="container" id="position">
+    <h2>Position</h2>
+    <div class="box">
+      <h3>Child 4</h3>
+    </div>
+    <div class="box">
+      <h3>Child 5</h3>
+    </div>
+    <div class="box">
+      <h3>Child 6</h3>
+    </div>
+  </div>
+	
+  <!-- 
+    images/shark.png
+    images/imageSprite.png
+    images/turtleSwimming.png
+  -->
+
+</body>
+</html>
+
+<!--
+vim: ft=html nu ai et ts=2
+-->
