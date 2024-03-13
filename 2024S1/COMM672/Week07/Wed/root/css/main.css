@@ -1,0 +1,56 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Verdana, sans-serif;
+}
+h1 {
+    font-size: 3.8em;
+    margin-bottom: .6em;
+    border-bottom: solid 1px #666;
+}
+h3 {
+    font-size: 2.5em;
+    margin-bottom: .4em;
+}
+p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+section {
+    border: solid 1px teal;
+    margin: 2em auto;
+    width: 80%;
+    height: 500px;
+    display: flex;
+/*
+    flex-direction: row;
+    flex-wrap: wrap;
+*/
+    flex-flow: row wrap; /* shorthand method of combining flex-direction and flex-wrap */
+    justify-content: center; /* controling alignment along main axis*/
+    align-items: flex-start;  /* controlling alignment along cross axis */
+/*    gap: 1em;*/
+/*    align-content: flex-start;*/
+}
+article {
+    border: solid 3px #999;
+    padding: .5em;
+    width: 260px;
+}
+
+article:nth-child(2) {
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

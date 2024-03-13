@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 2 Example</title>
+  <style type="text/css">
+    header {
+      background-color: paleturquoise;
+      display: flex;
+    }
+    header ul {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      height: 150px;
+      list-style-type: none;
+    }
+
+  </style>
+</head>
+<body>
+<!--  
+    header>figure>img+figcaption{Company name}+nav>ul>li*5>a{link $}
+-->
+    <header>
+      <figure>
+        <img src="https://placehold.co/120" alt="company logo">
+        <figcaption>Company name</figcaption>
+      </figure>
+      <nav>
+      <ul>
+        <li><a href="">link 1</a></li>
+        <li><a href="">link 2</a></li>
+        <li><a href="">link 3</a></li>
+        <li><a href="">link 4</a></li>
+        <li><a href="">link 5</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+</body>
+</html>
+
+<!--
+vim: ft=html nu ai et ts=2
+-->

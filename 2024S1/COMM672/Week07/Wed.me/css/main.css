@@ -1,0 +1,66 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3.8em;
+  margin-bottom: 0.6em;
+  border-bottom: solid 1px #666;
+}
+
+h3 {
+  font-size: 2.5em;
+  margin-bottom: 0.4em;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+section {
+  border: solid 1px teal;
+  margin: 2em auto;
+  width: 80%;
+  height: 500px;  /* not best practice */
+  /* changes vertcal to horizontal, direct descendants only */
+  /*
+      main axis - left to right
+      cross axis - top to bottom
+  */
+  display: flex;  
+  /*  switch the axes  
+  flex-direction: column;
+  */
+  flex-direction: row;
+  /* adjust article height */
+  flex-wrap: wrap;
+  /* flex-flow combines flex-direction and flex-wrap */
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  /* align-items: flex-end; */
+  align-items: flex-start; 
+  /* gap: 1em;  gutter below items */
+}
+
+/* In the HTML: flex children/flex items */
+article {
+  border: solid 3px #999;
+  padding: 0.5em;
+  width: 260px;
+}
+
+article:nth-child(2) {
+  /* order: -1; */
+  align-self: flex-end;
+}
+
+
+/* vim: ts=2 et ai nu
+*/
