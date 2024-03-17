@@ -1,0 +1,146 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-family: Verdana, sans-serif;
+  /*
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  */
+}
+main h1 {
+  font-size: 3.8em;
+  margin: .5em;
+  text-align: center;
+}
+main h2 {
+  font-size: 2.5em;
+  margin-bottom: .6em;
+  /* border-bottom: solid 1px #666; */
+  text-align: center;
+}
+h3 {
+  font-size: 2.5em;
+  margin-bottom: .4em;
+}
+header {
+  width: 100%;
+  height: 254px;
+  background-image:url("../images/nasa-hubble-space-telescope-unsplash-banner.png");
+}
+header h1 {
+  font-size: 4em;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+}
+
+nav ul li {
+  font-size: 1em;
+  letter-spacing: .2em;
+}
+
+nav ul li a {
+  display: block;
+  border: 1px solid;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin: .5em;
+}
+
+nav ul li a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: white;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+nav ul li a:active {
+    color: white;
+}
+
+figcaption {
+    color: white;
+    position: absolute;
+    top: 220px;
+    right: 10px;
+}
+
+figcaption a:link {
+    color: white;
+    text-decoration: none;
+}
+
+figcaption a:visited {
+    color: white;
+}
+
+figcaption a:hover {
+    color: white:
+}
+
+figcaption a:active {
+    color: white;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+section {
+  /* border: solid 1px teal;
+  margin: 2em auto;
+  width: 80%;
+  height: 500px; */
+  background-color: lightblue;
+  display: flex;
+/*
+  flex-direction: row;
+  flex-wrap: wrap;
+*/
+  flex-flow: row wrap; /* shorthand method of combining flex-direction and flex-wrap */
+  justify-content: center; /* controling alignment along main axis*/
+  align-items: flex-start;  /* controlling alignment along cross axis */
+/*    gap: 1em;*/
+/*    align-content: flex-start;*/
+}
+article {
+  border: solid 3px #999;
+  padding: .5em;
+  width: 260px;
+}
+
+article:nth-child(2) {
+  align-self: center;
+}
+
+.overvideo {
+  position: fixed;
+  bottom: 100px;
+  /*
+  background: rgba(0, 0, 0, 0.1);
+  */
+  color: #f1f1f1;
+  width:100%;
+  padding: 20px;
+}
+
+/* vim: ts=2 et ai nu
+*/

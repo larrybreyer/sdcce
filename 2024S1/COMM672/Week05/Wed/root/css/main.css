@@ -57,11 +57,11 @@ nav a:link {
 }
 
 nav a:visited {
-    background-color: #666;
+    background-color: #fff;
 }
 
 nav a:hover {
-    background-color: #c9f2ed;
+    background-color: #fff;
     color: #1aa391;
     border-color: #1aa391;
 }
