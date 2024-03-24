@@ -1,16 +1,17 @@
-/* Additional styles for the body and html to handle full height */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: black;
 }
 
 .grid-container {
   display: grid;
+  margin: 20px;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto 1fr auto;
-  gap: 10px;
-  height: 100vh;
+  gap: 30px;
+  height: 80vh;
 }
 
 .header {
@@ -19,6 +20,7 @@ html, body {
   color: white;
   padding: 20px;
   text-align: center;
+  height: 30px;
 }
 
 .sidebar {
@@ -32,7 +34,7 @@ html, body {
   display: grid;
   grid-column: 2 / 3;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 30px;
 }
 
 .content-1,
