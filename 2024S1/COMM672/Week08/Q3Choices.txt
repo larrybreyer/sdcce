@@ -1,0 +1,7 @@
+The wrapping element for all the grid items.
+The dividing lines that make up the structure of the grid.
+The direct descendant of the grid container.
+A rectangular shape composed by many grid cells.
+The space between grid cells or grid areas.
+The smallest surface surrounded by 4 grid lines.
+The space between two adjacent grid lines.
