@@ -4,57 +4,65 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Verdana, sans-serif;
-  font-weight: 900;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: minmax(90px, auto) 1fr minmax(110px, auto);
   grid-template-areas: 
     "header header"
     "sidebar content"
     "footer footer";
-  gap: 25px;
+  gap: 20px;
   height: 100vh; 
   border: 40px solid rgb(50, 55, 66);
-  background: rgb(50, 55, 66);
+  background: rgb(50, 55, 66); 
 }
 
 .header {
   grid-column: 1 / -1;
-  background-color: #6a0dad;
+  background: linear-gradient(to right, #715adb, #8e7ae2);
   color: white;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  border: 8px solid Black;
 }
 
 .sidebar {
   grid-row: 2 / 3;
-  background-color: #008080;
+  background-color: #37d2c9;
+  background: linear-gradient(to top, #2da9a2, #37d2c9);
   color: white;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 8px solid Black;
 }
 
 .main-content {
   display: grid;
   grid-column: 2 / 3;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
 .content-1,
 .content-2,
 .content-3 {
-  background-color: #6a0dad;
+  background: linear-gradient(to bottom right, #645add, 60%, #31c9e6);
   color: white;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 8px solid Black;
 }
 
 .content-1 {
@@ -63,9 +71,14 @@ html, body {
 
 .footer {
   grid-column: 1 / -1;
-  background-color: #6a0dad;
+  background: linear-gradient(to right, #715adb, #8e7ae2);
   color: white;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  border: 5px solid Black;
+  /* min-height: 100px; */
 }
 
