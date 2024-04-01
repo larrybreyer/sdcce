@@ -1,0 +1,50 @@
+=== imac2.breyer.com === vim: ft=sec tw=78 nohls
+
+What I─missed─
+
+Instructions:
+Make sure you include the following items:
+
+ •  Use semnatic HTML 5
+
+ •  Format the text using some of the font techniques we have covered in class
+
+ •  Use a CSS─reset─on this webpage
+
+ •  Create a navigation bar and use flexbox to control the spacing. You will
+    need to incorporate links and a─logo─or text based company name
+
+ •  For the header element:
+
+     o  use a background image (this about the various ways in which you can
+        control the positioning of the background image within the header
+        element). Feel free to use your own image or get one from
+        https://unsplash.com
+
+     o  Make sure that the text is readable over the image, you may need to
+        use a drop shadow or two to aid in readability.
+
+     o  Create a─split screen─design in the header using flexbox.
+
+ •  Make sure all of your code is valid (use the validators!)
+
+
+Score:  10 / 20
+
+March 31, 2024 1:05 PM
+
+Hey Larry,
+
+    you did not include a─reset─file as specified in the instructions.
+
+    Please avoid using divs, unless there is no other semantic solution,
+    a─div─is not necessary for this assignment.
+
+    In the navigation area, you should have included a─logo─of some sort, in
+    addition to the navigational links.
+
+    You did not include the─split screen─technique that was demonstrated in
+    this weeks, lecture material, and requested to be included in this
+    assignment.
+
+-Emily Kay
