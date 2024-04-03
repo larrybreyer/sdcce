@@ -1,0 +1,57 @@
+html { font-size: 10px; }
+body { 
+  font-family: Verdana, sans-serif; 
+  }
+
+h1 {
+  font-size: 4em;
+  background-color: #069;
+  color: white;
+  text-align: center;
+}
+h2 {
+  font-size: 2.6em;
+  font-weight: normal;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.6em;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+main {
+  margin: 1em;
+}
+article {
+  border-bottom: solid 1px #049;
+  margin-bottom: 1em;
+}
+footer {
+  background-color: #069;
+  color: white;
+  text-align: right;
+  font-size: 8px;
+  padding: 5.em;
+}
+
+@media screen and (min-width:800px) {
+  body {
+    max-width: 1300px;
+    margin: auto;
+  }
+  main {
+    display: flex;
+    gap: 2.5em;
+  }
+  article { 
+    flex: 2 1 0;
+  }
+  aside { 
+    flex: 1 1 0;
+  }
+}
+
+/* vim: ts=2 et ai nu
+*/
