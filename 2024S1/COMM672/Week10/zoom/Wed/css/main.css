@@ -1,0 +1,130 @@
+html { font-size: 10px; 
+  font-family: Verdana, sans-serif; 
+  /* font-family: "open Sans", sans-serif; */
+}
+h1 {
+  font-size: 3.8em;
+/*
+  background-color: #069;
+  color: white;
+  text-align: center;
+*/
+}
+h2 {
+  font-size: 2.8em;
+  font-weight: normal;
+}
+p {
+  font-size: 1.5em;
+  margin-bottom: 1.2em;
+  line-height: 1.4;
+}
+ul { font-size: 1.5em;}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------- header ------------------- */
+header {
+  background: url("../images/header-sm.jpg") no-repeat top left;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 300px;
+}
+header img {
+  width: 12.5rem;
+}
+header section {
+  font-size: 80%;
+  margin-top: 38px;
+}
+header h2 {
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ------------------- navigation ----------------- */
+
+nav {
+  background-color: #3cc1f1;
+  color: white;
+  text-align: center;
+  margin-bottom: 2em;
+}
+nav li {
+  padding: .3em;
+  border-bottom: solid 1px white;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: #123456;
+}
+
+
+/* -------------------    main    ----------------- */
+article {
+  margin: 2em 1em;
+  border-bottom: solid 1px #123456;
+}
+article:last-of-type {
+  border-bottom: none;
+}
+article h2 {
+  color: #3cc1f1;
+}
+
+/* -------------------   footer   ----------------- */
+
+footer {
+  text-align: center;
+  color: #123456;
+  border-top: dotted 1px #3cc1f1;
+  padding: 5.em;
+}
+footer p {
+  font-size: 1.2em;
+}
+
+/* ------------------mid-screen layout------------- */
+@media screen and (min-width:560px) {
+  article img {
+    float: right;
+    margin-left: 10px;
+  }
+
+}
+
+/* 
+@media screen and (min-width:800px) {
+  body {
+    max-width: 1300px;
+    margin: auto;
+  }
+  main {
+    display: flex;
+    gap: 2.5em;
+  }
+  article { 
+    flex: 2 1 0;
+  }
+  aside { 
+    flex: 1 1 0;
+  }
+}
+
+/*
+images/logo.svg
+images/logo-shadow.png
+images/header-sm.jpg
+images/header-lg.jpg
+
+/* vim: ts=2 et ai nu
+*/
