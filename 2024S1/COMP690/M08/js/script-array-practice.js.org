@@ -31,3 +31,5 @@
 //STEP 16
 
 //STEP 17
+
+// vim: ft=javascript ai ts=2 et nu

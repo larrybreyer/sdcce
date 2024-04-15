@@ -1,0 +1,37 @@
+[
+ {
+   "EmployeeID": 10000001,
+   "Full Name": " Walt Disney",
+   "Ext.": 1001,
+   "Email": " memouse@disney.com",
+   "Department": " Executive"
+ },
+ {
+   "EmployeeID": 10000002,
+   "Full Name": " Mickey Mouse",
+   "Ext.": 1002,
+   "Email": " wdisney@disney.com",
+   "Department": " Sales"
+ },
+ {
+   "EmployeeID": 10000003,
+   "Full Name": " Donald Duck",
+   "Ext.": 1003,
+   "Email": " dduck@disney.com",
+   "Department": " Engineering"
+ },
+ {
+   "EmployeeID": 10000004,
+   "Full Name": " Peter Pan",
+   "Ext.": 1004,
+   "Email": " ppan@disney.com",
+   "Department": " Marketing"
+ },
+ {
+   "EmployeeID": 10000005,
+   "Full Name": " Minnie Mouse",
+   "Ext.": 1005,
+   "Email": " mymouse@disney.com",
+   "Department": " Administrative"
+ }
+]

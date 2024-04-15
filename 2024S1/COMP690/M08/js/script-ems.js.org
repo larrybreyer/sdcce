@@ -57,3 +57,4 @@ function buildGrid() {
     // STORE THE ARRAY IN STORAGE
 
 };
+// vim: ft=javascript ai ts=2 et nu

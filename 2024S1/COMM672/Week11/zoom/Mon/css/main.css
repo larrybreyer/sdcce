@@ -1,0 +1,77 @@
+html {
+  font-size: 10px;
+  font-family: Tahoma, sans-serif;
+}
+h2 {
+  font-size: 3em;
+  color: #5da271;
+  margin-bottom: .5em;
+}
+p { 
+  font-size: 1.6em;
+  margin-bottom: 1em;
+}
+header {
+  background-color: #e3ebe3;
+  padding: 1.5em;
+}
+header h1 {
+  font-size: 3em;
+  color: #c84630;
+  margin-right: auto;
+}
+.logo {
+  color: #54743b;
+  font-size: 5em;
+}
+.menuWrap {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+nav{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #2e4057;
+}
+nav ul {
+  display: none;
+}
+nav ul li {
+  border-bottom: solid 1px #dee5e5;
+}
+nav ul a {
+  display: block;
+  padding: 1.2em  1.5em;
+  color: #dee5e5;
+  text-decoration: none;
+  letter-spacing: .05em;
+  font-size: 1.6em;
+}
+nav ul a:hover {
+  background-color: #1d2a3a;
+  color: #5da271;
+}
+.menuIcon {
+  font-size: 3.6em;
+  color: #1d2a3a;
+}
+#checkbox {
+  margin-left: auto;
+  display: none;
+}
+#checkbox:checked ~ nav ul {
+  display: block;
+  
+}
+main {
+  margin-top: 1.5em;
+  padding: 0 1em;}
+
+
+
+/*
+vim: ai ts=2 et nu
+*/
