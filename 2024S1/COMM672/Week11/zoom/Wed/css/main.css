@@ -28,6 +28,8 @@ header h1 {
   display: flex;
   align-items: center;
   gap: .5em;
+  max-width: 1800px;
+  margin: auto;
 }
 nav{
   position: absolute;
@@ -37,7 +39,10 @@ nav{
   background-color: #2e4057;
 }
 nav ul {
-  display: none;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
 }
 nav ul li {
   border-bottom: solid 1px #dee5e5;
@@ -54,23 +59,86 @@ nav ul a:hover {
   background-color: #1d2a3a;
   color: #5da271;
 }
-.menuIcon {
+.menuIcon, .menuIconClose{
   font-size: 3.6em;
   color: #1d2a3a;
+}
+.menuIconClose{
+  display: none;
 }
 #checkbox {
   margin-left: auto;
   display: none;
 }
 #checkbox:checked ~ nav ul {
-  display: block;
-  
+  /* display: block; */
+  max-height: 276px;
+  transition: all .5s;
+}
+#checkbox:checked ~ label .menuIcon {
+  display:none;
+}
+#checkbox:checked ~ label .menuIconClose {
+  display:block;
 }
 main {
   margin-top: 1.5em;
-  padding: 0 1em;}
+  padding: 0 1em;
+  /*
+  margin: auto;
+  max-width: 1200px; 
+  */
+}
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8em;
+  font-style: italic;
+  background-color: #224057;
+  color: #e3ebe3;
+  padding: 1em 1.5em 0;
+}
+@media screen and (min-width: 750px) {
+  .menuIcon {
+    display: none;
+  }
+  nav ul {
+    max-height: 70px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1800px;
+    margin: auto;
+  }
+  nav ul li {
+    border-bottom: none;
+  }
+  main {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em;
+  }
+}
+@media screen and (min-width: 1250px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1800px;
+    margin: 80px auto 40px;
+  }
+  nav ul, .menuWrap {
+    max-width: 1800px;
+    margin: auto;
+  }
+  footer p:last-of-type {
 
+  }
+  footer p {
+    max-width: 1800px;
+    justify-content: space-around;
+  }
+}
 
 /*
 vim: ai ts=2 et nu
