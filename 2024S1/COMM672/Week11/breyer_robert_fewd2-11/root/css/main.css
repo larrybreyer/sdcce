@@ -1,0 +1,151 @@
+html {
+  font-size: 10px;
+  font-family: Tahoma, sans-serif;
+}
+h1.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4em;
+}
+h2 {
+  font-size: 3em;
+  color: #5da271;
+  margin-bottom: .5em;
+}
+p { 
+  font-size: 1.6em;
+  margin-bottom: 1em;
+}
+header {
+  background-color: #e3ebe3;
+  padding: 1.5em;
+}
+header h1 {
+  font-size: 3em;
+  color: #c84630;
+  margin-right: auto;
+}
+.logo {
+  color: #54743b;
+  font-size: 5em;
+}
+.menuWrap {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  max-width: 1800px;
+  margin: auto;
+}
+nav{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #2e4057;
+}
+nav ul {
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+nav ul li {
+  border-bottom: solid 1px #dee5e5;
+}
+nav ul a {
+  display: block;
+  padding: 1.2em  1.5em;
+  color: #dee5e5;
+  text-decoration: none;
+  letter-spacing: .05em;
+  font-size: 1.6em;
+}
+nav ul a:hover {
+  background-color: #1d2a3a;
+  color: #5da271;
+}
+.menuIcon, .menuIconClose{
+  font-size: 3.6em;
+  color: #1d2a3a;
+}
+.menuIconClose{
+  display: none;
+}
+#checkbox {
+  margin-left: auto;
+  display: none;
+}
+#checkbox:checked ~ nav ul {
+  /* display: block; */
+  max-height: 276px;
+  transition: all .5s;
+}
+#checkbox:checked ~ label .menuIcon {
+  display:none;
+}
+#checkbox:checked ~ label .menuIconClose {
+  display:block;
+}
+main {
+  margin-top: 1.5em;
+  padding: 0 1em;
+  /*
+  margin: auto;
+  max-width: 1200px; 
+  */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8em;
+  font-style: italic;
+  background-color: #224057;
+  color: #e3ebe3;
+  padding: 1em 1.5em 0;
+}
+@media screen and (min-width: 750px) {
+  .menuIcon {
+    display: none;
+  }
+  nav ul {
+    max-height: 70px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1800px;
+    margin: auto;
+  }
+  nav ul li {
+    border-bottom: none;
+  }
+  main {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em;
+  }
+}
+@media screen and (min-width: 1250px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1800px;
+    margin: 80px auto 40px;
+  }
+  nav ul, .menuWrap {
+    max-width: 1800px;
+    margin: auto;
+  }
+  footer p:last-of-type {
+
+  }
+  footer p {
+    max-width: 1800px;
+    justify-content: space-around;
+  }
+}
+
+/*
+vim: ai ts=2 et nu
+*/
