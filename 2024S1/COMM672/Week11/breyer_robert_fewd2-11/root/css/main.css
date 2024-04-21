@@ -8,7 +8,8 @@ h2 {
   margin-bottom: .5em;
 }
 p { 
-  font-size: 1.6em;
+  font-size: 1.8em;
+  font-family: Playfair, sans-serif;
   margin-bottom: 1em;
 }
 header {
@@ -132,7 +133,13 @@ footer {
 }
 @media screen and (min-width: 1250px) {
   main {
-    grid-template-columns: repeat(4, 1fr);
+  /*
+    grid-template-columns: repeat(3, 1fr);
+  */
+    grid-template-areas: 
+            "a a a"
+            "b c d";
+              
     max-width: 1800px;
     margin: 80px auto 40px;
   }
