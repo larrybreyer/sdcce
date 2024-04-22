@@ -1,0 +1,82 @@
+html {
+  font-size: 10px;
+  font-family: Georgia, serif;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+h1 {
+  font-size: 3.6em;
+  text-align: center;
+  font-weight: normal;
+}
+h2 {
+  font-size: 2.6em;
+}
+p { 
+  font-size: 1.5em;
+}
+main {
+  padding: 2em;
+}
+footer {
+  text-align: center;
+  font-size: .8em;
+  border-top: solid 1px #999;
+  margin-top: 2em;
+  padding: .5em;
+}
+/* form styles */
+form {
+  font-family: Verdana, sans-serif;
+}
+label {
+  font-size: 1.5em;
+  display: block;
+  margin-top: 1em;
+  padding-bottom: .4em;
+  color: #666;
+}
+input {
+  background-color: #dedede;
+  color: teal;
+  padding: .5em;
+  font-weight: bold;
+}
+input[type=submit] {
+  background-color: teal;
+  color: white;
+  display: block;
+  margin-top: 1em;
+  border: none;
+  width: 6.5em;
+}
+
+@media screen and (min-width: 550px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    max-width: 650px;
+  }
+  label[for=fName] {
+    grid-column: 1/2;
+  }
+  label[for=lName] {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  input#fName {
+  width: 65px;
+    grid-column: 1/2;
+  }
+  input#lName {
+    grid-column: 2/3;
+  }
+}
+
+
+
