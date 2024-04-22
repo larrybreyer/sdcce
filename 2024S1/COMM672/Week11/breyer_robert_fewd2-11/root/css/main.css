@@ -43,7 +43,7 @@ header h1 {
 }
 nav{
   position: absolute;
-  top: 80px;
+  top: 110px;
   left: 0;
   width: 100%;
   background-color: #2e4057;
@@ -94,12 +94,13 @@ nav ul a:hover {
 main {
   margin-top: 1.5em;
   padding: 0 1em;
-  /*
-  margin: auto;
-  max-width: 1200px; 
-  */
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
+section.people {
+
+}
 footer {
   display: flex;
   justify-content: space-between;
@@ -108,6 +109,12 @@ footer {
   background-color: #224057;
   color: #e3ebe3;
   padding: 1em 1.5em 0;
+}
+
+@media screen and (min-width: 690px) {
+  nav{
+    top: 80px;
+  }
 }
 @media screen and (min-width: 750px) {
   .menuIcon {
@@ -124,22 +131,21 @@ footer {
   nav ul li {
     border-bottom: none;
   }
-  main {
+  main section.preamble {
+    margin-top: 80px;
+  }
+  main section.people{
     margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5em;
   }
 }
+
 @media screen and (min-width: 1250px) {
-  main {
-  /*
-    grid-template-columns: repeat(3, 1fr);
-  */
-    grid-template-areas: 
-            "a a a"
-            "b c d";
-              
+  main section.people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 1800px;
     margin: 80px auto 40px;
   }
