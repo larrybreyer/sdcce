@@ -12,6 +12,7 @@ export async function fetchUsers() {
         console.error(error);
     }
     console.log(users)
+    console.log(`fetchUsers received ${users}`)
     return users;
 
 }
