@@ -7,6 +7,7 @@ let arrEmployees = await fetchUsers();
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
 let empCount    = document.querySelector('#empCount')
+let rowCount    = arrEmployees.length;
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
 buildGrid(arrEmployees)
@@ -20,6 +21,9 @@ empTable.addEventListener('click', (e) => {
             let rowIndex = e.target.parentNode.parentNode.rowIndex
             // REMOVE EMPLOYEE FROM ARRAY
             empTable.deleteRow(rowIndex)
+            rowCount = rowCount - 1;
+            empCount.value = `(${rowCount})`
+
         }
     }
 })
