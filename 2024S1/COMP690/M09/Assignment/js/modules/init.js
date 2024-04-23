@@ -1,20 +1,14 @@
 // imported by js/script.js
 export async function fetchUsers() {
-    let users = []
+    let users = [];
     try {
         const response = await fetch('./data/employees.json'); 
         users = await response.json();
-          //  for (let user of users) {
-          //      document.body.innerHTML += 
-          //               `${user.name},${user.email}<br>`
-          //  } 
     } catch (error) {
         console.error(error);
     }
-    console.log(users)
-    console.log(`fetchUsers received ${users}`)
+    //  console.log('fetchUsers received', users);
     return users;
 
 }
-// fetchUsers();
-// vim: ai ts=4 et nu
+// vim: ft=javascript ai ts=4 et nu

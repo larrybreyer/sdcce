@@ -53,3 +53,4 @@ function buildGrid(arrEmployees) {
     // UPDATE EMPLOYEE COUNT
     empCount.value = `(${arrEmployees.length})`
 }
+// vim: ft=javascript ai ts=4 et nu

@@ -1,32 +1,8 @@
 import { fetchUsers } from './modules/init.js'
 
-// CREATE AN ARRAY OF EMPLOYEES
-let arrEmployees = [
-    [34123413, "Zak Ruvalcaba", 3424, "zak@vectacorp.com", "Executive"],
-    [23424665, "Sally Smith", 2344, "sally@vectacorp.com", "Administrative"],
-    [12341244, "Mark Martin", 5352, "mark@vectacorp.com", "Sales"],
-    [14545423, "Robin Banks", 7867, "robin@vectacorp.com", "Marketing"],
-    [13413453, "Sue Wedge", 1235, "sue@vectacorp.com", "QA"]
-]
-
-let row = {}
-let empArray = []
-
-for ( let i = 0; i < arrEmployees.length; i++ ) {
-    row = {"empid":arrEmployees[i][0],
-	    "name":arrEmployees[i][1],
-	    "ext":arrEmployees[i][2],
-	    "email":arrEmployees[i][3],
-	    "dept":arrEmployees[i][4]
-    }
-    empArray.push(row)
-}
-// LOG data/employees.json
-//  console.log(JSON.stringify(empArray,null,'\t'))
-
-let users = await fetchUsers()
-console.log(`fetchUsers returned ${users}`)
-console.log('No data.  Using empArray instead.')
+// FETCH AN ARRAY OF EMPLOYEES
+let arrEmployees = await fetchUsers();
+//  console.log('fetchUsers returned', arrEmployees);
 
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
@@ -56,15 +32,15 @@ function buildGrid(arrEmployees) {
     let tbody = document.createElement('tbody')
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
-    for (let employee of empArray) {
+    for (let employee of arrEmployees) {
         tbody.innerHTML += 
         `
         <tr>
-            <td>${employee.empid}</td>
-            <td>${employee.name}</td>
-            <td>${employee.ext}</td>
-            <td><a href="mailto:${employee.email}">${employee.email}</a></td>
-            <td>${employee.dept}</td>
+            <td>${employee['empid']}</td>
+            <td>${employee['name']}</td>
+            <td>${employee['ext']}</td>
+            <td><a href="mailto:${employee['email']}">${employee['email']}</a></td>
+            <td>${employee['dept']}</td>
             <td><button class="btn btn-sm btn-danger delete">X</button></td>
         </tr>
         `
@@ -74,4 +50,4 @@ function buildGrid(arrEmployees) {
     // UPDATE EMPLOYEE COUNT
     empCount.value = `(${arrEmployees.length})`
 }
-// vim: ai ts=4 et nu
+// vim: ft=javascript ai ts=4 et nu
