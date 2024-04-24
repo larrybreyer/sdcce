@@ -52,6 +52,7 @@ input[type=submit] {
   display: block;
   margin-top: 1em;
   border: none;
+  /* width: 65px; */
   width: 6.5em;
 }
 
@@ -70,7 +71,6 @@ input[type=submit] {
     grid-row: 1;
   }
   input#fName {
-  width: 65px;
     grid-column: 1/2;
   }
   input#lName {
