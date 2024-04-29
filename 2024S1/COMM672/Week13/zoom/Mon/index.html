@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Travelers</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" >
+    <link href="css/main.css" rel="stylesheet" type="text/css" >
+  </head>
+
+  <body>
+    <!--  main.section.booking>article.cta>header>h1+p>lorem -->
+    <main class="section booking">
+      <section>
+        <article class="cta">
+          <header>
+            <h1>Book your trip today</h1>
+            <p> Ipsum minus praesentium deserunt ipsum consequatur. Explicabo ipsam cupiditate cumque ab sit reprehenderit. Ut ex mollitia tempore mollitia ipsam, quasi? Aperiam pariatur doloribus natus consectetur reiciendis quasi? Illum omnis similique </p>
+          </header>
+        </article>
+
+        <form action="#" method="post" id="bookTrip" enctype="text/plain">
+          <!--  ul.formGroup#tripType>li*3>label>input[type=radio] -->
+          <ul id="tripType" class="formGroup radCheck">
+            <li>
+              <label for="roundTrip">
+                <input type="radio" id="roundTrip" name="flightType">
+                <span>Round trip</span>
+              </label>
+            </li>
+            <li>
+              <label for="OneWay">
+                <input type="radio" id="OneWay" name="flightType">
+                <span>One way</span>
+              </label>
+            </li>
+            <li>
+              <label for="multiCity">
+                <input type="radio" id="multiCity" name="flightType">
+                <span>Multi-city</span>
+              </label>
+            </li>
+          </ul>
+          <!--  ul.formGroup#additionalServices>li*6>label>input[type=checkbox] -->
+          <ul id="additionalServices" class="formGroup radCheck">
+            <li>
+              <label for="withKid">
+                <input type="checkbox" id="withKid" name="extraServices">
+                <span>Traveling with child</span>
+              </label>
+            </li>
+            <li>
+              <label for="withPet">
+                <input type="checkbox" id="withPet" name="extraServices">
+                <span>Traveling with pet</span>
+              </label>
+            </li>
+            <li>
+              <label for="flightFear">
+                <input type="checkbox" id="flightFear" name="extraServices">
+                <span>Fear of flying</span>
+              </label>
+            </li>
+            <li>
+              <label for="mediaEquip">
+                <input type="checkbox" id="mediaEquip" name="extraServices">
+                <span>Need media equipment</span>
+              </label>
+            </li>
+            <li>
+              <label for="allergies">
+                <input type="checkbox" id="allergies" name="extraServices">
+                <span>Food Allergies</span>
+              </label>
+            </li>
+            <li>
+              <label for="wheelchair">
+                <input type="checkbox" id="wheelchair" name="extraServices">
+                <span>Travling with wheelchair</span>
+              </label>
+            </li>
+          </ul>
+          <!--  ul.formGroup#placeDate>li*4>label+input.formControl -->
+          <ul id="placeDate" class="formGroup">
+            <li>
+              <label for="flyingFrom">From</label>
+              <input class="formControl" type="text" id="flyingFrom" placeholder="City or airport">
+            </li>
+            <li>
+              <label for="flyingTo">To</label>
+              <input class="formControl" type="text" id="flyingTo" placeholder="City or airport">
+            </li>
+            <li>
+              <label for="departing">Departing date</label>
+              <input class="formControl" type="text" id="departing" placeholder="mm/dd/yyyy">
+            </li>
+            <li>
+              <label for="returning">Returning Date</label>
+              <input class="formControl" type="text" id="returning" placeholder="mm/dd/yyyy">
+            </li>
+          </ul>
+          <!--  ul.formGroup#details>li*3>label+select.formControl>option*4 -->
+          <ul id="details" class="formGroup">
+            <li>
+              <label for="numOfAdults">Adults (18+)</label>
+              <select id="numOfAdults" class="formControl" name="numOfAdults">
+                <option value="a1">1</option>
+                <option value="a2">2</option>
+                <option value="a3">3</option>
+                <option value="a4">4</option>
+              </select>
+            </li>
+            <li>
+              <label for="numOfKids">Children (0-17)</label>
+              <select id="numOfKids" class="formControl" name="numOfKids">
+                <option value="c1">1</option>
+                <option value="c2">2</option>
+                <option value="c3">3</option>
+                <option value="c4">4</option>
+                <option value="c5">5</option>
+                <option value="c6">6</option>
+              </select>
+            </li>
+            <li>
+              <label for="travelClass">Travel class</label>
+              <select id="travelClass" class="formControl" name="travelClass">
+                <option value="economy">Economy class</option>
+                <option value="biz">Business class</option>
+                <option value="first">First class</option>
+              </select>
+            </li>
+          </ul>
+          <textarea name="msg" id="msg" class="formControl" placeholder="Please specify any additional instructions"></textarea>
+          <!--  ul.formGroup.btns>li*2 -->
+          <ul class="formGroup btns">
+            <li>
+              <input class="submit" type="submit" value="Show flights">
+            </li>
+            <li>
+              <input class="reset" type="reset" value="reset">
+            </li>
+          </ul>
+        </form>
+      </section>
+    </main>
+  </body>
+
+</html>
+
+<!--
+vim: ft=html nu ai et ts=2
+      <label for=""></label>
+      <input type="" id="" name="" required placeholder="">
+-->
