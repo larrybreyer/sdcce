@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our first React page</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 </head>
 <body>
-    
+    <div id="content"></div>
+    <!--    From Lec4/index.html
+    <script>
+        ReactDOM.render(
+            React.createElement(
+                'div',
+                {title: 'Outer div'},
+                'Hello World!'
+            ),
+            document.getElementById('content')
+        )
+    </script> 
+    -->
+    <!-- Example 1 
+    <script>
+        const element = React.createElement(
+            'div',
+            {title: 'Outer div'},
+            'Hello World!'
+        )
+        ReactDOM.render(element, document.getElementById('content'))
+    </script>
+    -->
+    <!-- Example 2 -->
+    <script>
+        const element = React.createElement(
+            'div',
+            {title: 'Outer div'},
+            React.createElement('h1', null, 'Hello World!')
+        )
+        ReactDOM.render(element, document.getElementById('content'))
+    </script>
 </body>
 </html>
+<!--  vim: ft=html ai et ts=2 sw=2 nu
+-->
