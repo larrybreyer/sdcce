@@ -1,0 +1,57 @@
+html {
+  font-size 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #777;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #379F9F;
+}
+h5 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #379F9F;
+}
+h6 {
+  font-size: 1.1em;
+  font-weight: 800;
+}
+header {
+  font-size 48px;
+  padding: 2em;
+  background-color: #98D7CB;
+}
+
+header p {
+  font-style: italic;
+}
+
+footer {
+  background-color: #98D7CB;
+  text-align: center;
+}
+
+/* vim: ft=css ai et ts=2 sw=2 nu
+*/

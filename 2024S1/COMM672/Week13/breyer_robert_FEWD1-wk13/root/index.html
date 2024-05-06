@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" >
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <title>breyer_robert_FEWD1-wk13</title>
+</head>
+<body>
+  <header>
+    <h1>lease your pad</h1>
+    <p> Turn your home, trailer, tent or igloo into some fast cash! 
+      When you're not there let someone else be.  </p>
+  </header>
+  <main>
+    <section class="hero">
+      <h2> Stay here </h2>
+      <img src="images/home.jpg" alt="Dream house">
+      <p> The premise is simple, you have extra space - 
+      we connect you with someone who wants to stay there.  </p>
+    </section>
+
+    <section class="list">
+      <h2>Current Listings</h2>
+      <ul>
+        <li>
+          <img src="images/vw.jpg" alt="VW Camper" width="200">
+          <h3>VW Bus</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitr,</p>
+          <a href="#">more</a>
+        </li>
+        <li>
+          <img src="images/airstream.jpg" alt="Airstream Trailer" width="200">
+          <h3>Airstream</h3>
+          <p>Morbi pulvinar accumsan justo, sit amet bibendum est</p>
+          <a href="#">more</a>
+        </li>
+        <li>
+          <img src="images/home3.jpg" alt="Real House" width="200">
+          <h3>House</h3>
+          <p>Ut mattis felis nec libero ullamcorper imperdiet. Sed in</p>
+          <a href="#">more</a>
+        </li>
+        <li>
+          <img src="images/teepee.jpg" alt="Teepees" width="200">
+          <h3>Teepees</h3>
+          <p>Praesent non leo aliquet, tempor mi eget, pulvinar magna</p>
+          <a href="#">more</a>
+        </li>
+        <li>
+          <img src="images/treehouse.jpg" alt="Tree house" width="200">
+          <h3>Treehouse</h3>
+          <p>Etiam a risus ac diam porta aliquet tempus et nibh. Aliquam</p>
+          <a href="#">more</a>
+        </li>
+        <li>
+          <img src="images/home2.jpg" alt="House in a junble" width="200">
+          <h3>Jungle House</h3>
+          <p>Maecenas eget turpis vel nulla finibus dignissim et a libe</p>
+          <a href="#">more</a>
+        </li>
+      </ul>
+
+    </section>
+    <hr>
+    <section class="form">
+      <h2>Need more information?</h2>
+      <p>Thanks for stopping by, if you have questions, please get in touch with us:</p>
+      <form action="#" method="post" id="info" enctype="text/plain">
+        <h4>THE BASICS</h4>
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="mail">Your email:</label>
+        <input type="text" id="mail" name="mail" required>
+        <label for="phone">Your telephone number:</label>
+        <input type="text" id="phone" name="phone" required>
+        <br>
+        <label for="message">Your question or message:</label>
+        <br>
+        <textarea id="message" name="message" cols="40" rows="10"></textarea>
+        <br>
+        <h4>READY TO RENT:</h4>
+        <p>Let us know a little bit about your pad.</p>
+        <h5>Location:</h5>
+        <label for="addr">Address</label> 
+        <input type="text" id="addr" name="addr" required>
+        <br>
+        <label for="city">City</label> 
+        <input type="text" id="city" name="city" required>
+        <label for="state">State</label> 
+        <input type="text" id="state" name="state" required>
+        <label for="zip">Zip</label> 
+        <input type="text" id="zip" name="zip" required>
+        <h5>What is your pad like?</h5>
+        <h6>Pad Type</h6>
+        <ul id="padType" class="radCheck">
+            <li>
+              <label for="housePad">
+                <input type="radio" id="housePad" name="padType">
+                <span>House</span>
+              </label>
+            </li>
+            <li>
+              <label for="treePad">
+                <input type="radio" id="treePad" name="padType">
+                <span>Treehouse</span>
+              </label>
+            </li>
+            <li>
+              <label for="trailerPad">
+                <input type="radio" id="trailerPad" name="padType">
+                <span>Trailer</span>
+              </label>
+            </li>
+            <li>
+              <label for="vanPad">
+                <input type="radio" id="vanPad" name="padType">
+                <span>Van</span>
+              </label>
+            </li>
+            <li>
+              <label for="iglooPad">
+                <input type="radio" id="iglooPad" name="padType">
+                <span>Igloo</span>
+              </label>
+            </li>
+            <li>
+              <label for="teepeePad">
+                <input type="radio" id="teepeePad" name="padType">
+                <span>Teepee</span>
+              </label>
+            </li>
+            <li>
+              <label for="otherPad">
+                <input type="radio" id="otherPad" name="padType">
+                <span>Other</span>
+              </label>
+            </li>
+        </ul>
+
+        <ul id="details" class="formGroup">
+          <li>
+            <label for="numOfAdults"> <h6>Room Type</h6> </label>
+            <select id="numOfAdults" class="formControl" name="numOfAdults">
+              <option value="a1">Entire home/apt</option>
+              <option value="a2">Private tree</option>
+              <option value="a3">Full trailer</option>
+              <option value="a4">Whole van</option>
+              <option value="a4">Ice box</option>
+              <option value="a4">Teepee with separate entrance</option>
+              <option value="a4">Bring a sleeping bag</option>
+            </select>
+          </li>
+          <li>
+            <label for="numOfKids"> <h6>Bedrooms</h6> </label>
+            <select id="numOfKids" class="formControl" name="numOfKids">
+              <option value="c1">1 Bedroom</option>
+              <option value="c2">2 Bedrooms</option>
+              <option value="c3">3 Bedrooms</option>
+              <option value="c4">4 Bedrooms</option>
+              <option value="c5">5 Bedrooms</option>
+              <option value="c6">6 Bedrooms</option>
+            </select>
+          </li>
+          <li>
+            <label for="numOfKids"> <h6>Bathrooms</h6> </label>
+            <select id="numOfKids" class="formControl" name="numOfKids">
+              <option value="c1">1 Bathrooms</option>
+              <option value="c2">2 Bathrooms</option>
+              <option value="c3">3 Bathrooms</option>
+              <option value="c4">4 Bathrooms</option>
+              <option value="c5">5 Bathrooms</option>
+              <option value="c6">6 Bathrooms</option>
+            </select>
+          </li>
+        </ul>
+
+        <h6>Other amenities</h6>
+        <ul id="otherAmenities" class="radCheck">
+          <li>
+            <label for="poolAdd">
+              <input type="checkbox" id="poolAdd" name="extraFeatures">
+              <span>Pool</span>
+            </label>
+          </li>
+          <li>
+            <label for="tennisAdd">
+              <input type="checkbox" id="tennisAdd" name="extraFeatures">
+              <span>Tennis courts</span>
+            </label>
+          </li>
+          <li>
+            <label for="trailsAdd">
+              <input type="checkbox" id="trailsAdd" name="extraFeatures">
+              <span>Walking trails</span>
+            </label>
+          </li>
+          <li>
+            <label for="hikingAdd">
+              <input type="checkbox" id="hikingAdd" name="extraFeatures">
+              <span>Hiking</span>
+            </label>
+          </li>
+          <li>
+            <label for="bikesAdd">
+              <input type="checkbox" id="bikesAdd" name="extraFeatures">
+              <span>Bikes</span>
+            </label>
+          </li>
+          <li>
+            <label for="toysAdd">
+              <input type="checkbox" id="toysAdd" name="extraFeatures">
+              <span>Kids Toys</span>
+            </label>
+          </li>
+          <li>
+            <label for="petsAdd">
+              <input type="checkbox" id="petsAdd" name="extraFeatures">
+              <span>Pet friendly</span>
+            </label>
+          </li>
+        </ul>
+
+        <input class="submit" type="submit" value="Sign me up!">
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <p>Copyright 202, all rights reserved</p>
+  </footer>
+
+</body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->
