@@ -1,0 +1,7 @@
+//  A React function component
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>
+}
+ReactDOM.render(<Welcome name="Zak Ruvalcaba" />,
+    document.getElementById('content'))
+
