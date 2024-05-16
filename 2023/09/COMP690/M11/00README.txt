@@ -2,9 +2,9 @@
 
 Directory contents
 
-    ./lab16.lec/
-    ./lab17.lec/
-    ./lab18.lec/
+    ./lab16.org/
+    ./lab17.org/
+    ./lab18.org/
 
 The above directories are a composite of the contents of these ZIP archives:
 
