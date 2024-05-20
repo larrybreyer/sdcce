@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using jQuery, example 1</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+
+    <script src="../scripts/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".faq p").hide();
+
+        $(".faq h3").click(function(){
+          $(".faq p").hide();
+          //$(".faq p").show();
+          $(this).siblings().show("slow");
+        });
+
+        $(".toggle h1").hide();
+        // this is not working for me 
+        $(".toggle p").click(function(){
+          $(".toogle h1").toggle();
+        });
+
+      });  // end doc ready
+    </script>
+  </head>
+
+  <body>  
+
+    <header>
+      <h1>Hello</h1>
+      <h2>Sub heading message</h2>
+    </header>
+<!--  main>h2{FAQs}+ul.faq>li*5>h3{Question $}+p>lorem -->
+    <main>
+      <h2>FAQs</h2>
+      <ul class="faq">
+        <li>
+          <h3>Question 1</h3>
+          <p> Amet corrupti porro dolores odit qui totam Atque numquam aspernatur magni aut dolor. Iste repellendus necessitatibus architecto voluptatem facilis Similique veritatis quod nam itaque qui. Aliquam repudiandae maxime quae esse </p>
+        </li>
+        <li>
+          <h3>Question 2</h3>
+          <p> Amet reiciendis quibusdam impedit praesentium ea dicta. Soluta voluptate rerum deserunt consequuntur odit. Modi ut veritatis quis sequi debitis mollitia. Odio dolor sit delectus autem aliquam et. Repellendus molestiae natus </p>
+        </li>
+        <li>
+          <h3>Question 3</h3>
+          <p>
+            Sit quod vel esse ad consectetur Tenetur laboriosam ea magni tempore fugit. Molestiae in debitis rem ex modi! Aperiam dicta laboriosam ad hic veniam! Culpa placeat odit dolores aspernatur facilis
+          </p>
+        </li>
+        <li>
+          <h3>Question 4</h3>
+          <p>
+            Sit sed eaque ut accusamus ullam excepturi? Ipsam molestias cumque rem veniam ullam. Neque ullam voluptatibus placeat eaque consequatur Alias deleniti odit dolores sapiente velit Neque consequuntur tempora quasi suscipit?
+          </p>
+        </li>
+        <li>
+          <h3>Question 5</h3>
+          <p>
+            Elit rerum similique suscipit perspiciatis laudantium? Laboriosam ex quam error nesciunt debitis aliquam? Eligendi laboriosam delectus eius perspiciatis dolore hic earum! Debitis est quasi tempore quo beatae. Obcaecati deserunt alias.
+          </p>
+        </li>
+      </ul>
+      <!--  article.toggle>p{read it}+p{hide it}+h1{have a great day} -->
+      <article class="toggle">
+        <p>special message</p>
+        <h1>have a great day :)</h1>
+      </article>
+    </main>
+
+    <footer>
+      <p>Copyright 2024</p>
+    </footer>
+    
+
+  	
+  </body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->

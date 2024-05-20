@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Using jQuery</title>
+      <link  href="css/reset.css" rel="stylesheet" type="text/css">
+      <link href="css/main.css" rel="stylesheet" type="text/css">
+      
+      <script src="scripts/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+      <script>
+        $(document).ready(function() {
+            /*
+            $(selector).action();
+            $("h1").hide();
+            */
+            $("main article:nth-of-type(2)").hide(); //selecting using css type selectors
+            
+            $("a.show").click(function(){
+                $("main article:nth-of-type(2)").show("slow");
+                $(".show").hide();
+            });
+            
+            $("a.hide").click(function(){
+                $("main article:nth-of-type(2)").hide(2000);
+                $(".show").show();
+            });
+        });
+      </script>
+  </head> 
+   
+  <body>
+<!--     header>h1{hello}+h2{sub heading message}-->
+      <header>
+          <h1>Hello</h1>
+          <h2>Sub heading message</h2>
+      </header>
+<!--      main>article*3>h2{Article Heading $}+p>lorem-->
+     <main>
+         <article>
+             <h2>Article Heading 1</h2>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione suscipit, tempora soluta necessitatibus voluptatum reiciendis obcaecati ipsam ullam illum animi fugiat quae, veniam, mollitia vitae, nemo quibusdam ab nihil corrupti!</p>
+         </article>
+         <article>
+             <h2>Article Heading 2</h2>
+             <p>Recusandae magni, corporis, soluta inventore consequatur labore voluptas cupiditate non magnam nemo vel dolorum officia, cumque ducimus iste ullam amet obcaecati. Ducimus obcaecati reiciendis ut dignissimos id mollitia quasi veritatis. <a href="#" class="hide">hide this article</a></p>
+         </article>
+         <a href="#" class="show">Show article 2</a>
+         <article>
+             <h2>Article Heading 3</h2>
+             <p>Ipsa hic nemo eius aliquid. Nostrum possimus beatae, consequatur tempore assumenda repellat, eius ut asperiores atque voluptatem ad culpa libero labore fugiat mollitia officiis maiores dolores aperiam sapiente at. Debitis.</p>
+         </article>
+     </main>
+      
+<!--      footer>p{Copyright 2024}-->
+      <footer>
+          <p>Copyright 2024</p>
+      </footer>
+      
+  </body> 
+    
+</html>

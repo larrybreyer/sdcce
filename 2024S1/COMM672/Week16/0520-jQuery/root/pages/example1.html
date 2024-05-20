@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Using jQuery, example 1</title>
+      <link  href="../css/reset.css" rel="stylesheet" type="text/css">
+      <link href="../css/main.css" rel="stylesheet" type="text/css">
+      
+      <script src="../scripts/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+      <script>
+        $(document).ready(function() {
+           $(".faq p").hide();
+            
+            $(".faq h3").click(function(){
+                $(".faq p").hide();
+                $(this).siblings().show();
+            });
+            
+            $(".toggle h1").hide();
+            $(".toggle p").click(function(){
+                $(".toggle h1").fadeToggle(2500);
+            });
+            
+        }); // end doc ready
+      </script>
+  </head> 
+   
+  <body>
+<!--     header>h1{hello}+h2{sub heading message}-->
+      <header>
+          <h1>Hello</h1>
+          <h2>Sub heading message</h2>
+      </header>
+
+<!--    main>h2{FAQs}+ul.faq>li*5>h3{question $}+p>lorem-->
+     <main>
+         <h2>FAQs</h2>
+         <ul class="faq">
+             <li>
+                 <h3>question 1</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam atque doloremque delectus, placeat ex! Nemo voluptatem blanditiis, labore ipsam non deserunt maxime eveniet quo qui, officiis, assumenda fugit consectetur hic.</p>
+             </li>
+             <li>
+                 <h3>question 2</h3>
+                 <p>Illo explicabo inventore a ratione incidunt omnis architecto magni ut temporibus assumenda tenetur, rerum laborum itaque iusto, facilis aperiam, quos quo distinctio dolores alias. Quasi perferendis blanditiis libero nihil dolores?</p>
+             </li>
+             <li>
+                 <h3>question 3</h3>
+                 <p>Accusantium, neque provident ipsa eius enim totam ipsum inventore consequuntur voluptatum ex, earum amet tempore laboriosam obcaecati aspernatur ea, pariatur assumenda fugiat velit, itaque soluta voluptatem dolorem possimus praesentium? Iste?</p>
+             </li>
+             <li>
+                 <h3>question 4</h3>
+                 <p>Ipsa pariatur veritatis consectetur inventore quibusdam voluptatem optio quas consequatur quisquam delectus molestiae perferendis reprehenderit, iste numquam voluptate cum neque, commodi ut dolores odit, similique nihil maxime sint voluptatum. Nihil?</p>
+             </li>
+             <li>
+                 <h3>question 5</h3>
+                 <p>Atque facilis voluptatibus reiciendis voluptate magnam ratione tempore ad architecto corporis excepturi, culpa delectus illo suscipit tenetur. Culpa id sunt voluptas iusto, dignissimos, sapiente exercitationem porro, fugiat libero maxime incidunt.</p>
+             </li>
+         </ul>
+         
+<!--         article.toggle>p{read it}+p{hide it}+h1{Have a great day}    -->
+         <article class="toggle">
+             <p>special message</p>
+             <h1>Have a great day :)</h1>
+         </article>
+     </main>
+      
+<!--      footer>p{Copyright 2024}-->
+      <footer>
+          <p>Copyright 2024</p>
+      </footer>
+      
+  </body> 
+    
+</html>

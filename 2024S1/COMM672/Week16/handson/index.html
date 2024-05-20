@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using jQuery</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="scripts/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        /* 
+        $(selector).action();
+        $("h1").hide();
+        */
+        $("main article:nth-of-type(2)").hide();  // using css type selectors
+
+        $("a.show").click(function(){
+          $("main article:nth-of-type(2)").show("slow");  // using css type selectors
+          $("a.show").hide();
+        });
+
+        $("a.hide").click(function(){
+          $("main article:nth-of-type(2)").hide(2000);  // 2 seconds
+          $("a.show").show();
+        });
+      });
+    </script>
+  </head>
+
+  <body>  
+
+    <header>
+      <h1>Hello</h1>
+      <h2>Sub heading message</h2>
+    </header>
+
+    <main>
+      <article>
+        <h2> Article heading 1</h2>
+        <p> Elit illo excepturi cumque optio saepe, sapiente. Eveniet dolores harum expedita sapiente necessitatibus dolorum Eligendi animi harum quod nihil non obcaecati odio Id dolorum placeat nesciunt molestiae dolorum Rem tenetur?  </p>
+      </article>
+      <article>
+        <h2> Article heading 2</h2>
+        <p> Amet quo sint libero adipisci ullam. Tempora fuga ab nemo veritatis quos Fugiat qui veniam nisi vero eos ut ex sint incidunt Voluptatem exercitationem unde quas veritatis soluta! Reiciendis dignissimos <a href="#" class"hide">hide this article</a></p>
+      </article>
+      <a href="#" class="show">Show article 2</a>
+      <article>
+        <h2> Article heading 3</h2>
+        <p> Consectetur exercitationem amet sint tempore adipisci Autem ad quasi fugit debitis nemo Autem corrupti nesciunt consectetur non corporis Consequatur ipsam officia autem reprehenderit explicabo quos Ipsam minima animi officiis doloribus.  </p>
+      </article>
+    </main>
+    <footer>
+      <p>Copyright 2024</p>
+    </footer>
+    
+
+  	
+  </body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->
