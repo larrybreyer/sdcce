@@ -1,0 +1,61 @@
+html {
+	 font-family: "Open Sans", sans-serif;
+	 color: #03396C;
+	
+}
+
+
+header {
+	 background-color: #03396C;
+	
+}
+
+
+
+
+
+
+.menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+
+background-color: #FFFFFF;
+}
+
+.logo {
+max-width: 150px;
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li:last-child {
+margin-right: 0;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+}
+
+.enroll {
+	background: #B3CDE0;
+	
+}
+
+
+footer {
+	
+	background-color: #03396C;
+	
+}
+
