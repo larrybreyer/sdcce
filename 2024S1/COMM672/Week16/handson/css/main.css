@@ -1,12 +1,12 @@
-vim: ai ts=2 et nu
 body {
   font-family: Verdana, sans-serif;
+  margin: 2em;
 }
 h1 {
   font-size: 38px;
   font-weight: normal;
 }
-h2 {
+h2{
   font-size: 30px;
   margin-bottom: 12px;
 }
@@ -29,7 +29,6 @@ p {
   border-bottom: solid 1px #ccc;
   margin-bottom: 10px;
   cursor: pointer;
-
 }
 .toggle {
   margin: 20px auto;
@@ -38,3 +37,5 @@ p {
   color: orangered;
   text-decoration: underline;
 }
+/* vim: ai ts=2 et nu
+*/

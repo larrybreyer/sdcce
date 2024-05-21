@@ -3,37 +3,35 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using jQuery, example 1</title>
-    <link rel="stylesheet" href="../css/reset.css" type="text/css">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-
-    <script src="../scripts/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function(){
-        $(".faq p").hide();
-
-        $(".faq h3").click(function(){
-          $(".faq p").hide();
-          //$(".faq p").show();
-          $(this).siblings().show("slow");
-        });
-
-        $(".toggle h1").hide();
-        // this is not working for me 
-        $(".toggle p").click(function(){
-          $(".toogle h1").toggle();
-        });
-
-      });  // end doc ready
-    </script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Using jQuery, example 1</title>
+      <link rel="stylesheet" href="../css/reset.css" type="text/css">
+      <link rel="stylesheet" href="../css/main.css" type="text/css">
+  
+      <script src="../scripts/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+      <script>
+        $(document).ready(function() {
+           $(".faq p").hide();
+  
+           $(".faq h3").click(function(){
+               $(".faq p").hide();
+               $(this).siblings().show();
+           });
+  
+           $(".toggle h1").hide();
+           $(".toggle p").click(function(){
+               $(".toggle h1").fadeToggle(2500);
+           });
+  
+        });  // end doc ready
+      </script>
   </head>
 
   <body>  
-
+<!--     header>h1{hello}+h2{sub heading message}-->
     <header>
       <h1>Hello</h1>
       <h2>Sub heading message</h2>
