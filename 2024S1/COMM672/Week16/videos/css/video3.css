@@ -1,0 +1,11 @@
+html { fond-size: 10px; }
+body {
+  font: 1.5rem Verdana, Arial, sans-serif;
+  color: #333;
+  margin: 2rem;
+}
+h1 { font-size: 4rem; margin-bottom: .5em;}
+
+
+/* vim: ft=css ai et ts=2 nu
+*

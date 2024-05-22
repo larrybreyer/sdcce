@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 3 - Selector</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/video3.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('h1').css('color','#069');
+        $('#highlight').css('background','#f9d453');
+        $('.special').css('color','#3512bf');
+        $('img[alt="Tiger"]').css('border', 'solid 5px #069');
+        $('.frame img').css('padding', '10px');
+        $('p:even').css('background', '#f99fc6');
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1>jQuery selector example</h1>
+    <p>This is a plain old paragraph element.</p>
+    <p id="highlight">This paragraph element has an id with a value of 'highlight'.</p>
+    <p class="special">And this paragraph element has a class of 'special'.</p>
+    <p>This paragraph is the 4th one on the page.</p>
+    <figure>
+      <img src="images/01.jpg" alt="Lion">
+      <figcaption class="special">A lion staring at you.</figcaption>
+    </figure>
+
+    <figure class="frame">
+      <img src="images/02.jpg" alt="Tiger">
+      <figcaption>A tiger sizing you up.</figcaption>
+    </figure>
+
+  </body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->
