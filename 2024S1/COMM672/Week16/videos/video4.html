@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 4 - Events</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/video4.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"> </script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+          $(this).slideUp(); 
+        });
+
+        $('.dblClick').dblclick(function(){
+          $(this).slideUp();
+        });
+
+        $('.hover').hover(function(){
+          $(this).addClass('highlight');
+        }, function(){
+          $(this).removeClass('highlight');
+        });
+
+        $(window).keypress(function(){
+          $('h1').css('color','red');
+        });
+
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1>jQuery event examples</h1>
+    <p class="click">Click me</p>
+    <p class="dblClick">Double click me</p>
+    <p class="hover">Hover over me</p>
+
+  </body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->
