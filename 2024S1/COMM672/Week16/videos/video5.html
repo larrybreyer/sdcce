@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 5 - Show/Hide</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/video5.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('.hide').click(function(){
+          $('.basic').hide();
+          $('.fast').hide('fast');
+          $('.slow').hide(1500);
+        });
+
+        $('.show').click(function(){
+          $('.basic').show();
+          $('.fast').show('slow');
+          $('.slow').show(100);
+        });
+
+        $('.toggle').click(function(){
+          $('.basic').toggle();
+        });
+      });
+    </script>
+
+  </head>
+
+  <body>
+  	<h1>jQuery show/hide effects</h1>
+    <a class="show" href="#">show</a> 
+    <a class="hide" href="#">hide</a>
+    <a class="toggle" href="#">toggle</a>
+    <p class="basic">Can you see me?</p>
+    <p class="fast">I show/hide fast</p>
+    <p class="slow">I show/hide slow</p>
+    <!-- Note:  Emmet with not insert the # for you -->
+  </body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->

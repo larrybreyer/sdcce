@@ -1,0 +1,68 @@
+html { font-size: 10px; }
+body {
+  font: 1.5rem Verdana, Arial, sans-serif;
+  color: #333;
+}
+h1 { 
+  font-size: 4rem; 
+  margin-bottom: .5em;
+}
+h2 { 
+  font-size: 3rem; 
+  margin-bottom: .5em;
+}
+p { 
+  font-size: 2rem; 
+  margin-bottom: 2rem;
+}
+main { padding: 2rem; }
+
+a.btn {
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 1.5rem;
+  color: #666;
+  background: #fff;
+  border: 1px solid #666;
+}
+
+a.btn:hover {
+  border: 1px solid #666;
+  background: #666;
+  color: #fff;
+}
+
+/* modal window styles */
+.popupOverlay {
+  background-color: rgba(0,0,0, .8);
+  border: solid 2px #666;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+.popupContent {
+  background-color: #fff;
+  border: solid 2px #666;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px rgba(0,0,0, .3);
+  padding: 4rem;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  visibility: hidden;
+}
+
+.popupOverlay.active, .popupContent.active {
+  visibility: visible;
+}
+/* .highlight {
+  background-color: #f9ca23;
+  border-bottom: solid 3px #5a95fa;
+} */
+/* vim: ft=css ai et ts=2 nu
+*

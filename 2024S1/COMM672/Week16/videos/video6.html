@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 6 - Modal Pop-up</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/video6.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('.open').click(function(){
+          $('.popupOverlay, .popupContent').addClass('active');
+        });
+        $('.close, .popupOverlay').click(function(){
+          $('.popupOverlay, .popupContent').removeClass('active');
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div class="popupOverlay">
+      <div class="popupContent">
+        <h2>Pop-up window</h2>
+        <p>This is our new modal window content, you can literally put anything in here, text, images, whatever you want.</p>
+        <a href="#" class="btn close">I'm done, close away</a>
+      </div>
+    </div>
+
+    <main>
+      <h1>Here's some regular page content</h1>
+      <p>Build out the page as you normally would and then make a link that will open the modal content.</p>
+      <a href="#" class="btn open">Check it out!</a>
+    </main>
+
+  </body>
+</html>
+
+<!-- vim: ft=html nu ai et sw=2 ts=2
+-->

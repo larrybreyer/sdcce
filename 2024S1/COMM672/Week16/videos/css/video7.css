@@ -1,0 +1,40 @@
+html { 
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+header { background-color: #91d2d9; }
+#section1 { background-color: #5cb6bf; }
+#section2 { background-color: #3aa1ab; }
+#section3 { background-color: #1d828c; }
+
+nav,footer { background-color: #333; }
+
+h1 { 
+  font-size: 4rem; 
+  font-weight: 400;
+}
+h2 { 
+  font-size: 3rem; 
+  font-weight: 400;
+}
+p { 
+  font-size: 1.5rem; 
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+nav ul {
+  font-size: 1.5rem; 
+  font-weight: 100;
+}
+nav a {
+  display: block;
+  padding: 15px;
+}
+nav a, footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* vim: ft=css ai et ts=2 nu
+*
