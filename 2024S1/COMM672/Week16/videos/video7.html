@@ -17,18 +17,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"></script>
-    <script>
-      $(document).ready(function(){
-
-      });
-    </script>
   </head>
-  <body>
+  <body id="pageTop">
     <nav>
       <ul>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
+        <li><a href="#section1">1</a></li>
+        <li><a href="#section2">2</a></li>
+        <li><a href="#section3">3</a></li>
       </ul>
     </nav>
     <header>
@@ -61,13 +56,25 @@
       Aut aliquid ullam.  </p>
     </section>
     <footer>
-      <a href="#">
+      <a href="#pageTop" class="top">
         <span class="mi material-icons-outlined">
           navigation
         </span>
       </a>
     </footer>
 
+    <script>
+      $(document).ready(function(){
+        $('.top').hide();
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 200) {
+            $('.top').fadeIn();
+          }else{
+            $('.top').fadeOut();
+          }
+        });
+      });
+    </script>
 
   </body>
 </html>

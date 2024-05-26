@@ -1,14 +1,28 @@
 html { 
   font-family: 'Lato', sans-serif;
   color: #fff;
+  scroll-behavior: smooth;  /* not in css.vim */
+  /* I added it to ~/log/vim.d/after/syntax/css.vim */
+}
+body > * { /* applies to all descendants */
+  height: 100vh;   /* 100% vertical height of visible window */
+  padding: 2rem 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 header { background-color: #91d2d9; }
 #section1 { background-color: #5cb6bf; }
 #section2 { background-color: #3aa1ab; }
 #section3 { background-color: #1d828c; }
 
-nav,footer { background-color: #333; }
-
+nav,footer { 
+  background-color: #333; 
+  height: auto;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
 h1 { 
   font-size: 4rem; 
   font-weight: 400;
@@ -26,6 +40,18 @@ p {
 nav ul {
   font-size: 1.5rem; 
   font-weight: 100;
+  display: flex;
+  gap: 1rem;
+}
+nav li {
+  background-color: rgba(255,255,255,.2);
+  border: solid 1px #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nav a {
   display: block;
@@ -35,6 +61,25 @@ nav a, footer a {
   color: #fff;
   text-decoration: none;
 }
+.top { 
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  display: block;
+}
+.mi {
+  background-color: rgba(255,255,255,.2);
+  border: solid 1px #fff;
+  border-radius: 50%;
+  padding: 7px;
+}
 
+@media screen and (min-width: 600px) {
+  body > * {
+    padding: 2rem 10vh;
+  }
+  nav { align-items: end;}
+  p {max-width: 1000px;
+}
 /* vim: ft=css ai et ts=2 nu
 *

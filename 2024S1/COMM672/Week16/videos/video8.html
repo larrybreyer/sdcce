@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Video 8 - Carousel</title>
+
+    <link href='css/slick.css' rel='stylesheet' >
+    <link href='css/slick-theme.css' rel='stylesheet' >
+    <link href='css/reset.css' rel='stylesheet' type='text/css'>
+    <link href='css/video8.css' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <h1>Carousel Examples</h1>
+    <div class='carousel'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+    </div>
+
+    <section class='crossFade'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+      <img src='images/01.jpg' alt='lion'>
+      <img src='images/02.jpg' alt='tiger'>
+      <img src='images/03.jpg' alt='bear'>
+    </section>
+
+    <section class='multi'>
+      <figure>
+        <img src='images/01.jpg' alt='lion'>
+        <figcaption>angry</figcaption>
+      </figure>
+      <figure>
+        <img src='images/02.jpg' alt='lion'>
+        <figcaption>concerned</figcaption>
+      </figure>
+      <figure>
+        <img src='images/03.jpg' alt='lion'>
+        <figcaption>sleepy</figcaption>
+      </figure>
+      <figure>
+        <img src='images/01.jpg' alt='lion'>
+        <figcaption>angry</figcaption>
+      </figure>
+      <figure>
+        <img src='images/02.jpg' alt='lion'>
+        <figcaption>concerned</figcaption>
+      </figure>
+      <figure>
+        <img src='images/03.jpg' alt='lion'>
+        <figcaption>sleepy</figcaption>
+      </figure>
+    </section>
+
+    <!--  -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' ></script>
+
+    <script src='scripts/slick.min.js'></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          centerMode: true
+        });
+
+        $('.crossFade').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+
+        $('.multi').slick({
+          dots: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerMode: false
+        }); 
+      });
+    </script>
+
+  </body>
+</html>
+
+<!-- vim: ft=html nu ai et sw=2 ts=2
+-->
