@@ -1,0 +1,1 @@
+../lightbox2-2.11.4/dist/js/lightbox.js
