@@ -119,7 +119,7 @@ var EmployeeFilter = /*#__PURE__*/function (_React$Component) {
     }
   }]);
   return EmployeeFilter;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component)); // vim: ai ts=2 et nu
 
 
 /***/ }),
@@ -256,7 +256,7 @@ var EmployeeList = /*#__PURE__*/function (_React$Component) {
     }
   }]);
   return EmployeeList;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component)); // vim: ai ts=2 et nu
 
 
 /***/ }),
@@ -275,6 +275,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // import ReactDOM from 'react-dom'
 
+
+
+// Just adding a comment to see if it forces a recompile
 
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('content'));
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_EmployeeList_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
