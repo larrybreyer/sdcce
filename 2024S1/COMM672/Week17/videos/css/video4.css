@@ -2,26 +2,44 @@
     *********************************************************
     **      TABLE OF CONTENTS
     **
-    **  1. CSS_Reset
-    **  2. Global_Styles
-    **  3. Header_and_Nav_Content
-    **  4. Sidebar
-    **  5. Main_Body_Content
-    **  6. Widget_Content
-    **  7. Generic_Selectors (Common to all pages)
-    **  8. Footer_Content
-    **  9. Forms_and_Comments
+    **  1. Project_details: color/typography info
+    **  2. CSS_Reset
+    **  3. Global_Styles
+    **  4. Header_and_Nav_Content
+    **  5. Sidebar
+    **  6. Main_Body_Content
+    **  7. Widget_Content
+    **  8. Generic_Selectors (Common to all pages)
+    **  9. Footer_Content
+    ** 10. Forms_and_Comments
+    *********************************************************
+    **  1. Project_details: color/typography info
+    **
+    **  Project Details
+    **    Name:             Nessie, find the truth
+    **    Author:           Emily Kay
+    **    Version Date:     2024/06/02
+    **    Version Number:   1.1
+    **    Notes:            blah, blah, blah
+    **
+    **  Color Guide
+    **    Color         Purpose     Hex Value
+    **    light teal    nav         #5cafc1
+    **
+    **  Typography Guide
+    **    Section       Font
+    **    headings      Lilita One
+    **    body          Maven Pro
+    **    quotes        Georgia, Italic
     **
     *********************************************************
-*/
-/*
-    *********************************************************
-    **  1. CSS_Reset
-    *********************************************************
+ */
+
+/* 
+    **  2. CSS_Reset
         ERIC MEYER RESET (MODIFIED)
    http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+   v2.0 | 20110126 | License: none (public domain)
 */
 * {
 	margin: 0;
@@ -44,42 +62,42 @@ ol, ul {
 }
 /* 
     *********************************************************
-    **  2. Global_Styles
+    **  3. Global_Styles
     *********************************************************
  */
 /* 
     *********************************************************
-    **  3. Header_and_Nav_Content
+    **  4. Header_and_Nav_Content
     *********************************************************
  */
 /* 
     *********************************************************
-    **  4. Sidebar
+    **  5. Sidebar
     *********************************************************
  */
 /* 
     *********************************************************
-    **  5. Main_Body_Content
+    **  6. Main_Body_Content
     *********************************************************
  */
 /* 
     *********************************************************
-    **  6. Widget_Content
+    **  7. Widget_Content
     *********************************************************
  */
 /* 
     *********************************************************
-    **  7. Generic_Selectors (Common to all pages)
+    **  8. Generic_Selectors (Common to all pages)
     *********************************************************
  */
 /* 
     *********************************************************
-    **  8. Footer_Content
+    **  9. Footer_Content
     *********************************************************
  */
 /* 
     *********************************************************
-    **  9. Forms_and_Comments
+    ** 10. Forms_and_Comments
     *********************************************************
  */
 

@@ -2,26 +2,44 @@
     *********************************************************
     **      TABLE OF CONTENTS
     **
-    **  1. CSS_Reset
-    **  2. Global_Styles
-    **  3. Header_and_Nav_Content
-    **  4. Sidebar
-    **  5. Main_Body_Content
-    **  6. Widget_Content
-    **  7. Generic_Selectors (Common to all pages)
-    **  8. Footer_Content
-    **  9. Forms_and_Comments
+    **  1. Project_details: color/typography info
+    **  2. CSS_Reset
+    **  3. Global_Styles
+    **  4. Header_and_Nav_Content
+    **  5. Sidebar
+    **  6. Main_Body_Content
+    **  7. Widget_Content
+    **  8. Generic_Selectors (Common to all pages)
+    **  9. Footer_Content
+    ** 10. Forms_and_Comments
+    *********************************************************
+    **  1. Project_details: color/typography info
+    **
+    **  Project Details
+    **    Name:             Nessie, find the truth
+    **    Author:           Emily Kay
+    **    Version Date:     2024/06/02
+    **    Version Number:   1.1
+    **    Notes:            blah, blah, blah
+    **
+    **  Color Guide
+    **    Color         Purpose     Hex Value
+    **    light teal    nav         #5cafc1
+    **
+    **  Typography Guide
+    **    Section       Font
+    **    headings      Lilita One
+    **    body          Maven Pro
+    **    quotes        Georgia, Italic
     **
     *********************************************************
-*/
-/*
-    *********************************************************
-    **  1. CSS_Reset
-    *********************************************************
+ */
+
+/* 
+    **  2. CSS_Reset
         ERIC MEYER RESET (MODIFIED)
    http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+   v2.0 | 20110126 | License: none (public domain)
 */
 * {
 	margin: 0;
@@ -42,69 +60,75 @@ body {
 ol, ul {
 	list-style: none;
 }
-/* 
-    *********************************************************
-    **  2. Global_Styles
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  3. Header_and_Nav_Content
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  4. Sidebar
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  5. Main_Body_Content
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  6. Widget_Content
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  7. Generic_Selectors (Common to all pages)
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  8. Footer_Content
-    *********************************************************
- */
-/* 
-    *********************************************************
-    **  9. Forms_and_Comments
-    *********************************************************
- */
 
+/* 
+    *********************************************************
+    **  3. Global_Styles
+    *********************************************************
+ */
+body {
+    background: url(../images/bg1.jpg) fixed no-repeat;
+    background-size: cover;
+    font: normal 400 100% "Maven Pro", sans-serif;
+    margin: 0 auto;
+    max-width: 960px;
+ /* font-style: normal;
+    font-weight: 400;
+    font-size: 100%;
+    font-family: "Maven Pro", Arial, Helvetica, Verdana, sans-serif; */
+ /* background-image: url(../images/bg1.jpg);
+    background-attachment: fixed; */
+}
+h1, h2, h3, h4 { font-family: "Lilita One", sans-serif; }
 h1 {
-    font-family: "Lilita One", Arial, Helvetica, Verdana, sans-serif;
     font-size: 2em;
-    text-shadow: 2px 3px 3px #ffffff;
-    text-shadow: 0px 0px 6px #ffffff, 2px 2px 3px #ffffff;
-    text-align: center;
     letter-spacing: 2px;
+    margin: 1em 0;
+    text-align: center;
+    text-shadow: 0px 0px 6px #ffffff, 2px 2px 3px #ffffff;
 }
 h2 {
-    font-family: "Lilita One", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 1.5em;
     letter-spacing: 1px;
+    margin: 1em 0;
 }
-body {
-    font-family: "Maven Pro", Arial, Helvetica, Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    background-image: url(../images/bg1.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    max-width: 960px;
-    margin: 0 auto;
+p { margin-bottom: 1em; }
+a {
+    color: #155967;
+    text-decoration: none;
 }
+a:hover { color: #3e907a; }
+
+/*  HERE
+    *********************************************************
+    **  4. Header_and_Nav_Content
+    *********************************************************
+ */
+/* 
+    *********************************************************
+    **  5. Sidebar
+    *********************************************************
+ */
+/* 
+    *********************************************************
+    **  6. Main_Body_Content
+    *********************************************************
+ */
+/* 
+    *********************************************************
+    **  7. Widget_Content
+    *********************************************************
+ */
+/* 
+    *********************************************************
+    **  8. Generic_Selectors (Common to all pages)
+    *********************************************************
+ */
+/* 
+    *********************************************************
+    **  9. Footer_Content
+    *********************************************************
+ */
 footer {
     background-color: #155967;
     color: #ffffff;
@@ -114,7 +138,7 @@ footer {
     margin-top: 5%;
     margin-bottom: 5%;
     padding-left: 10px;
-    padding-top: 100px;
+    padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     clear: both;
@@ -138,9 +162,7 @@ nav {
     font-style: normal;
     height:2.8em;
 }
-#navWrap {
-    padding-top: .75em
-}
+#navWrap { padding-top: .75em }
 .sectionLeft {
     width: 90%;
     margin-left: 5%;
@@ -179,13 +201,6 @@ header {
     width: 30%;
     height: 30%;
     min-width: 180px;
-}
-a {
-    color: #155967;
-    text-decoration: none;
-}
-a:hover {
-    color: #3e907a;
 }
 nav a {
     color: #5cafc1;
