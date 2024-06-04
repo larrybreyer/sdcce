@@ -1,18 +1,18 @@
-/* 
-    *********************************************************
+/*  *********************************************************
     **      TABLE OF CONTENTS
     **
     **  1. Project_details: color/typography info
     **  2. CSS_Reset
     **  3. Global_Styles
     **  4. Header_and_Nav_Content
-    **  5. Sidebar
-    **  6. Main_Body_Content
-    **  7. Widget_Content
-    **  8. Generic_Selectors (Common to all pages)
-    **  9. Footer_Content
-    ** 10. Forms_and_Comments
-    *********************************************************
+    **  5. Main_Body_Content
+    **  6. Generic_Selectors
+    **  7. Footer_Content
+    **  8. Media_Queries
+    *********************************************************/
+
+/*  *********************************************************
+    **
     **  1. Project_details: color/typography info
     **
     **  Project Details
@@ -26,16 +26,18 @@
     **    Color         Purpose     Hex Value
     **    light teal    nav         #5cafc1
     **
+    **
+    **
+    **
     **  Typography Guide
     **    Section       Font
     **    headings      Lilita One
     **    body          Maven Pro
     **    quotes        Georgia, Italic
     **
-    *********************************************************
- */
+    *********************************************************/
 
-/* 
+/*  *********************************************************
     **  2. CSS_Reset
         ERIC MEYER RESET (MODIFIED)
    http://meyerweb.com/eric/tools/css/reset/ 
@@ -137,44 +139,37 @@ nav a:hover { color: #ffffff; }
 
 /*  
     *********************************************************
-    **  6. Main_Body_Content
+    **  5. Main_Body_Content
     *********************************************************
  */
 
 .colA {
     float: left;
     margin: 0 5%;
- /* margin-left: 5%;
-    margin-right: 5%; */
     width: 90%;
 }
+
 .colB {
     background-color: #f2f2f2;
     border-bottom: 10px solid #90b6b0;;
     border-top: 10px solid #90b6b0;;
     float: right;
     margin: 0 5% 5%;
- /* margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%; */
     padding: 0 2% 0 3%;
- /* padding-left: 10px;
-    padding-right: 8px; */
     width: 84%;
 }
-
-
-
-/*  HERE
+/*  
     *********************************************************
-    **  8. Generic_Selectors (Common to all pages)
+    **  6. Generic_Selectors
     *********************************************************
  */
+
 /* 
     *********************************************************
-    **  9. Footer_Content
+    **  7. Footer_Content
     *********************************************************
  */
+
 footer {
     background-color: #155967;
     clear: both;
@@ -182,79 +177,41 @@ footer {
     font-size: x-small;
     font-weight: 600;
     margin: 5% auto;
- /* margin-bottom: 5%;
-    margin-top: 5%;  */
     padding: 10px;
- /* padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;  */
     text-align: center;
 }
+
+/* 
+    *********************************************************
+    **  8. Media_Queries
+    *********************************************************
+ */
 
 @media screen and (min-width:600px) {
-
-nav {
-    background-color: #000000;
-    color: #f8f8f8;
-    text-align: center;
-    margin-top: 8%;
-    margin-right: 2%;
-    margin-bottom: 5%;
-    margin-left: 2%;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    font-weight: 800;
-    font-variant: normal;
-    height:3em;
-}
-.colA {
-    width: 30%;
-    margin-left: 5%;
-    margin-right: 2.5%;
-    float: left;
-}
-.colB {
-    width: 50%;
-    margin-left: 2.5%;
-    margin-right: 5%;
-    float: right;
-    background-color: #f2f2f2;
-    border-top: 10px solid #000000;;
-    border-bottom: 10px solid #000000;;
-    margin-bottom: 5%;
-    padding-left: 10px;
-}
-h1 {
-    font-size: 2.2em;
-}
+    h1 { font-size: 2.2em; }
+    nav {
+        font-weight: 800;
+        height:3em;
+        margin: 8% 2% 5%;
+        padding: 5px 10px;
+    }
+    .colA {
+        float: left;
+        width: 30%;
+        margin: 0 2.5% 5% 5%;
+    }
+    .colB {
+        float: right;
+        width: 50%;
+        margin: 0 2.5% 5% 5%;
+        padding-left: 10px;
+    }
 }
 
 @media screen and (min-width:750px) {
-h1 {
-    /*font-size: 1.5em;
-    text-shadow: 2px 2px 3px #ffffff;*/
-    text-align: center;
-    font-size:2.6em;
-}
-h2 {
-    /*font-size: 1.2em;*/
-}
-#promo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 280px;
-}
-.logo {
-    max-width: 100%;
-}
-nav {
-    margin-top: 6%;
-}
+    h1 { font-size:2.6em; }
+    .logo { max-width: 100%; }
+    nav { margin-top: 6%; }
 }
 /* vim: ft=css nu ai et sw=4 ts=4
 */
