@@ -1,0 +1,39 @@
+/* change the background color and main text color */
+body { 
+    background-color: #CFFFCF; 
+    color: #3F003F;
+}
+
+/* change font style of h2 tags in the "subhead" class */
+h2.subhead {
+    font-style: italic;
+}
+
+/* use ID to change size and add shadow to the img */
+#mainGraphic {
+    width: 800px;
+    box-shadow: 10px 10px 5px #1F5F1F;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* vim: ft=css ai et ts=4 nu
+*/
