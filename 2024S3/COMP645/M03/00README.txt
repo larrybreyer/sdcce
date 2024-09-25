@@ -1,0 +1,2 @@
+First week of JavaScript
+
