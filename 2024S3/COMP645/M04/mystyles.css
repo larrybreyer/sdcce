@@ -1,0 +1,39 @@
+/* change the background color and main text color */
+body { 
+    background-color: #CFFFCF; 
+    color: #3F003F;
+}
+
+form#fmSaveAlbum { 
+    background-color: antiquewhite;
+    padding: 2em;  /* The spave inside the form */
+    margin: 3em; /* The spave outside the form */
+    width: 75%;
+    border-radius: 1em;  /* Add rounded edges */
+    /* center the form */
+
+}
+
+/*
+  Select all instances of <label>
+  which must be inside of the <form>
+  with the id set fmSaveAlbum
+*/
+form#fmSaveAlbum label { 
+    float: left;
+    width: 7em;
+}
+
+form#fmSaveAlbum input, form#fmSaveAlbum textarea { 
+    width: 20em;
+}
+
+form#fmSaveAlbum   input[type=reset],
+  form#fmSaveAlbum input[type=submit] {
+    width: 7em;
+}
+
+/* You can also use placeholder to identify element */
+
+/* vim: ft=css ai et ts=4 nu
+*/

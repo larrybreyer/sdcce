@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define the character set for this project -->
+    <meta charset="UTF-8">
+    <!-- Make the screen look nice in Internet Explorer. Remove for mobile -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- The text that appears on the Tab of the web browser -->
+    <title>Robert Breyer</title>
+    <!-- Make the screen look nice on generic mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connect to an external file to style this screen -->
+    <link rel='stylesheet' type='text/css' media='screen' href='mystyles.css'>
+</head>
+<body>
+    <h1>My Fave Movies</h1>
+
+    <form id="fmSaveAlbum">
+        <!-- Group together certain form inputs -->
+        <fieldset>
+          <legend>
+            Required
+          </legend>
+        <!-- Put id at end of argument list -->
+          <label for=""> Band Name:    </label>
+          <input required type="text" placeholder="Beatles"       id="inSaveBand"> <br>
+          <label for=""> Album Name:   </label>
+          <input required type="text" placeholder="Rubber Soul"   id="inSaveAlbum"> <br>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Optional
+          </legend>
+          <label for=""> Album Year:       </label>
+          <input type="number"    placeholder="1967"          id="inSaveYear"> <br>
+          <label for=""> Album Comments:   </label>
+          <textarea               placeholder="4th album"     id="inSaveComment" ></textarea> <br>
+        </fieldset>
+        <input type="reset" value="Clear"> <input type="submit" value="Save">
+    </form>
+    <!-- CRUD Create / Retrieve / Update / Delete -->
+    <hr>
+    <form action="" id="fmGetAlbum">
+      <input type="submit" value="Get Album">
+    </form>
+    <!-- Empty placeholder to show the album  -->
+    <div id="dvShowAlbum">&nbsp;</div>
+    <!-- Load an external JavasScript file -->
+    <script src='myscript.js'></script>
+    </body>
+</html>
+<!-- vim: ft=html ai ts=4 et nu
+
+ -->
