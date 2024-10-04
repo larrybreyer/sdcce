@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" media="all">
+  <title>Robert Breyer</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+
+    <form id="fmSaveMovie">
+        <!-- Group together certain form inputs -->
+        <fieldset>
+          <legend>
+            Required
+          </legend>
+        <!-- Put id at end of argument list -->
+          <label for=""> Movie Name:   </label>
+          <input required type="text" placeholder="Lawrence of Arabia"   id="inSaveMovie"> <br>
+          <label for=""> Movie Director:    </label>
+          <input required type="text" placeholder="David Lean"       id="inSaveDirector"> <br>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Optional
+          </legend>
+          <label for=""> Movie Year:       </label>
+          <input type="number"    placeholder="1962"          id="inSaveYear"> <br>
+          <label for=""> Movie Comments:   </label>
+          <textarea               placeholder="Starred Peter O'Toole"     id="inSaveComment" ></textarea> <br>
+        </fieldset>
+        <input type="reset" value="Clear"> <input type="submit" value="Submit">
+    </form>
+    <!-- CRUD Create / Retrieve / Update / Delete -->
+	
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+vim: ft=html nu ai et sw=2 ts=2
+-->

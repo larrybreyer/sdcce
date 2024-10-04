@@ -4,7 +4,7 @@ body {
     color: #3F003F;
 }
 
-form#fmSaveAlbum { 
+form#fmSaveMovie { 
     background-color: antiquewhite;
     padding: 2em;  /* The space inside the form */
     margin: 3em; /* The space outside the form */
@@ -17,19 +17,19 @@ form#fmSaveAlbum {
 /*
   Select all instances of <label>
   which must be inside of the <form>
-  with the id set fmSaveAlbum
+  with the id set fmSaveMovie
 */
-form#fmSaveAlbum label { 
+form#fmSaveMovie label { 
     float: left;
     width: 7em;
 }
 
-form#fmSaveAlbum input, form#fmSaveAlbum textarea { 
+form#fmSaveMovie input, form#fmSaveMovie textarea { 
     width: 20em;
 }
 
-form#fmSaveAlbum   input[type=reset],
-  form#fmSaveAlbum input[type=submit] {
+form#fmSaveMovie   input[type=reset],
+  form#fmSaveMovie input[type=submit] {
     width: 7em;
 }
 
