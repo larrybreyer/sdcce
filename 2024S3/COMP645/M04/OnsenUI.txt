@@ -1,0 +1,24 @@
+ •  In your own words, what is Onsen UI used for?
+
+    Onsen UI is a framework specifically designed for building mobile web
+    applications. It allows developers to create hybrid apps using HTML5, CSS,
+    and JavaScript. Onsen UI provides a wide range of UI components (like
+    tabs, side menus, and lists) that are styled to match the native
+    appearance of both iOS and Android platforms, making it ideal for
+    cross-platform mobile development.
+
+ •  What is the most interesting aspect of Onsen UI you discovered?
+
+    One of the key benefits of Onsen UI is its compatibility with popular
+    frameworks like Angular, React, and Vue, making it flexible for developers
+    to use with their preferred front-end framework.
+
+ •  Do you believe there are any negatives when using Onsen UI?
+
+    I see no negatives for my needs which is minimizing time spent on HTML and
+    CSS.
+
+ •  How might Onsen UI be relevant to your education goals, or not?
+
+    Onsen UI can simplify and accelerate Mobile Application Development by
+    providing ready-to-use components and cross-platform compatibility.

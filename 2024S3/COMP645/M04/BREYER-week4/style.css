@@ -24,8 +24,13 @@ form#fmSaveMovie label {
     width: 7em;
 }
 
-form#fmSaveMovie input, form#fmSaveMovie textarea { 
+form#fmSaveMovie input {
     width: 20em;
+}
+
+form#fmSaveMovie textarea { 
+    width: 20em;
+    height: 5em;
 }
 
 form#fmSaveMovie   input[type=reset],
