@@ -14,6 +14,7 @@ do {
     }
     do {
         again = prompt('Run application again? (y or n)', 'y');
+//  Zak wants us to tell the user he did not enter y or n
     } while ( again != 'y' && again != 'n' );
 } while (again === 'y');
 console.log('Application has exited.');

@@ -8,7 +8,8 @@ do {
   if ( coinFlip < .5 ) {
     console.log(`Heads`);
   } else {
-    console.log(`Tails`);
+    // console.log(`Tails`);
+    console.log(`You finally got Tails`);
   }
 
 } while ( coinFlip < .5);
