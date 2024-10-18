@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/onsenui.css">
+  <link rel="stylesheet" href="css/onsen-css-components.min.css"> 
+  <script src="js/onsenui.min.js"></script>
+  <script>
+    const login = () => {
+      const username = document.querySelector('#username').value;
+      const password = document.querySelector('#password').value;
+    
+      if (username === 'user' && password === 'pass') {
+        // cal the navigtor to move to the new page
+        const navigator = document.querySelector('#navigator');
+        navigator.resetToPage('home.html');
+      } else {
+        ons.notification.alert('Wrong username/password combination');
+      }
+    }
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator">
+    <ons-page>
+      <div style="text-align: center; margin-top: 200px">
+      <p>
+        <ons-input id="username" placeholder="Username" modifier="underbar">
+        </ons-input>
+      </p>
+
+      <p>
+        <ons-input
+          id="password"
+          placeholder="Password"
+          type="password"
+          modifier="underbar"
+        >
+        </ons-input>
+      </p>
+
+      <p>
+        <ons-button onclick="login()">Sign in</ons-button>
+      </p>
+      </div>
+
+    </ons-page>
+  </ons-navigator>
+
+  <template id="home.html">
+    <ons-page id="home">
+      Hello!
+    </ons-page>
+  </template>
+
+</body>
+</html>
+
+<!-- vim: ft=html ai ts=2 et nu
+ -->
