@@ -93,6 +93,7 @@ if(strongPWD.test(valSignUpPWD)) {
                             document.getElementById("signupPWD").value      = "";
                             document.getElementById("signupPWDConf").value  = "";
                             document.getElementById("signupEmail").value    = "";
+                            console.log(document.getElementById("signupEmail").value);
                             clearFormSignUp();
                         } else {
                             console.log("Previous account detected");
@@ -129,3 +130,5 @@ function logIn() {
         } // END If..Else check passwords match
     } // END If..Else account existance
 } // END logIn()
+
+// vim: ft=javascript ai ts=4 et nu
