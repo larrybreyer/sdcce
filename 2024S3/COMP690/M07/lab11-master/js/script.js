@@ -80,7 +80,11 @@ const resetForm = () => {
     $('email_address').focus()
 }
 
+// EVENT HANDLERS
 $('terms').addEventListener('click', checkDisabled)
 $('register').addEventListener('click', processEntries)
 $('reset_form').addEventListener('click', resetForm)
 $('email_address').focus()
+
+
+// vim: ft=javascript ai ts=4 et nu
