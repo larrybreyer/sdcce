@@ -40,3 +40,5 @@ const toggle = (e) => {
 for (h2Element of h2Elements) {
     h2Element.addEventListener('click', toggle)
 }
+
+// vim: ft=javascript ai ts=4 et nu
