@@ -167,13 +167,8 @@ function signUp() {
                     let tmpUser = {
                         "_id" : tmpValSignUpEmail,
                         "pwd" : valSignUpPWD,
-                        "age" : valSignUpAge,
-                        "genres": null
+                        "age" : valSignUpAge
                     };
-
-                    console.log("Creating account: " + tmpValSignUpEmail);
-
-
                     // Convert the complex Object into a plain String via JSON.stringify(tmpUser)
                     localStorage.setItem(tmpUser._id, JSON.stringify(tmpUser));
                     ons.notification.alert("Account created!");
@@ -503,4 +498,3 @@ function comicEditUpdate() {
         });
     }).catch(function (err){console.log("Error updating comic:" + err);});
 } // END comicEditUpdae()
-// vim: ft=javascript ai ts=4 et nu
