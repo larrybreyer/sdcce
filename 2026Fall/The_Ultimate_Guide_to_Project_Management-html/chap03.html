@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Chapter 4: Kanban 101: How to Use Kanban Boards to Manage Your
+Next Project</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chapter 4: Kanban 101: How to Use Kanban Boards to
+Manage Your Next Project</h1>
+</header>
+<h2
+id="leanpub-auto-chapter-4-kanban-101-how-to-use-kanban-boards-to-manage-your-next-project">Chapter
+4: Kanban 101: How to Use Kanban Boards to Manage Your Next Project</h2>
+<figure class="image center">
+<img src="images/ch4_header.jpeg" />
+</figure>
+<p>Project management apps turn ambitious ideas into workable plans.
+They put lists, tasks and files into a centralized hub, so your team can
+collaborate. They’re intricate, all-encompassing solutions.</p>
+<p>And that power can make them feel, well, complicated.</p>
+<p>Every task includes its own micro-tasks—the nitty-gritty details that
+help your goals move forward. It’s like each task is a project of its
+own, begging for its own project management system.</p>
+<p>Sometimes the individual tasks are as important as the overall
+project—especially when the project is, perhaps, an ongoing project like
+“Make more car parts” or “Write blog posts”. When the job’s never done,
+the system for completing each task is most important.</p>
+<p>That’s why Toyota invented the “kanban” system, and introduced it to
+their factory teams more than 60 years ago: to help make sure each part
+was made with the same level of care at every step. For that, kanban
+focuses on status instead of due dates. Each task moves through
+standardized project stages so teams can track what’s in-progress at a
+glance, and identify show-stopping bottlenecks.</p>
+<p>It helped Toyota make parts that were consistently great, and ensured
+the parts were finished exactly when they were most needed in their
+factories. And today, kanban helps teams manage editorial workflows,
+push code through development sprints, streamline hiring processes, and
+much more.</p>
+<p>It’s the project management system you need to visualize your work.
+Here are 8 of the best ways you can implement kanban into your team,
+along with 8 great apps to pick from.</p>
+<h3 id="leanpub-auto-kanban-a-short-history">Kanban: A Short
+History</h3>
+<figure class="image center">
+<img src="images/ch4_img1.jpg"
+alt="A kanban card on parts in a Toyota factory in the UK" />
+<figcaption aria-hidden="true">A kanban card on parts in a Toyota
+factory in the UK</figcaption>
+</figure>
+<p>Supermarket shelves. Car factory floors. Software development
+schedules. These unrelated tasks played a role in the creation of
+kanban, and for our purposes, kanban boards.</p>
+<ul>
+<li><strong>Supermarket shelves:</strong> Think of the last time you
+went to a grocery store to buy peanut butter. When you arrived—no matter
+the day of time—it’s likely there were jars still stocked on the
+shelves. Inventory in a grocery store isn’t controlled by some strict
+schedule—it’s ordered and stocked to fill customer demand. Jars of
+peanut butter are moved from stockroom boxes to shelves as they’re
+emptied, and then new orders are placed as the stockroom runs out of
+inventory. It’s a visual process, one that can be managed just by
+looking at store shelves.</li>
+<li><strong>Car factory floors:</strong> If supermarkets can effectively
+rely on one action (customers buying peanut butter) triggering another
+action (stocking peanut butter on supermarket shelves), how could a car
+company do the same for its parts inventory? That was the question
+managers at Toyota were asking in the 1950s, when they sought to <a
+href="http://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter2/section7/item4.html">better
+manage their parts inventory</a>. So they put in place the kanban
+(かんばん, which translates to “visual card”) approach, which, like a
+shelf of empty peanut butter, relied on visual signals as products
+passed from one worker to the next. You’d know exactly where to pick up
+work on a part, thanks to its kanban card that detailed exactly what had
+been done to the part already.</li>
+<li><strong>Software development schedules:</strong> Fast-forward to the
+2000s, and Microsoft’s software development team is look a more
+efficient way to fix bugs in their Team Server product. After starting
+out with a more complicated project management system, management
+consultant David Anderson helped create an <a
+href="http://www.djaa.com/brief-history-kanban-knowledge-work">early
+kanban system for software development</a> that put tasks into a buffer
+(or list of things to be done), and let developers pick something to
+work on and then send it to the next stage of the development process by
+adding it to the next list.</li>
+</ul>
+<p>As it turns out, almost every job has a process, steps that each task
+must go through. Peanut butter jars go from a supplier to a stockroom to
+shelves; parts go from raw metal to a finished product on a factory
+floor; software bugs go from a feature request to raw code to a finished
+addition to the product. Kanban fits them all.</p>
+<p>So what exactly is a kanban board, and how would you use one to
+visualize your projects and get tasks done more efficiently?</p>
+<hr />
+<h3 id="leanpub-auto-kanban-board-basics">Kanban Board Basics</h3>
+<figure class="image center">
+<img src="images/ch4_img2.png" />
+</figure>
+<p>Whether offline in a 1950’s Toyota factory or online in today’s
+latest apps, kanban has three basic elements: board, list and card.</p>
+<ul>
+<li><strong>Board:</strong> A board encapsulates a project or workflow;
+a traditional project management tool calls this a “project” or
+“workspace”</li>
+<li><strong>List or Lane:</strong> A list or lane contains a set of
+related cards—typically those in the same stage of a process—in a titled
+column on a kanban board; a traditional project management tool calls
+this a “to-do list” or “task list”</li>
+<li><strong>Card:</strong> A card houses an item related to your board
+and list, such as a task to be completed or a product to be made, and
+lives in a list on a board; a traditional project management tool calls
+this a “to-do” or “task”</li>
+</ul>
+<p>With these elements as a foundation, the possibilities for how you
+employ a kanban board are as limitless as the ways <a
+href="https://zapier.com/blog/spreadsheet-crm/">you could use a
+spreadsheet</a>. Create two boards, for example, to manage your
+company’s next product launch. On the first board, your development team
+tracks launch progress by moving cards from list to list—To-Do, Doing
+and Done. On the second board, your marketing team categorizes planned
+launch activities with columns like Co-Marketing Ideas, Press Pitches
+and Internal Promotion.</p>
+<figure class="image center">
+<img src="images/ch4_img3.png" />
+</figure>
+<p>That’s only two of the many ways you could use a kanban board to
+organize your processes. We’ll get to more. But first, let’s look at the
+core kanban ideas and features to help you go from cards and lists to an
+organized workflow.</p>
+<h4 id="leanpub-auto-kanban-board-features-to-know">8 Kanban Board
+Features to Know</h4>
+<p>In a typical project management app, you’d list tasks, add comments
+or notes with more info, and check tasks off as they’re completed.
+Things work a bit different in a kanban board app.</p>
+<p>Here are the eight most common features you’ll find in a kanban board
+app—from the basics that are similar to paper-on-a-board physical kanban
+boards, to those that could only be possible in an app. The names and
+specifics of these features vary across apps—as you’ll notice in the
+screenshots which come from a variety of apps—but their core
+functionality remains the same.</p>
+<blockquote>
+<p><em>Note:</em> Each of the graphics in this section were originally
+animations in the web version of this book. To view the animated
+versions, be sure to check out <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/kanban-board/">Chapter
+4 of <em>The Ultimate Guide to Project Management</em></a> on the Zapier
+Learning Center.</p>
+</blockquote>
+<h4 id="leanpub-auto-move-cards-from-list-to-list-board-to-board">1.
+Move Cards from List to List, Board to Board</h4>
+<figure class="image center">
+<img src="images/ch4_img4.png" />
+</figure>
+<p>Moving cards between columns is vital to making the most of a kanban
+board. It’s the one feature you’ll use most—you’ll likely move cards
+more than you even make new ones. In most kanban board apps, you can
+change the placement of a card at any time—move it within a list (up or
+down) or move it from list to list. To do so, put your cursor over the
+card, then click, hold and move the card to the new location.</p>
+<p>If you want to move or copy the card from one board to another,
+you’ll typically find that option within the card’s settings. And in
+some kanban board apps like LeanKit, you can change the layout of your
+columns, so you might be moving a card to a lower or higher column.
+Experiment and see where you can drag a card—you can’t break
+anything.</p>
+<figure class="image center">
+<img src="images/ch4_img5.png" />
+</figure>
+<p>With all this movement, you’ll sometimes find yourself needing to
+look back at the path the card took. To do this, locate the card’s
+activity stream, likely on the card “back.”</p>
+<h4
+id="leanpub-auto-invite-individuals-to-boards-assign-and-subscribe-to-cards">2.
+Invite Individuals to Boards, Assign and Subscribe to Cards</h4>
+<figure class="image center">
+<img src="images/ch4_img6a.png"
+alt="Left: Members of a Trello Board. Right: Members on a Trello Card" />
+<figcaption aria-hidden="true">Left: Members of a Trello Board. Right:
+Members on a Trello Card</figcaption>
+</figure>
+<p>Like you’d expect from a traditional project management app, kanban
+board tools let you invite teammates, clients and others to collaborate
+on a project. This happens on two levels: board and card.</p>
+<p>Each board has its own settings, including the ability to invite
+members. In Trello, for instance, you’re able to invite <em>any</em>
+Trello user to a board. Or, if you’re part of an organization (such as
+“Zapier”), there’s a quick-list of fellow organization members that you
+can choose from. Otherwise, you can typically enter someone’s email
+address to invite them to join a board for the first time.</p>
+<p>When you add people to a board, they’ll be able to add cards, move
+cards, leave comments on cards, edit cards and more. They’ll also see
+the activity stream related to that board, so they can keep up with the
+project even if they’re not a direct part of it.</p>
+<p>Cards have members or assigned users, too, but with a different
+purpose: you’ll add a member to the card (including yourself) to take or
+split ownership of the task. When you do so, you’ll start to get
+notifications for activities related to that card. For example, if a
+board member leaves a comment on the card, the kanban board app lets you
+know when you’re assigned to that card.</p>
+<figure class="image center">
+<img src="images/ch4_img6.png" />
+</figure>
+<p>If you’re not directly responsible for the activity described on a
+card, but you want to keep tabs on it, another option of many kanban
+board tools is to “subscribe” to the card. Subscribing to a card ensures
+you’re notified of new card activity, just as if you were assigned to
+it. And in the same vein, if one of your cards are too noisy, you can
+unsubscribe from notifications to keep your inbox clear.</p>
+<h4 id="leanpub-auto-add-notes-and-hold-discussions-on-cards">3. Add
+Notes and Hold Discussions on Cards</h4>
+<figure class="image center">
+<img src="images/ch4_img7.png"
+alt="Using the card back functionality in LeanKit" />
+<figcaption aria-hidden="true">Using the card back functionality in
+LeanKit</figcaption>
+</figure>
+<p>Here’s where a virtual kanban board is exponentially more valuable
+than a physical one: endless comments. Offline, it you’re using a
+Post-it Note to track a task, you’ll quickly run out of space to
+scribble things you need to remember. Online, a kanban card gives you
+limitless space to make note of what’s needed.</p>
+<p>Most kanban tools include a description field on each card, where you
+can add notes and attach related files. There’s also usually an area to
+hold discussions with your teammates. And when you’re writing up a
+description or leaving a comment, you’re able to mention other members
+by @-mentioning the individual, like you would on Twitter.</p>
+<figure class="image center">
+<img src="images/ch4_img8.png" />
+</figure>
+<p>To access these two features, you’ll need to tap into what some apps
+call the “card back”—look for a link to this additional set of features
+on the card itself, or just click the card and it’ll likely open
+automatically.</p>
+<h4 id="leanpub-auto-attach-checklists-or-tasks-to-cards">4. Attach
+Checklists or Tasks to Cards</h4>
+<figure class="image center">
+<img src="images/ch4_img9.png" />
+</figure>
+<p>Your work is rarely a simple process, which is why tasks need
+checklists of their own. That’s what you’ll get with a kanban tool—each
+card can have one or more checklists or task lists. For example, a card
+on your “Press Outreach” kanban board might be titled “TechCrunch,” and
+contain the following checklist:</p>
+<p>[ ] Initial pitch email [ ] Follow up with more information [ ] Media
+assets delivered [ ] Coverage confirmed [ ] Coverage published</p>
+<p>Depending on your kanban board tool, the card cover might show a
+completed checklist percentage that goes up as you check off tasks,
+making it easy to see where you are in a process.</p>
+<figure class="image center">
+<img src="images/ch4_img10.png" />
+</figure>
+<p>Like descriptions and comments, you can @-mention fellow board
+members in a checklist, too. At Zapier, we use checklists with mentions
+to assign roles in our editorial workflow. Every card has an “Editing”
+checklist with three tasks—micro edits, macro edits and newsletter
+copy—each assigned with an @-mention.</p>
+<blockquote>
+<p><strong>Related</strong> Learn more about our editorial process and
+how we <a href="https://zapier.com/blog/how-to-publish-ebook/">turn blog
+posts into books</a> at Zapier.</p>
+</blockquote>
+<h4 id="leanpub-auto-consider-work-in-progress-limits">5. Consider Work
+in Progress Limits</h4>
+<figure class="image center">
+<img src="images/ch4_img11.png" />
+</figure>
+<p>Processes can get overwhelming when there’s too many tasks in a list
+at once. That’s why some kanban apps let you restrict the amount of
+tasks you can include in a list with work in progress limits, or WIP
+(pronounced whip) limits for short. These constraints are applied to a
+column limiting the number of cards in that column.</p>
+<p>For example, if I know that our blog writers at Zapier can only
+handle writing three posts per week, I would add a WIP limit of three
+cards to the column titled “Writing.” You’ll usually find WIP limit
+tools in the layout editor for your kanban board, and will just enter a
+number for the top number of cards you want in a list. If you add too
+many, the kanban tool will warn you there’s already too many things to
+do—a quick way to know when you should work on other tasks.</p>
+<h4 id="leanpub-auto-label-or-tag-cards">6. Label or Tag Cards</h4>
+<figure class="image center">
+<img src="images/ch4_img12.png" />
+</figure>
+<p>Let’s get back to full-picture—the board view—and focus on another
+must-know feature: labels. Labels, also called tags, add another level
+of organization to cards in a list or board. If a card has a specific
+state that isn’t covered by its position in a list, a label can be
+handy.</p>
+<p>Returning to our editorial calendar setup, for example, we use labels
+at Zapier to denote if a post is written in-house, by a freelancer or by
+a guest. You could also use labels to note tasks that need your design
+or development team’s help, perhaps, or to mark tasks’ difficulty. You
+could even add multiple tags, to note when tasks need both development
+<em>and</em> design help, say.</p>
+<p>Labels or tags aren’t applied across all of your boards. Instead,
+they’re specific to each board. You can customize each board’s label
+colors and names so they fit that board’s workflow perfectly.</p>
+<h4 id="leanpub-auto-put-due-dates-on-cards">7. Put Due Dates on
+Cards</h4>
+<figure class="image center">
+<img src="images/ch4_img13.png" />
+</figure>
+<p>Tasks without due dates often don’t get done. So don’t forget to set
+deadlines for your kanban cards. Just click the due date
+button—typically on a card’s back or under a clock icon—and select the
+date when the task should be finished.</p>
+<p>Most apps offer due date notifications, too. To get a reminder,
+you’ll either need to be a member of the card or “subscribe” to the
+card—a feature available in most kanban tool apps. Then, your kanban
+tool will remind you when a task is coming up or overdue.</p>
+<h4 id="leanpub-auto-view-cards-as-a-calendar">8. View Cards as a
+Calendar</h4>
+<figure class="image center">
+<img src="images/ch4_img14.png" />
+</figure>
+<p>Beyond the default “board” view of a kanban board tool, many kanban
+apps let you toggle a calendar view. This quick switch—in Trello, for
+example, it’s at the click of a button—makes it easy to visualize
+upcoming development deadlines, a publishing scheduling or product
+delivery dates.</p>
+<p>And just like the board view, the calendar view lets you add, move
+and edit cards, too. Need to reschedule an overdue task? Just drag it to
+the new due date on your calendar.</p>
+<hr />
+<h3 id="leanpub-auto-kanban-board-apps">8 Kanban Board Apps</h3>
+<p>Need a tool to make your kanban boards? Here are eight of the best,
+each of which are easy to use but also include unique features to help
+your team be productive.</p>
+<blockquote>
+<p>See the full table along with full app reviews on the <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/kanban-board/">Zapier
+Learning Center</a>.</p>
+</blockquote>
+<figure class="image center">
+<img src="images/ch4_table.png" />
+</figure>
+<p>There’s more, too. You’ll find kanban board tools inside many apps
+today—or as companion add-ons you can easily install. <a
+href="https://zapier.com/zapbook/visual-studio-online/">Visual Studio
+Online</a> includes a kanban view for your work items, while tools like
+<a href="https://waffle.io/">Waffle.io</a> can turn your GitHub issues
+into a kanban board automatically. Productivity tools, including task
+managers like <a
+href="https://www.getflow.com/blog/2015/02/kanban-boards/">Flow</a> and
+project managers like <a
+href="https://www.zoho.com/projects/help/kanban-view.html">Zoho
+Project</a>, also often include kanban views as another way to sort your
+tasks.</p>
+<p>Or, for simpler projects, you might not even need an app. Instead,
+you could repurpose a whiteboard as a makeshift kanban board. Draw your
+own columns, use post-it notes for your cards, and you’ll have a quick
+way to visualize your projects and start pushing each task towards the
+last column for completion.</p>
+<hr />
+<h3 id="leanpub-auto-ways-to-test-drive-a-kanban-board">6 Ways to Test
+Drive a Kanban Board</h3>
+<p>Kanban boards were popularized first by factories and later by
+software development teams. Thanks to their flexibility, kanban apps can
+now be found everywhere—from the boardroom to your home office. Here are
+six of the many unique ways kanban boards can be used to get more
+done.</p>
+<h4 id="leanpub-auto-manage-personal-tasks">1. Manage Personal
+Tasks</h4>
+<p>Collaborating in a kanban board seems like a given, but it’s not a
+requirement. A kanban tool can be used all on your own to manage your
+personal tasks. The simplest way to get started is to create the
+standard lists: To-Do, Doing and Done. Or add a <em>backlog</em> list,
+for when a task or work item doesn’t fit into one of the three
+categories. That’s how <a href="http://getpocket.com/">Pocket</a>
+founder Nate Weiner uses Trello.</p>
+<p>“I have a board that I call The Hopper, (with lists) Today, Tomorrow
+and This Week,” <a
+href="https://zapier.com/blog/pocket-nate-weiner-interview/">Weiner
+says</a>. Before using the personal kanban method, the Pocket CEO relied
+on his email inbox as a checklist. Finding that a “terrible place to put
+tasks,” he tried several to-do apps, but none of them stuck.</p>
+<p>That is, until he made a kanban board. “Anytime I come up with
+something, I just hop into the app, drop it in The Hopper and then at
+the beginning and end of the day, I can recycle these things and move
+them around as need be,” says Weiner.</p>
+<p>You can add automation to Weiner’s process by relying on Zapier to
+create a Trello card when you star or label a Gmail email, or file away
+an Office 365 email.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/1339/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new starred Gmail emails</a></li>
+<li><a
+href="https://zapier.com/app/min/2621/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new labeled Gmail emails</a></li>
+<li><a
+href="https://zapier.com/app/min/3388/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new Office 365 emails in inbox or folder</a></li>
+</ul>
+<p>Moreover, if you have a routine task you need to complete, rather
+than re-adding it daily, weekly or month, rely on Zapier.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/8181/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Kanbanery task cards every day</a></li>
+<li><a
+href="https://zapier.com/app/min/2803/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+weekly cards to Leankit</a></li>
+<li><a
+href="https://zapier.com/app/min/534/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello card monthly at scheduled time</a></li>
+</ul>
+<blockquote>
+<p>For more on making personal kanban boards, read Alan Henry’s
+Lifehacker post, “<a
+href="http://lifehacker.com/productivity-101-how-to-use-personal-kanban-to-visuali-1687948640">Productivity
+101: How to Use Personal Kanban to Visualize Your Work</a>.”</p>
+</blockquote>
+<h4 id="leanpub-auto-build-an-editorial-calendar">2. Build an Editorial
+Calendar</h4>
+<p>There’s apps to help manage your editorial calendar, but rather than
+adding more software to your workflow, consider using a kanban board to
+manage content. At Zapier, for example, we use a Trello board to keep
+our publishing pipeline flowing.</p>
+<p>Our “Editorial Calendar” board has six lists—To Write/Assign,
+Writing, Editing, Ready, Publishing and Promoting—and each card
+represents a piece of content. The member of the card is the content’s
+author, unless the post has been <a
+href="https://zapier.com/blog/how-to-hire-freelance-writers/">assigned
+to a freelancer</a>, in which case the member is the freelancer’s
+contact and the card is given a green label to note it’s a “freelancer”
+post. When a card moves into the “Editing” list, we add a checklist with
+three tasks—Macro Edits, Micro Edits and Newsletter Copy—@-mentioning a
+team member beside each.</p>
+<p>Before implementing the kanban workflow at Zapier, we didn’t plan
+posts more than a week out, and were always scrambling to get content
+published on time. The Trello board, with its checklist, card members
+and due dates, has helped changed the way we work at Zapier.</p>
+<p>And once an article has been published, we use a Zapier-powered
+Trello to Slack integration to let the team know there’s a new post on
+our blog automatically whenever a card’s moved into our Promoting
+list.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/132/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+new Trello activity to a Slack channel or @slackbot</a></li>
+<li><a
+href="https://zapier.com/app/min/1572/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Get
+Slack notifications for Trello cards created or closed</a></li>
+<li><a
+href="https://zapier.com/app/min/1552/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Get
+Trello notifications in Slack</a></li>
+</ul>
+<p>Or, if you’re using another kanban board app, here are some Zapier
+automations to help your team know as things move through your editorial
+calendar.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/3750/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Share
+new LeanKit cards as HipChat messages</a></li>
+<li><a
+href="https://zapier.com/app/min/2085/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+KanbanTool cards from starred Slack messages</a></li>
+<li><a
+href="https://zapier.com/app/min/9292/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Send
+emails when KanbanFlow tasks are moved</a></li>
+</ul>
+<blockquote>
+<p>For a tutorial on using a kanban board for your content planning,
+read “<a
+href="http://www.blueglass.co.uk/blog/create-editorial-calendar-using-trello-need-one/">How
+to Create an Editorial Calendar Using Trello</a>” on the BlueGlass
+digital marketing blog, or “<a
+href="http://blog.trello.com/moved-to-published-using-trello-as-an-editorial-calendar/">Moved
+To Published: Using Trello As An Editorial Calendar</a>” on Trello’s
+blog. For a breakdown of how a kanban board app differs from an
+editorial calendar tool, see WPCurve’s post, “<a
+href="http://wpcurve.com/trello-vs-coschedule-editorial-calendar/">Trello
+vs CoSchedule: Editorial calendar review for content marketers</a>.”</p>
+</blockquote>
+<h4 id="leanpub-auto-gather-content-ideas">3. Gather Content Ideas</h4>
+<p>Similarly, Robby Macdonell, vice president of product development at
+productivity tool <a href="https://www.rescuetime.com/">RescueTime</a>,
+relies on a kanban board to keep a repository of future blog post ideas.
+He employs just two list: “Possibilities” and “Done.”</p>
+<p>“I’m constantly seeing articles or blog posts about working smarter
+or happier, and many of them have ideas that I’d like for us to explore
+further on the <a href="http://blog.rescuetime.com/">RescueTime
+blog</a>,” Macdonell says.</p>
+<p>“I usually see these articles in passing, don’t have enough time to
+fully digest them, and when it comes time to meet with our content team,
+I’ve completely forgotten about them,” he says. “Now, I just save the
+article with Pocket, give it a tag, and it automatically ends up in the
+‘Ideas for Future Posts’ board.”</p>
+<p>You could use Zapier integrations to create kanban cards from your
+company mentions, RSS feed posts, emailed-in idea suggestions, and much
+more, so you’ll always have ideas to start with—and then, you could get
+them published with your Kanban-powered editorial calendar.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/1680/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new tagged Pocket items</a></li>
+<li><a
+href="https://zapier.com/app/min/2110/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new favorited Pocket items</a></li>
+<li><a
+href="https://zapier.com/app/min/2108/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new Pocket items</a></li>
+</ul>
+<h4 id="leanpub-auto-share-a-public-road-map">4. Share a Public Road
+Map</h4>
+<p><a
+href="https://zapier.com/blog/best-customer-support-apps/">Customer
+support apps</a> often include forum tools, where users can suggest and
+vote on new features, functionality or add-ons. The team behind <a
+href="https://frontapp.com/">Front</a>, a shared inbox app, knew the
+importance of that customer interaction and wanted to offer their users
+something like this. Rather than fiddling with a new tool, though, they
+made a modification to the Trello board where they were privately
+storing user requests—they made it <a
+href="https://trello.com/b/kZsVVrc8/front-product-roadmap">public</a>.</p>
+<p>“It was a big decision to make and we put a lot of thought into it,”
+Mathilde Collin, Front CEO, <a
+href="http://blog.frontapp.com/2015/04/02/why-we-made-our-roadmap-public-and-how-to-build-your-own/">writes
+on the company blog</a>, “but once we opted for it, it literally took us
+2 minutes to launch it.”</p>
+<p>On top of giving visibility to all, they added a Trello feature to
+allow for public votes on individual cards to gather input from
+users.</p>
+<p>“The public roadmap has already helped us collect valuable feedback,”
+Collin writes. “For example, the native iPhone app was far more urgent
+than we anticipated, and 4 times more requested than the Android app: we
+instantly added it to our next product cycle.”</p>
+<p>Front’s not alone in using a kanban board for a public roadmap.
+Trello itself <a
+href="https://trello.com/b/nC8QJJoZ/trello-development">does the
+same</a>, and they offer a guide to taking your company’s plans public,
+too: “<a
+href="http://blog.trello.com/going-public-roadmapping-with-a-public-trello-board/">Going
+Public! Roadmapping With A Public Trello Board</a>.”</p>
+<p>When it comes to filling up your own roadmap with potential ideas,
+Zapier can help by creating cards in your kanban app from starred Slack
+messages, new Evernote notes in a specific notebook, new Asana projects
+and more.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/8183/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Kanbanery task cards for new notes on Evernote</a></li>
+<li><a
+href="https://zapier.com/app/min/9299/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+KanbanFlow tasks from starred Slack messages</a></li>
+<li><a
+href="https://zapier.com/app/min/5559/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+new Kanban Tool cards for new projects on Asana</a></li>
+<li><a
+href="https://zapier.com/app/min/3724/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+LeanKit cards from GitHub issues</a></li>
+</ul>
+<h4 id="leanpub-auto-track-your-sales-pipeline">5. Track Your Sales
+Pipeline</h4>
+<p>At some point, you’ll find you need a CRM app, a <a
+href="https://zapier.com/learn/ultimate-guide-to-crm-apps/what-is-a-crm/">customer
+relationship management</a> system that keeps you and your team on top
+of your sales pipeline. Until that time comes, though, you can get much
+of the same features with a <a
+href="https://zapier.com/blog/spreadsheet-CRM">spreadsheet CRM</a> or a
+contact-centric kanban board. It’s the latter that <a
+href="http://gregoiregilbert.com/blog/trello-to-manage-sales-pipeline/">entrepreneur
+Grégoire Gilbert</a> found to work best early on for his team.</p>
+<p>“There’s a lot of CRM and sales pipeline solutions out there. From
+platforms aiming at freelancers, to SaaS targeting sales teams. Most of
+them look good and could have probably worked for our tiny team,” say
+Gilbert. “Although, being a pretty convinced Trello user already, I
+decided to give it a try for managing my sales pipeline.”</p>
+<p>He set up his company’s kanban board with a list for each stage, from
+“Contacted Us” to “Won,” “Contact again later” or “Lost.” He then used
+labels to mark if a prospect needed to be contacted or there was another
+action that needed to take place. When the contact reached the list
+called “Meeting arranged,” Gilbert employed the card’s checklist to note
+the tasks he needed to complete in order to prepare for the in-person
+sale, and added the in-person meeting’s date as the card’s due date.</p>
+<p>Gilbert’s system wasn’t set in stone. That was part of the plus of
+using a kanban board tool: it was customizable to his team’s evolving
+workflow. And he’s not only one he’s used Trello as a simple
+CRM—EntreLeverage, an administrative support agency, for example, has <a
+href="http://www.entreleverage.com/blog/steal-this-system-how-to-create-a-super-simple-sales-pipeline">heralded
+the system</a>, too.</p>
+<p>If you’re considering setting up a kanban board app for a sales
+pipeline, rely on Zapier when it the time comes to start pulling in
+leads. Zapier can turn your emails, contacts, proposals and more into
+kanban cards, or it could notify you when cards—ahem, contacts—reach a
+certain stage.</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/3727/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+LeanKit cards from Formstack submissions</a></li>
+<li><a
+href="https://zapier.com/app/min/5545/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Created
+new detailed events on Google Calendar for new Kanban Tool
+cards</a></li>
+<li><a
+href="https://zapier.com/app/min/3341/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new WooCommerce orders</a></li>
+<li><a
+href="https://zapier.com/app/min/9296/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+KanbanFlow tasks from new Google Sheets spreadsheet rows</a></li>
+<li><a
+href="https://zapier.com/app/min/5566/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+cards on Kanban Tool for updated Freshdesk tickets</a></li>
+</ul>
+<h4 id="leanpub-auto-hire-faster">6. Hire Faster</h4>
+<p>You’re hiring for one position, then two, then four. Sorting through
+applicants in your inbox is manageable when you’re just starting to
+hire, but before long you’ll need an applicant tracking system—an app
+that organizes candidates, allows you to assign team members to hiring
+tasks and keeps applicant information easily accessible. There’s
+well-built software for this task, such as <a
+href="https://www.workable.com/">Workable</a> or <a
+href="https://breezy.hr/">Breezy</a>, but a kanban board with some
+Zapier automations can also be a great solution.</p>
+<p>To get started, set up a hiring inbox with your Google Apps account,
+and then use Zapier to create cards from each new email received. You
+can set up the integration to use the email subject as the card’s title,
+include the attached resume as a card attachment, and pull out the email
+body, contact info and any other details and add it as the card’s
+description. Then, you can use columns to note each part of the hiring
+process. It’s not a full-fledged applicant tracking system, but it’s
+bounds better than an overflowing inbox.</p>
+<figure class="image center">
+<img src="images/ch4_img15.png"
+alt="A Zapier integration to add hiring data from an email to a kanban card in Trello" />
+<figcaption aria-hidden="true">A Zapier integration to add hiring data
+from an email to a kanban card in Trello</figcaption>
+</figure>
+<p>It’s also how a number of teams are already processing their
+applicants. “Back in the day we found it very stressful to keep track of
+our inbound applications,” says Michael Börner of digital agency <a
+href="http://edenspiekermann.com/">Edenspiekermann</a>. “Making
+decisions on applications is decentralized at Edenspiekermann, and we
+needed a way to send the applications to our colleagues to get proper
+feedback.”</p>
+<p>“Now, we generate a Trello board for each job posting, and define a
+Zap that way,” says Börner. “We are sending the inbound application
+message to an email address that splits the mail with its attachments
+and adds it as a card on the corresponding board. Further, the Zap
+assigns the right people to the cards, and from there, we take it in
+Trello. This way we save time and get a well-handled process.”</p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/9293/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+KanbanFlow tasks from new labeled Gmail emails</a></li>
+<li><a
+href="https://zapier.com/app/min/5542/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+new Kanban Tool cards for new emails</a></li>
+<li><a
+href="https://zapier.com/app/min/3389/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new IMAP emails</a></li>
+<li><a
+href="https://zapier.com/app/min/4230/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Turn
+new Office 365 emails into Trello cards</a></li>
+</ul>
+<blockquote>
+<p>For a step-by-step guide to setting up Trello as an applicant
+tracking system, read entrepreneur Eric Sui’s tutorial, “<a
+href="https://medium.com/42hire-don-t-panic-just-hire/how-you-can-use-trello-to-organize-your-hiring-funnel-2d36caad9023#.a8k4szpkj">How
+You Can Use Trello to Organize Your Hiring Process</a>.”</p>
+</blockquote>
+<hr />
+<h3 id="leanpub-auto-create-your-own-kanban-boards">Create Your Own
+Kanban Boards</h3>
+<figure class="image center">
+<img src="images/ch4_img16.jpg"
+alt="Emma reviews its Leankit board during a team meeting" />
+<figcaption aria-hidden="true">Emma reviews its Leankit board during a
+team meeting</figcaption>
+</figure>
+<p>The team behind email marketing app <a
+href="http://myemma.com">Emma</a> relies on Leankit to <a
+href="http://leankit.com/case-study/emma/">monitor progress of its
+team’s biggest goals</a>. Jessica Crabb, a product designer at Pivotal
+Labs, turns to Trello to <a
+href="https://medium.com/product-labs/everything-you-need-to-plan-and-share-user-research-with-trello-41e6f101327e#.6i9jnvkcl">schedule
+and record user research</a>. Brian Cervino, a Trello team member, uses
+his company’s product to <a
+href="http://blog.trello.com/meal-planning-with-trello/">plan his
+meals</a>—one of <a href="https://trello.com/inspiration/">dozens of
+kanban board uses</a> highlighted by the Trello team.</p>
+<p>Kanban board apps can be called on for projects big and small,
+individual and team efforts, one-time or ongoing work. These tools offer
+much of the same functionality of a traditional project management
+app—or a CRM, applicant tracking system or editorial calendar tool.
+You’ll just need time to make it your own.</p>
+<p>Create boards for your next projects, add lists and labels that fit
+your workflow, bring in all of your tasks, and give it a try. Customize
+until everything feels just right. It might take a bit of time, but once
+you have your board title, list names and card formats in place, you’ll
+be ready to tackle your first task. And before you know it, you’ll be
+making more kanban boards for your next tasks.</p>
+<hr />
+<p>Kanban boards aren’t the only way to manage projects. There’s a world
+of project management software, with tools of all shapes and sizes that
+can help you plan projects, assign tasks, schedule release dates, and
+keep track of everything in one place. Some are simple, with just
+team-focused to-dos. Others do everything, merging chat and invoicing
+with projects and documentation, for a one-stop-project-shop.</p>
+<p>In the next chapter, we’ll look at the <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/best-project-management-software">50
+best project management apps</a>, with enough different tools to fit
+almost every possible project need—and then some.</p>
+<hr />
+<p><em>Enjoy this chapter? Read it online or share it at <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/kanban-board/">https://zapier.com/learn/ultimate-guide-to-project-management/kanban-board/</a>.</em></p>
+<hr />
+<p><em>Written by Zapier Marketer <a
+href="https://twitter.com/dannyaway">Danny Schreiber</a>.</em></p>
+<p><em><strong>Image Credits:</strong> Toyota factory photo by <a
+href="https://www.flickr.com/photos/toyotauk/">Toyota UK</a> via <a
+href="https://www.flickr.com/photos/toyotauk/8947453202/">Flickr</a>.</em></p>
+</body>
+</html>

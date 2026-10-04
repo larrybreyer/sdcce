@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Chapter 7: Project Management Software Stacks: The Apps That 13
+Companies Use to Manage Projects</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chapter 7: Project Management Software Stacks: The
+Apps That 13 Companies Use to Manage Projects</h1>
+</header>
+<h2
+id="leanpub-auto-chapter-7-project-management-software-stacks-the-apps-that-13-companies-use-to-manage-projects">Chapter
+7: Project Management Software Stacks: The Apps That 13 Companies Use to
+Manage Projects</h2>
+<figure class="image center">
+<img src="images/ch7_header.png" />
+</figure>
+<p>You’ve found a project management system that works for your team,
+tweaked your apps to fit that workflow, and boiled your goals down into
+clear next-steps. Now, it’s time for the real work.</p>
+<p>But sure enough, roadblocks appear. When your team gets into the
+weeds, you find it difficult to collaborate, share knowledge, adjust to
+unforeseen challenges, and push your project to the finish line.</p>
+<p>Projects are messy structures that quickly take a life of their own.
+And if you want to tame them, you need a whole team of specialized
+apps.</p>
+<p>Your project management app isn’t always enough on its own. You’ll
+also need tools for storing notes, chatting with your team, gathering
+feedback, and scheduling meetings—along with any other apps that fill
+gaps in your workflows.</p>
+<p>Different projects call for different apps—and every team is
+comfortable with a different stack, or toolkit. Let’s look at project
+management app stacks from more than a dozen teams across a range of
+industries, to see how they turn projects into reality.</p>
+<hr />
+<h3
+id="leanpub-auto-stampede-designs-stack-for-user-experience-design">Stampede
+Design’s Stack for User Experience Design</h3>
+<figure class="image center">
+<img src="images/ch7_img1stampede.png" />
+</figure>
+<p>Crafting delightful user experiences for clients takes a lot of
+communication. After deciding on goals, you’ll need to keep your
+customers up-to-date on your progress, any design drafts, and changes to
+your plan.</p>
+<p>Now try doing that with a team of remote designers and developers who
+have varied work hours. That’s how they tackle client work at <a
+href="http://www.stampede-design.com">Stampede Design</a>, turning
+concepts into responsive websites and interactive experiences.</p>
+<p>Pulling off a project requires more than a dozen apps. “We start with
+project creation in Basecamp,” says Stampede culture manager Zana Fauzi,
+“kicking it off with the client and asking for assets before we
+start.”</p>
+<p>Before assigning those tasks, they turn to scheduling tool
+ResourceGuru to see who has open time, and to estimate when the project
+can be shipped. “We weigh in the workload and working hours of all our
+team members across different time zones,” Fauzi says.</p>
+<figure class="image center">
+<img src="images/ch7_img2.png"
+alt="The Stampede Design team&#39;s workplaces" />
+<figcaption>The Stampede Design team’s workplaces</figcaption>
+</figure>
+<p>With the timeframe figured out, they can log those dates and
+assignments in Basecamp. Next, they create a folder in Dropbox for the
+project, so clients can have access to any design assets.</p>
+<p>All of Stampede’s conversations happen in <a
+href="https://slack.com/">Slack</a>—a chat app—and they connected it to
+their other apps with Zapier. They pipe in notifications about project
+changes, submissions to their Gravity Forms form, and posts on their
+social media accounts. They also use Slack to chat with clients: “We
+have dedicated Slack channels with clients, or otherwise communicate in
+Basecamp,” Fauzi says.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/1250/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+new Basecamp activity to Slack</a></li>
+<li><a
+href="https://zapier.com/app/min/10586/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+new Gravity Forms submissions to a Slack channel</a></li>
+<li><a
+href="https://zapier.com/app/min/1551/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Share
+new Facebook Page posts in Slack</a></li>
+</ul>
+<p>Time tracking app <a href="https://toggl.com/">Toggl</a> keeps the
+project focused and on-time. “It ensures team members do not go over the
+estimated time limit, and also checks if they are overwhelmed or
+underutilized,” Fauzi says. Once a project launches, the team celebrates
+with little rewards on <a href="https://bonus.ly/">Bonusly</a>.</p>
+<p>Every tool plays a different part in keeping the Stampede team
+focused, so they can keep their clients happy.</p>
+<h4 id="leanpub-auto-apps">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://basecamp.com/">Basecamp</a></li>
+<li><strong>Scheduling</strong>: <a
+href="http://resourceguruapp.com">ResourceGuru</a></li>
+<li><strong>Time Tracking</strong>: <a
+href="https://toggl.com/">Toggl</a></li>
+<li><strong>File Sharing</strong>: <a
+href="https://www.dropbox.com">Dropbox</a></li>
+<li><strong>Communication</strong>: <a
+href="https://slack.com/">Slack</a> &amp; <a
+href="https://basecamp.com/">Basecamp</a></li>
+<li><strong>Rewards</strong>: <a
+href="http://bonus.ly">Bonus.ly</a></li>
+<li><strong>Notes</strong>: <a
+href="https://workflowy.com">Workflowy</a> &amp; <a
+href="https://keep.google.com">Google Keep</a></li>
+<li><strong>Shared Logins</strong>: <a
+href="https://lastpass.com">LastPass</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Stampede’s
+stack: <a
+href="https://zapier.com/zapbook/basecamp/review/">Basecamp</a>, <a
+href="https://zapier.com/zapbook/toggl/review">Toggl</a>, <a
+href="https://zapier.com/zapbook/dropbox/review">Dropbox</a>, and <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-thumbprints-stack-for-printing-logistics">Thumbprint’s
+Stack for Printing Logistics</h3>
+<figure class="image center">
+<img src="images/ch7_img3thumbprint.png" />
+</figure>
+<p>Sometimes you need to see a project in a different light, with one
+view for planning and another for assigning tasks. That’s why print
+logistics company <a href="http://thumbprint.is">Thumbprint</a> relies
+on both Trello and Wunderlist for their projects.</p>
+<p>“Trello allows us to show projects along a workflow and how they are
+progressing,” says Thumbprint COO Tod Ellington “Wunderlist allows us to
+see tasks by teams and clients.” To help Trello and Wunderlist talk to
+each other, they rely on Zapier.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/3349/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Wunderlist tasks from new or moved Trello cards</a></li>
+<li><a
+href="https://zapier.com/app/min/3348/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new Wunderlist tasks</a></li>
+</ul>
+<p>Every project follows the same basic steps, so the Thumbprint team
+uses <a href="https://zapier.com/blog/the-checklist-manifesto/">workflow
+checklists</a> in Process Street to keep track of everything. Toggl
+helps them keep track of time spent on projects, while a Klipfolio
+dashboard shows the stats for each department’s projects.</p>
+<p>Team password manager OneLogin ties everything together, the
+“starting point for each employee, where they access the software
+specific to each role,” says Ellington. That, along with the Zapier
+integrations, keeps their diverse set of project tools connected so they
+can use the best tool for each task.</p>
+<h4 id="leanpub-auto-apps-1">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://trello.com/">Trello</a> &amp; <a
+href="https://www.wunderlist.com/">Wunderlist</a></li>
+<li><strong>Checklists</strong>: <a
+href="https://www.process.st">Process Street</a></li>
+<li><strong>Time Tracking</strong>: <a
+href="https://toggl.com/">Toggl</a></li>
+<li><strong>Stats</strong>: <a
+href="https://www.klipfolio.com">Klipfolio</a></li>
+<li><strong>Shared Logins</strong>: <a
+href="https://www.onelogin.com">OneLogin</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Thumbprint’s
+stack: <a href="https://zapier.com/zapbook/trello/review/">Trello</a>,
+<a href="https://zapier.com/zapbook/wunderlist/review/">Wunderlist</a>,
+and <a
+href="https://zapier.com/zapbook/toggl/review">Toggl</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-bryan-landers-stack-for-product-design-consulting">Bryan
+Landers’ Stack for Product Design Consulting</h3>
+<figure class="image center">
+<img src="images/ch7_img4landers.png" />
+</figure>
+<p>Sometimes working with clients means using their preferred tools—even
+though they might not be your favorites. That’s what product designer <a
+href="http://bryanlanders.com/">Bryan Landers</a> has discovered as he
+juggles client work and his <a href="http://missionandvalues.co">Mission
+&amp; Values</a> podcast.</p>
+<p>“I use Wunderlist for my own personal tasks, and also use Trello for
+tasks when the card-based, drag-and-drop UI is better,” he says. “When
+clients have their own apps for task management, I will use them if I
+think that it will save time with communication. This is definitely
+challenging because it means managing tasks across multiple apps, but
+it’s worth it for the increased transparency and alignment with the
+client.”</p>
+<p>Sticking to your own apps when you have one or two clients works
+fine. But when you’re communicating with 10 different teams
+simultaneously—each one with its own apps and workflows—switching from
+platform to platform gets old, fast.</p>
+<p>The one thing that most project management tools have in common,
+though, is that they send notifications via email. Landers uses that to
+his advantage: his inbox acts as a central notification hub, and he
+triages work from there.</p>
+<p>But a full inbox can be overwhelming—especially with notifications
+coming in at all hours. “I find myself always tweaking notifications
+because one benefit of being a freelancer is that you are in charge of
+managing your own time,” Landers says. “If you don’t want to be
+contacted after 10pm by a client, then it’s up to you to turn off
+notifications for all of these apps.”</p>
+<p>If email is the common denominator among your team’s tools, Zapier
+can help you control the flow of information. You can update clients
+about their projects via email, without worrying about which project app
+they’re using. Most other apps—including design feedback tool
+Zeplin—include email notifications to loop clients in. And when an email
+isn’t enough, Landers starts a Skype or Google Hangouts call. It’s just
+enough to give some order to a maze of client projects.</p>
+<h4 id="leanpub-auto-apps-2">Apps</h4>
+<ul>
+<li><strong>Starting Projects</strong>: Email</li>
+<li><strong>Project Management</strong>: <a
+href="https://trello.com/">Trello</a> &amp; <a
+href="https://www.wunderlist.com/">Wunderlist</a>, or client’s own
+project management app</li>
+<li><strong>Communication</strong>: <a
+href="https://www.skype.com/en/">Skype</a> &amp; <a
+href="https://hangouts.google.com">Google Hangouts</a></li>
+<li><strong>Notes</strong>: <a
+href="https://www.google.com/docs/about/">Google Docs</a> or client’s
+perfered app</li>
+<li><strong>Design Feedback</strong>: <a
+href="https://zeplin.io">Zeplin</a> &amp; <a
+href="http://www.invisionapp.com">InVision</a></li>
+<li><strong>Notifications</strong>: <a
+href="http://zapier.com/zapbook/sms">SMS via Zapier</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Bryan’s stack:
+<a href="https://zapier.com/zapbook/trello/review/">Trello</a>, <a
+href="https://zapier.com/zapbook/wunderlist/review/">Wunderlist</a>, and
+<a href="https://zapier.com/zapbook/google-docs/review/">Google
+Docs</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-anguleris-technologies-stack-for-information-modeling">Anguleris
+Technologies’ Stack for Information Modeling</h3>
+<figure class="image center">
+<img src="images/ch7_img5anguleris.png" />
+</figure>
+<p>Mapping out a schedule is a crucial part of planning a successful
+project. That’s why <a href="http://www.anguleris.com">Anguleris
+Technologies</a> uses three different tools to scope out dates for their
+building information modeling projects: Float, LiquidPlanner, and
+Smartsheet.</p>
+<p>Each tool plays a role in a progressive scheduling structure, which
+moves from short- to long-term goals. They need to see who has time to
+take on new work, figure out when each task will be completed, and then
+share that info with clients.</p>
+<p>It starts in forecasting app Float, which the team uses to plan who’s
+working on what in the short-term (i.e. the next two weeks or so).</p>
+<figure class="image center">
+<img src="images/ch7_img6.jpeg" alt="The Anguleris Technologies team" />
+<figcaption aria-hidden="true">The Anguleris Technologies
+team</figcaption>
+</figure>
+<p>With the short-term plan in place, the Anguleris team creates a new
+project in LiquidPlanner where they can schedule when each task will
+actually be completed. They can then create a timeframe in Smartsheet to
+share the expected completion dates with clients. Outlook, Slack, and
+GoToMeeting fill the communication gaps, helping their team discuss
+tasks internally and meet with clients.</p>
+<h4 id="leanpub-auto-apps-3">Apps</h4>
+<ul>
+<li><strong>Planning</strong>: <a
+href="http://floatapp.com">Float</a></li>
+<li><strong>Project Management</strong>: <a
+href="https://www.liquidplanner.com/">LiquidPlanner</a></li>
+<li><strong>Scheduling</strong>: <a
+href="https://www.smartsheet.com/">Smartsheet</a></li>
+<li><strong>Communication</strong>: <a
+href="http://www.outlook.com">Outlook</a>, <a
+href="https://slack.com/">Slack</a>, and <a
+href="http://www.gotomeeting.com">GoToMeeting</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Anguleris’s
+stack: <a
+href="https://zapier.com/zapbook/liquid-planner/review/">LiquidPlanner</a>,
+<a href="https://zapier.com/zapbook/smartsheet/review">Smartsheet</a>,
+and <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-starofservices-stack-for-on-demand-services">StarOfService’s
+Stack for On-Demand Services</h3>
+<figure class="image center">
+<img src="images/ch7_img7star.png" />
+</figure>
+<p>Projects of different sizes require different apps. That’s why the
+team at <a href="http://www.starofservice.com/#/">StarOfService</a>—an
+app that connects people to service professionals like personal trainers
+and translators—never tries to force a “small project” app to do a “big
+project” app’s job.</p>
+<p>“We love Kanban-style workflows,” says StarOfService co-founder Maël
+Leclair. They started out with Trello, but hit its limits as their
+projects expanded. “For us Trello is not scaling super well for large
+projects, so we keep it as a sidekick that complements JIRA.” Trello
+gets the smaller projects, then they turn to JIRA for more complicated
+jobs.</p>
+<p>Zapier helps keep projects running smoothly, no matter which app
+they’re in. “We have a Gmail address that is used for reporting bugs,”
+Leclair says. “We use a Zap to send those bug reports automatically to
+JIRA and Trello.”</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/10030/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Forward
+new emails to create Trello cards</a></li>
+<li><a
+href="https://zapier.com/app/min/2411/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+new Email messages to JIRA as new issues</a></li>
+<li><a
+href="https://zapier.com/app/min/1900/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Send
+Amazon SNS JSON messages to Slack</a></li>
+</ul>
+<p>“We also try to centralize as much information as possible into
+Slack,” Leclair says. That’s where they discuss projects internally, and
+Zapier also notifies them about alerts from their server by
+automatically sending the messages to Slack. “It helps us to identify
+issues early before they become a major problem,” Leclair says.</p>
+<h4 id="leanpub-auto-apps-4">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://trello.com/">Trello</a> &amp; <a
+href="https://www.atlassian.com/software/jira">JIRA</a></li>
+<li><strong>Scheduling</strong>: <a
+href="https://www.google.com/calendar/about/">Google Calendar</a></li>
+<li><strong>Communication</strong>: <a
+href="https://gmail.com/">Gmail</a> &amp; <a
+href="https://slack.com/">Slack</a></li>
+<li><strong>Notes</strong>: <a
+href="https://www.google.com/docs/about/">Google Docs</a></li>
+<li><strong>Design Feedback</strong>: <a
+href="https://www.invisionapp.com">InVision</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in StarOfService’s
+stack: <a href="https://zapier.com/zapbook/trello/review/">Trello</a>,
+<a href="https://zapier.com/zapbook/google-calendar/review/">Google
+Calendar</a>, <a
+href="https://zapier.com/zapbook/jira/review/">JIRA</a>, <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>, and <a
+href="https://zapier.com/zapbook/google-docs/review/">Google
+Docs</a>.</em></p>
+</blockquote>
+<h4
+id="leanpub-auto-blue-ocean-robotics-stack-for-robotics-development">Blue
+Ocean Robotics’ Stack for Robotics Development</h4>
+<figure class="image center">
+<img src="images/ch7_img8blue.png" />
+</figure>
+<p>No, this isn’t a science fiction movie: the team at <a
+href="http://www.blue-ocean-robotics.com/en">Blue Ocean Robotics</a>
+spends every day building robots that improve quality of life for
+humans. From industrial robots that pick parts and disinfect equipment
+to telepresence robots that help remote team members join in at the
+office, their projects are already part of workflows at companies around
+the globe.</p>
+<p>To build those robots and market them, the Blue Ocean team relies on
+many of the same tools you might already be using. “We actually use a
+very streamlined set of tools in our project management,” says vice
+president of marketing Thomas Midtgaard-Jørgensen. “We use Trello as the
+project overview, with the Scrum for Trello add-on which allows us to
+manage hours.”</p>
+<figure class="image center">
+<img src="images/ch7_img9.jpeg"
+alt="One of Blue Ocean Robotics&#39; robots" />
+<figcaption>One of Blue Ocean Robotics’ robots</figcaption>
+</figure>
+<p>Many of their tasks come in via Gmail emails, alongside their regular
+correspondence. “The best way for us to sort deliverables from
+information is to make tasks in Gmail,” Midtgaard-Jørgensen says. “These
+tasks are then converted into Trello cards via a Zap.”</p>
+<p><strong><em>Zapier Integration:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/1339/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new starred Gmail emails</a></li>
+</ul>
+<p>After struggling to implement Evernote in their workflow, the Blue
+Ocean team settled on Trello for storing notes alongside their tasks and
+projects. But their communication tools—Slack for text chat, plus Skype
+and Google Hangouts for video calls—really help their projects hum
+along.</p>
+<p>“If you do not communicate via daily scrum meetings and walkabouts,
+then you cannot have a finger on the project’s pulse,”
+Midtgaard-Jørgensen says. “This element of transparency removes any
+doubts about where we’re going with the projects.”</p>
+<h4 id="leanpub-auto-apps-5">Apps</h4>
+<ul>
+<li><strong>Starting Projects</strong>: <a
+href="https://gmail.com/">Gmail</a></li>
+<li><strong>Project Management</strong>: <a
+href="https://trello.com/">Trello</a> with <a
+href="http://scrumfortrello.com/">Scrum for Trello</a> add-on</li>
+<li><strong>Communication</strong>: <a
+href="https://slack.com/">Slack</a>, <a
+href="https://www.skype.com/en/">Skype</a>, &amp; <a
+href="https://hangouts.google.com">Google Hangouts</a></li>
+<li><strong>Notes</strong>: <a
+href="https://trello.com/">Trello</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Blue Ocean
+Robotics’s stack: <a
+href="https://zapier.com/zapbook/trello/review/">Trello</a> and <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-tinkerbox-studios-stack-for-app-development">Tinkerbox
+Studios’ Stack for App Development</h3>
+<figure class="image center">
+<img src="images/ch7_img10tinkerbox.png" />
+</figure>
+<p>If you start a project off on the right foot, and get all of your
+to-dos lined up at the get-go, you won’t waste time tracking down
+project info later. That’s what <a
+href="https://www.tinkerbox.com.sg">Tinkerbox Studios</a>—a design and
+development studio—has found with their projects.</p>
+<p>“One of the most useful things we’ve got down pat is the onboarding
+process for projects,” says Tinkerbox Studios founder Jaryl Sim.
+Whenever they win a deal in Pipedrive—their CRM—they need to create a
+project in Basecamp, a Slack channel where they can chat about that
+project, and a Dropbox folder. Then, they alert everyone about the new
+undertaking.</p>
+<figure class="image center">
+<img src="images/ch7_img11.jpeg" />
+</figure>
+<p>Zapier handles that whole process automatically. From the deal in
+Pipedrive, a Zap creates the project, Slack channel, and Dropbox folder,
+plus sets up billing for the client. Then, “it sends us all an email
+telling us where everything is, which cuts down a lot of informal
+coordination to get things set up,” Sim says.</p>
+<p>That way, the entire team always has the data they need, so they can
+focus on the project at hand.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/12070/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Basecamp projects for new Pipedrive deals</a></li>
+<li><a
+href="https://zapier.com/app/min/12071/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Slack channels for new Pipedrive deals</a></li>
+<li><a
+href="https://zapier.com/app/min/12072/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Dropbox folders for new Pipedrive deals</a></li>
+<li><a
+href="https://zapier.com/app/min/217/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Get
+Slack notifications for new Pipedrive deals</a></li>
+</ul>
+<h4 id="leanpub-auto-apps-6">Apps</h4>
+<ul>
+<li><strong>Starting Projects</strong>: <a
+href="https://www.pipedrive.com/">Pipedrive</a></li>
+<li><strong>Project Management</strong>: <a
+href="https://basecamp.com/">Basecamp</a> &amp; an internal project
+management app</li>
+<li><strong>Communication</strong>: <a
+href="https://slack.com/">Slack</a></li>
+<li><strong>File Sharing</strong>: <a
+href="https://www.dropbox.com/">Dropbox</a></li>
+<li><strong>Design Feedback</strong>: <a
+href="https://www.invisionapp.com">InVision</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Tinkerbox’s
+stack: <a
+href="https://zapier.com/zapbook/pipedrive/review/">Pipedrive</a>, <a
+href="https://zapier.com/zapbook/basecamp/review/">Basecamp</a>, <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>, and <a
+href="https://zapier.com/zapbook/dropbox/review">Dropbox</a>.</em></p>
+</blockquote>
+<h3 id="leanpub-auto-delves-stack-for-intelligence">Delve’s Stack for
+Intelligence</h3>
+<figure class="image center">
+<img src="images/ch7_img12delve.png" />
+</figure>
+<p>No app can cover every <a
+href="https://zapier.com/blog/project-management-systems/">project
+management method</a>. Your best bet is to find a tool that does most of
+what you need, and then see if a companion app can fill in the gaps.</p>
+<p>That’s why the <a href="http://delvedc.com">Delve</a> team uses
+Basecamp with Workstack—an add-on that visualizes how long each task
+will take and whose schedule is the most full. “Workstack provides the
+leadership team with a dashboard of priorities and project scheduling
+across projects,” says Delve CEO Jeff Berkowitz.</p>
+<p>Delve specializes in research projects in the political and business
+spheres. They use Dropbox to keep their files organized and in-sync,
+while Slack helps them communicate about everything related to specific
+projects. “We use Zapier to connect Basecamp to Slack, where all of our
+team and project communication takes place,” Berkowitz says. That way,
+no one misses an update in Basecamp, and they don’t need to be watching
+the app constantly.</p>
+<p><strong><em>Zapier Integration:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/1250/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+new Basecamp activity to Slack</a></li>
+</ul>
+<h4 id="leanpub-auto-apps-7">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://basecamp.com/">Basecamp</a></li>
+<li><strong>Scheduling</strong>: <a
+href="https://www.workstack.me">Workstack</a></li>
+<li><strong>Communication</strong>: <a
+href="https://slack.com/">Slack</a></li>
+<li><strong>File Sharing</strong>: <a
+href="https://www.dropbox.com/">Dropbox</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Delve’s stack:
+<a href="https://zapier.com/zapbook/basecamp/review/">Basecamp</a>, <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>, and <a
+href="https://zapier.com/zapbook/dropbox/review">Dropbox</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-high-sails-medias-stack-for-photography-video-and-design">High
+Sails Media’s Stack for Photography, Video, and Design</h3>
+<figure class="image center">
+<img src="images/ch7_img13high.png" />
+</figure>
+<p>Running two companies at the same time means juggling a lot of tasks.
+But the <a href="http://highsailsmedia.com">High Sails Media</a> team is
+pretty good at keeping multiple projects afloat simultaneously: they run
+their design firm alongside <a
+href="http://www.stopgolove.net/">StopGoLove</a>, their wedding
+photography and film company. Each project has a ton of moving parts,
+and they rely on Zapier to put each piece in the right place.</p>
+<p>“We use Zapier to create Trello cards from multiple Asana workspaces
+and projects, as well as alert us in Slack when a new Asana task is
+created,” says visual designer Jason McCutchen. “We also use it in the
+StopGoLove side to automagically migrate leads in our lead email list to
+our clients’ email lists based on a field in a Google spreadsheet.”</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/73/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new Asana tasks</a></li>
+<li><a
+href="https://zapier.com/app/min/1584/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Asana tasks from new starred Slack messages</a></li>
+<li><a
+href="https://zapier.com/app/min/5/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+Subscribers to MailChimp via a Google Spreadsheet</a></li>
+<li><a
+href="https://zapier.com/app/min/7308/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Send
+messages on Slack for new CallRail calls</a></li>
+</ul>
+<p>They also use Zapier to get Slack alerts about CallRail calls. That
+way, each task, call, and discussion is all in the same place.</p>
+<p>“We worked very hard to get the Zaps to complement one another and
+work sequentially,” McCutchen says. “Zaps have saved us more time and
+energy than I can probably even quantify.”</p>
+<figure class="image center">
+<img src="images/ch7_img14.jpeg"
+alt="The High Sails Media team at work in their office, a 200 year old barn in Mendon, Massachusetts" />
+<figcaption aria-hidden="true">The High Sails Media team at work in
+their office, a 200 year old barn in Mendon, Massachusetts</figcaption>
+</figure>
+<h4 id="leanpub-auto-apps-8">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://asana.com/">Asana</a> &amp; <a
+href="https://trello.com/">Trello</a></li>
+<li><strong>Communication</strong>: <a
+href="http://www.callrail.com">CallRail</a></li>
+<li><strong>Contacts</strong>: <a
+href="https://www.google.com/sheets/about/">Google Sheets</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in High Sails
+Media’s stack: <a
+href="https://zapier.com/zapbook/asana/review/">Asana</a>, <a
+href="https://zapier.com/zapbook/trello/review/">Trello</a>, and <a
+href="http://zapier.com/zapbook/google-sheets/review/">Google
+Sheets</a>.</em></p>
+</blockquote>
+<h3 id="leanpub-auto-bata-foods-stack-for-food-export">Bata Food’s Stack
+for Food Export</h3>
+<figure class="image center">
+<img src="images/ch7_img15bata.png" />
+</figure>
+<p>There’s very little room for error in the food exporting business.
+Miss your deadlines or forget a task, and you could end up with a
+container full of mushy, rotting products. That’s why the <a
+href="http://www.batafood.com">Bata Food</a> has a checklist to follow
+for each type of project.</p>
+<p>“We prepared templates on Excel before for 2-3 different scenarios,”
+says Bata Food consultant Burak Bardakçı. “For each sale, we import a
+template in this project in Todoist which assigns tasks automatically to
+the people in charge.” That ensures nothing’s overlooked.</p>
+<figure class="image center">
+<img src="images/ch7_img16.jpeg" alt="A Bata Foods shipment" />
+<figcaption aria-hidden="true">A Bata Foods shipment</figcaption>
+</figure>
+<p>Zapier integrations keep track of everything else. They log leads in
+OpenERP, and use Zapier to share new customers on Slack. From there,
+each lead is automatically added to a MailChimp mailing list. “Any new
+action on OpenERP, such as “new quotation”, “new lead/opportunity”, or
+“new contact”, sends a notification to a Slack channel so everyone in
+the team can track or search what is going on in the system,” says
+Bardakçı.</p>
+<p>Todoist tasks and upcoming Google Calendar events are also shared in
+Slack, to keep everything in one place. With Slack as the central hub
+for every activity, and Todoist templates ensuring that the same tasks
+are completed every time, the Bata Food team is able to tackle every
+project on schedule.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/5532/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+new subscribers to MailChimp for new OpenERP records</a></li>
+<li><a
+href="https://zapier.com/app/min/5531/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Send
+Slack messages for new OpenERP records</a></li>
+<li><a
+href="https://zapier.com/app/min/12081/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Share
+new Todoist tasks in Slack</a></li>
+<li><a
+href="https://zapier.com/app/min/356/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+approaching Google Calendar events to a Slack channel</a></li>
+</ul>
+<h4 id="leanpub-auto-apps-9">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://en.todoist.com/">Todoist</a> &amp; <a
+href="https://www.odoo.com/">OpenERP</a></li>
+<li><strong>Communication</strong>: <a
+href="https://slack.com/">Slack</a> &amp; <a
+href="https://gmail.com/">Gmail</a></li>
+<li><strong>Scheduling</strong>: <a
+href="https://www.google.com/calendar/about/">Google Calendar</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Bata Food’s
+stack: <a href="https://zapier.com/zapbook/todoist/review/">Todoist</a>,
+<a href="https://zapier.com/zapbook/openerp/review/">OpenERP</a>, <a
+href="https://zapier.com/zapbook/slack/review">Slack</a>, and <a
+href="https://zapier.com/zapbook/google-calendar/review/">Google
+Calendar</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-conneqtifys-stack-for-building-communities">Conneqtify’s
+Stack for Building Communities</h3>
+<figure class="image center">
+<img src="images/ch7_img17conneqtify.png" />
+</figure>
+<p>Planning events requires coordination between a wide range of teams,
+something <a href="http://conneqtify.se">Conneqtify</a> has solved with
+a form-powered project workflow.</p>
+<p>“I ask a few questions in Typeform,” says Conneqtify founder Oskar
+Wiklund “with those questions, I automate the entire workflow by adding
+info and deadlines to the tasks, and assigning them.” The form starts
+off by asking what type of event will be planned—something that’s useful
+for Wiklund when he’s doling out to-dos.</p>
+<p>“I assign different tasks to different people depending on what type
+of task it is: communication tasks to the communication team, logistics
+to the logistics team,” Wiklund says. Zapier integrations help with
+that, and also queue up social media posts about the event right from
+the form.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/113/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello cards from new Typeform entries</a></li>
+<li><a
+href="https://zapier.com/app/min/10638/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Post
+new Typeform entries to your Facebook Page</a></li>
+</ul>
+<p>Simple-yet-powerful workflows like these that help their projects go
+smoothly. “As a community builder, Zapier has allowed me to connect with
+more people than ever,” Wiklund says. “I can automate the way we connect
+with customers and make it feel very personal and professional.”</p>
+<h4 id="leanpub-auto-apps-10">Apps</h4>
+<ul>
+<li><strong>Starting Projects</strong>: <a
+href="https://www.typeform.com/">Typeform</a></li>
+<li><strong>Project Management</strong>: <a
+href="https://trello.com/">Trello</a></li>
+<li><strong>Contacts</strong>: <a
+href="https://www.pipedrive.com/">Pipedrive</a></li>
+<li><strong>Scheduling</strong>: <a href="https://gmail.com/">Gmail</a>
+with <a href="https://mixmax.com">Mixmax</a> plugin</li>
+<li><strong>Notes</strong>: <a
+href="https://evernote.com/">Evernote</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Conneqtify’s
+stack: <a href="http://zapier.com/zapbook/typeform/review">Typeform</a>,
+<a href="https://zapier.com/zapbook/trello/review/">Trello</a>, <a
+href="https://zapier.com/zapbook/pipedrive/review/">Pipedrive</a>, and
+<a
+href="https://zapier.com/zapbook/evernote/review/">Evernote</a>.</em></p>
+</blockquote>
+<h3 id="leanpub-auto-interlikes-stack-for-development">Interlike’s Stack
+for Development</h3>
+<figure class="image center">
+<img src="images/ch7_img18interlike.png" />
+</figure>
+<p>New projects mean new files (lots of them) and it’s important to keep
+them organized. A detailed folder structure helps the team at <a
+href="http://interlikeapp.com">Interlike</a>—an online marketing
+platform—stay productive.</p>
+<p>“We have company guidelines on project folder structure in Google
+Drive,” says Interlike CEO Kirill Kaplun, “which allows us to have
+everything in its place, easily accessible and sharable.” To make sure
+those folder structures are used every time, they rely on Zapier
+integrations to create the folders for new projects.</p>
+<p>Each project—which, at Interlike, often means a new feature request
+or bug to fix—starts with a Typeform or Podio form. “We have processes,
+not just projects,” Kaplun says. When there’s a new bug or feature
+request, a team member will fill out a form. Then, Zapier does the rest.
+“Once project is initiated the correct folder structure is created, and
+Zapier creates events and appointments in corresponding calendars,”
+Kaplun says.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/10609/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+Google Drive folders for new Podio items</a></li>
+<li><a
+href="https://zapier.com/app/min/10639/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Google Drive folders with new Typeform entries</a></li>
+<li><a
+href="https://zapier.com/app/min/1356/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+new Typeform entries to Asana as tasks</a></li>
+</ul>
+<p>Zapier integrations keep their projects structured and organized, so
+their team can focus on building their app. And when they need to
+prototype a new feature, they often use Zapier to test it out, too. The
+integrations give them a quick way to <a
+href="https://zapier.com/blog/prototype-app-zapier/">prototype without
+code</a>, so they can spend more time squashing bugs and improving their
+platform.</p>
+<h4 id="leanpub-auto-apps-11">Apps</h4>
+<ul>
+<li><strong>Starting Projects</strong>: <a
+href="https://podio.com/site/en">Podio</a> or <a
+href="https://www.typeform.com/">Typeform</a></li>
+<li><strong>Project Management</strong>: <a
+href="https://asana.com/">Asana</a></li>
+<li><strong>File Sharing</strong>: <a
+href="https://www.google.com/drive/">Google Drive</a></li>
+<li><strong>Prototyping</strong>: <a
+href="http://zapier.com/">Zapier</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in Interlike’s
+stack: <a href="http://zapier.com/zapbook/podio/review/">Podio</a>, <a
+href="http://zapier.com/zapbook/typeform/review">Typeform</a>, <a
+href="https://zapier.com/zapbook/asana/review/">Asana</a>, and <a
+href="https://zapier.com/zapbook/google-drive/review/">Google
+Drive</a>.</em></p>
+</blockquote>
+<h3
+id="leanpub-auto-white-room-automations-stack-for-industrial-connectivity">White
+Room Automation’s Stack for Industrial Connectivity</h3>
+<figure class="image center">
+<img src="images/ch7_img19white.png" />
+</figure>
+<p>The team at <a href="http://whiteroomautomation.com">White Room
+Automation</a> has struggled to find the perfect project management
+tool.</p>
+<p>“There are very few apps that do everything well,” says White Room
+Automation principal consultant Ryan Plester. “Harvest is a great
+time-tracking tool, but its expenses are limited. Our accounting system
+is another good example: great for basic accounting but for getting into
+the details of product sales, we had to build custom objects in
+Salesforce.”</p>
+<p>Instead of using just one tool, they’ve found tools that work best
+for each task: Asana for tasks, Harvest for time tracking, and
+customized Salesforce objects for accounting. To tie everything
+together, they use Zapier.</p>
+<p>“Zapier enables us to automate tasks that are easily repeatable but
+take up time when done manually,” Plester says.</p>
+<p><strong><em>Zapier Integrations:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/34/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Asana Tasks from Emails in Gmail</a></li>
+<li><a
+href="https://zapier.com/app/min/4386/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Harvest projects from new Asana projects</a></li>
+<li><a
+href="https://zapier.com/app/min/2262/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Add
+new Google Contacts contacts to Salesforce as contacts</a></li>
+</ul>
+<h4 id="leanpub-auto-apps-12">Apps</h4>
+<ul>
+<li><strong>Project Management</strong>: <a
+href="https://asana.com/">Asana</a></li>
+<li><strong>Time Tracking</strong>: <a
+href="https://www.getharvest.com/">Harvest</a></li>
+<li><strong>Scheduling</strong>: <a
+href="https://www.getharvest.com/forecast">Harvest Forecast</a></li>
+<li><strong>Accounting</strong>: Custom Objects in <a
+href="https://www.salesforce.com/">Salesforce</a></li>
+</ul>
+<blockquote>
+<p><em>Read our in-depth reviews of some of the apps in White Room
+Automation’s stack: <a
+href="https://zapier.com/zapbook/asana/review/">Asana</a>, <a
+href="https://zapier.com/zapbook/harvest/review/">Harvest</a>, and <a
+href="https://zapier.com/zapbook/salesforce/review">Salesforce</a>.</em></p>
+</blockquote>
+<hr />
+<p>Every project and team has different needs. For some, planning ahead
+is most important, the trick that helps their projects flow smoothly.
+Others need to look in a wide range of tools, and need something that
+pulls everything together. You might find that documentation, or
+checklists, or some other aspect is what makes or breaks your
+projects.</p>
+<p>What’s important is that you have a tool for every need your projects
+bring. Don’t try to shoehorn tasks into a project management app that’s
+not built for them. Instead, add on a new tool for that task, and use
+integrations—perhaps with the <a href="https://zapier.com/zapbook">over
+600 apps integrated with Zapier</a>—to connect it to your projects and
+make everything run smoothly.</p>
+<p>Start out by finding a project management app for your team with our
+roundup of the <a
+href="https://zapier.com/blog/best-project-management-software/">best
+project management apps</a>—and feel free to use more than one if you
+need. Then, here are roundups of some other great business software to
+help with every other part of your projects:</p>
+<ul>
+<li><a
+href="https://zapier.com/learn/ultimate-guide-to-forms-and-surveys/best-online-form-builder-software/">Form
+builder apps</a></li>
+<li><a
+href="https://zapier.com/blog/standard-operating-procedures/">Checklist
+and Standard Operating Procedures Apps</a></li>
+<li><a href="https://zapier.com/blog/best-note-taking-apps/">Notes
+apps</a></li>
+<li><a href="https://zapier.com/blog/best-team-chat-app/">Team chat
+apps</a></li>
+<li><a
+href="https://zapier.com/blog/best-meeting-scheduler-apps/">Scheduling
+tools</a></li>
+<li><a href="https://zapier.com/blog/best-time-tracking-apps/">Time
+Tracking apps</a></li>
+</ul>
+<hr />
+<p>Ever noticed how so many of your tasks follow the same routine—and
+how much that routine needs standardized? That’s where <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/standard-operating-procedures">Standard
+Operating Procedures</a> come in. They’re the checklists that keep
+surgeries and flights safe, and can help make sure your next projects
+are an equal success.</p>
+<p>Here’s how.</p>
+<hr />
+<p><em>Enjoy this chapter? Read it online or share it at <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/project-management-toolkits/">https://zapier.com/learn/ultimate-guide-to-project-management/project-management-toolkits/</a>.</em></p>
+<hr />
+<p><em>Written by Zapier marketer <a
+href="https://twitter.com/maguay">Matthew Guay</a>.</em></p>
+</body>
+</html>

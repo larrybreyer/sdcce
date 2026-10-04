@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Chapter 2: Project Management 101: The Complete Guide to Agile,
+Kanban, Scrum and Beyond</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chapter 2: Project Management 101: The Complete Guide
+to Agile, Kanban, Scrum and Beyond</h1>
+</header>
+<h2
+id="leanpub-auto-chapter-2-project-management-101-the-complete-guide-to-agile-kanban-scrum-and-beyond">Chapter
+2: Project Management 101: The Complete Guide to Agile, Kanban, Scrum
+and Beyond</h2>
+<figure class="image center">
+<img src="images/ch2_header.jpg" />
+</figure>
+<blockquote>
+<p>“Of all the difficulties facing NASA in its bid to send humans to the
+Moon in the Apollo program, management was perhaps the greatest
+challenge.” - <a href="http://history.nasa.gov/monograph14.pdf">Roger D.
+Launius</a>, chief historian, NASA</p>
+</blockquote>
+<p>Humanity has a track record of wielding some serious project
+management chops. From building the Great Pyramids to landing on the
+moon, humanity’s greatest endeavors have required thousands of people
+working together on common goals. That requires intricate project
+management to pull off.</p>
+<p>Although most of us will never be tasked with goals of such scope,
+many of us have to manage projects in one way or another. The Project
+Management Institute estimates there will be more than <a
+href="http://www.pmi.org/~/media/PDF/Business-Solutions/PMIProjectManagementSkillsGapReport.ashx">15
+million new project manager positions</a> added to the global job market
+by 2020—and many of the rest of us will still have smaller projects to
+manage on our own.</p>
+<p>Project Management, simplified, is the organization and strategic
+execution of everything that needs to get done to tackle a finite
+goal—on time and within budget. Whether developing new software,
+carrying out a marketing campaign, or landing a human on Mars, project
+management is what gets you to your goal.</p>
+<p>Every project is different. There’s no one-size-fits-all project
+management system—and there may be no one perfect system for you. But
+the past decades of experience have lent us a number of effective
+project management methods that can guide your work.</p>
+<h5 id="leanpub-auto-popular-project-management-systems">Popular Project
+Management Systems</h5>
+<ul>
+<li>Traditional Project Management</li>
+<li>Agile</li>
+<li>Scrum</li>
+<li>Lean</li>
+<li>Kanban</li>
+<li>Six Sigma</li>
+<li>PRINCE2</li>
+</ul>
+<p>Before diving into any one method, let’s answer the obvious
+question—<em>Why do you need a project management system at
+all?</em>—provide a brief history of project management, and define
+common project management terms.</p>
+<hr />
+<h3 id="leanpub-auto-why-project-management">Why Project
+Management?</h3>
+<figure class="image center">
+<img src="images/ch2_img1.jpg"
+alt="Dr. George E. Mueller presenting the Apollo program to President John F. Kennedy on November 15, 1963" />
+<figcaption aria-hidden="true">Dr. George E. Mueller presenting the
+Apollo program to President John F. Kennedy on November 15,
+1963</figcaption>
+</figure>
+<p>Neil Armstrong and Buzz Aldrin’s names will forever symbolize one of
+humanity’s greatest achievements: putting a human on the moon. Yet, with
+<a
+href="http://www.nasa.gov/centers/langley/news/factsheets/Apollo.html">over
+400,000 NASA employees</a> and 20,000 companies and universities working
+together on the Apollo missions, the people who managed the project may
+have been the most crucial to actually landing on the moon.</p>
+<p>In 1961, President Kennedy committed to putting a man on the moon—and
+bring him back safely—within a decade, when NASA had only ever sent an
+astronaut to space for 15 minutes. Such a staggeringly complex project
+necessitated an incredible amount of resources, teamwork, innovation,
+and planning. Do each part at random, and it’d never get finished.</p>
+<p>As recounted in NASA’s “<a
+href="http://history.nasa.gov/monograph14.pdf">Managing the Moon
+Program</a>,” the problem wasn’t so much <em>what</em> to do, as much as
+it was <em>how</em> to do so much in so little time. “We knew what had
+to be done,” recounted Dr. Max Faget, head of engineering at Johnson
+Space Center. “How to do it in 10 years was never addressed before the
+announcement was made. But quite simply, we considered a program of a
+number of phases.”</p>
+<p>What mattered, then, was accelerating each phase and making sure the
+various teams and companies working on each part of the project could
+collaborate effectively, delivering finished work in a timely manner.
+That task fell to Dr. George E. Muller, who managed every part of the
+Apollo project from the White House to the smallest supplier. To ensure
+all phases worked perfectly, he broke each down into five areas: Program
+Control, System Engineering, Testing, Reliability &amp; Quality, and
+Flight Operations.</p>
+<figure class="image center">
+<img src="images/ch2_img2.jpg" />
+</figure>
+<p>This five box system—called GEM boxes after Muller’s initials—was
+designed “to focus, early on in the program, on the fact that you were
+going to test things, and you ought to design so you can test them,”
+said Muller. Program Control described what was needed, managed the
+budget and requirements, and specified how each piece worked together.
+System Engineering designed new items, Testing made sure it worked,
+Reliability &amp; Quality made sure each item was up-to-spec, and Flight
+Operations ensured it’d work in flight.</p>
+<p>“When people were first confronted with your approach to things, like
+all-up testing and management of the systems level, there was an initial
+skepticism that that was the right way to do business,” recalled Dr.
+John Logsdon of the feelings when Muller’s project management plan was
+introduced. But it proved itself out.</p>
+<p>As Dr. Muller said, “the amount of time it took to convince people
+that that was, in fact, a good thing to do, and, in my view at least,
+was necessary in order to provide the kinds of communications that were
+required in that complex a program in order to be sure that all those
+interfaces worked.”</p>
+<p>Muller’s project management system was a resounding success. NASA put
+the first humans on the moon and brought them back to earth safely in
+less than a decade of Kennedy’s announcement. That was only possible by
+breaking down the enormous project into manageable, repeatable steps,
+ones that guaranteed success even when working with so many individuals
+and companies. It was a project management system—and teamwork—that won
+the space race.</p>
+<hr />
+<h3 id="leanpub-auto-a-quick-history-of-project-management">A Quick
+History of Project Management</h3>
+<p>Project Management wasn’t new to NASA and Dr. Muller; Egypt’s
+pyramids and the Great Wall of China showcase the results of project
+management from bygone millennia. There’s little documentation of early
+project management methods, and today’s project management methods are
+descended from ideas from the past century.</p>
+<p>The most obvious way to break a project down is by its phases or
+tasks. Take cooking a recipe, for instance: you purchase the
+ingredients, combine them correctly, cook them, and then serve your
+finished meal. A simple project management method would be to list each
+step and check it off as it’s completed—a <a
+href="https://zapier.com/blog/task-management-strategies/">simple to-do
+list</a>, perhaps, would suffice.</p>
+<p>Maybe you’d want to cook multiple dishes—perhaps you’ll make a salad
+(with just three steps since it doesn’t need to be cooked) and a dessert
+(with just one step since it’s pre-made). You’ll need to serve each dish
+on time, and still make sure everything gets done. Suddenly, you’ll need
+a more powerful project management system, one that lines up the time
+needed for each task with the time each task is supposed to be
+completed.</p>
+<p>That’s where one of the first modern project management tools—the
+Gantt chart—comes into play.</p>
+<figure class="image center">
+<img src="images/ch2_img3.png"
+alt="A list of tasks along with a Gantt Chart calendar, made with Smartsheet" />
+<figcaption aria-hidden="true">A list of tasks along with a Gantt Chart
+calendar, made with Smartsheet</figcaption>
+</figure>
+<p>Invented independently by Korol Adamiecki and Henry Gantt in the
+early 20th century, the Gantt chart lists a project schedule based on
+start and finish dates. You list how long a task takes, and if any other
+tasks have to be completed before that task can start—for instance, you
+can’t serve your meal before you’ve cooked it. You can then calculate
+the “critical path” of the activities that must be completed by certain
+dates, and estimate how long the total project will take.</p>
+<p>Traditional project management looks a lot like this dinner project,
+only with far more tasks and more stringent deadlines and carefully
+planned resources. A project with tight deadlines might use a Gantt
+chart to decide when to start tasks; a project where resources are more
+constrained (say, a dinner project where two different dishes need the
+oven at different temperatures) might use an event chain diagram—much
+the same as a Gantt chart, but focused on the usage of resources other
+than time.</p>
+<p>Some projects need more or less structure than traditional project
+management gives you. If you’re publishing a series of articles on a
+blog, specific deadlines might not be as helpful as a process where you
+plan each article, write the first draft, get early edits and feedback,
+finish the article, proofread it, and then publish it. Instead of
+managing time or resources, you’ll manage process, running every task
+through the same <a
+href="https://zapier.com/blog/the-checklist-manifesto/">checklist</a> or
+workflow.</p>
+<p>It’s for projects like these that Agile project management and its
+many offshoots—Lean, Kanban, and more—have been developed, to help you
+make a process to produce consistent work. Some projects need to add
+more dates and resource allocation back into an agile workflow, so more
+advanced techniques like Six Sigma and Scrum have been developed as
+well.</p>
+<hr />
+<h3 id="leanpub-auto-popular-project-management-systems-1">Popular
+Project Management Systems</h3>
+<p>A century’s march of industrial and technological revolution have
+left behind enough examples of projects to have a project management
+system for almost every possible need. Even if your projects have less
+lofty goals and involve far fewer resources than sending a man to the
+moon, a structured project management system can help ensure your
+project’s success. You’ll just need to figure out what’s most important
+in your project—due dates, resources, process, or a mix of the three—and
+then pick a project management system that can help you effectively
+manage and finish your project.</p>
+<p>Before you dive in, though, let’s cover a list of the most common—and
+likely unfamiliar—terms you’ll find in project management.</p>
+<h4 id="leanpub-auto-common-project-management-terms">Common Project
+Management Terms</h4>
+<ul>
+<li><strong>Agile</strong>: An iterative form of project management
+where tasks are completed through specific phases</li>
+<li><strong>Critical Path</strong>: The list of the critical tasks that
+must be completed before a project is finished; together, they show the
+total estimated project time</li>
+<li><strong>Event Chain Diagram</strong>: A bar graph of events in a
+project and the order they’ll be completed based on resource
+availability</li>
+<li><strong>Float</strong>: The amount of time a task can be delayed
+without causing a delay to subsequent tasks or the entire project</li>
+<li><strong>Gantt Chart</strong>: A bar graph and calendar fusion that
+shows the time each task in a project will require; a form of an event
+chain diagram that’s focused on time.</li>
+<li><strong>Milestone</strong>: The time when important tasks in a
+project are completed</li>
+<li><strong>Project Manager (PM)</strong>: The team member whose top
+responsibility is to plan, carry out and close a project.</li>
+<li><strong>Resources</strong>: Elements required to complete a project,
+including time, equipment, supplies, team members, and other
+resources</li>
+<li><strong>Scope</strong>: The definition of what the project will
+cover; when this grows during the project it’s called “scope creep”</li>
+<li><strong>Sprint</strong>: Also called iteration; a period of time in
+which a certain part of a project is created and shipped</li>
+<li><strong>Traditional Project Management (TPM)</strong>: Basic project
+management where tasks are completed one after another</li>
+</ul>
+<p>With that knowledge tucked away, it’s time to find a project
+management system that can fit your team. We’ll first look at
+Traditional and Agile project management—the two main ideas that most
+other systems are based on—then dive into Scrum, Kanban, Six Sigma and
+more.</p>
+<hr />
+<h3 id="leanpub-auto-traditional-project-management">Traditional Project
+Management</h3>
+<p>Perhaps the most obvious way to break up your projects into a
+workflow, traditional project management is often referred to as
+“waterfall” project management because it handles one thing after
+another in a linear order. Think of it like your favorite mobile game,
+such as Candy Crush: you can’t unlock the next level until you’ve beat
+the one you’re in (and hopefully, your project is just as fun if not
+frustratingly addictive).</p>
+<p>Traditional Project Management, or TPM as it’s abbreviated, stresses
+on-time delivery within a stringent budget. It’s best for projects where
+tasks need to be completed one after another—or where you want to
+emphasize planning and design before you start building the actual
+project.</p>
+<figure class="image center">
+<img src="images/ch2_img4.png" />
+</figure>
+<p>You could make your own “traditional” project management system by
+breaking any project down into steps that must be completed one after
+another, but standard TPM has six specific stages: initiation, planning
+and design, execution, testing, monitoring and completion.</p>
+<ul>
+<li><strong>Initiation phase</strong>: The project manager and team
+determine the product requirements. Otherwise known as as “requirements
+determination”, it’s a fancy way of saying everyone participates in a
+brain dump, listing everything that needs to happen to get to the finish
+line.</li>
+<li><strong>Planning and design phase</strong>: This step can be broken
+into two categories: basic design and detailed design. During this
+phase, the team makes sure the proposed design meets the product
+requirements. For software design teams, for example, this is the point
+where they choose their coding language and decide how they want to
+structure the user experience.</li>
+<li><strong>Execution</strong> (or Implementation) and <strong>Testing
+phase</strong>: These are the steps where the ball really gets
+rolling—construction and integration all happen in this chapter.
+Following the detailed design, the team builds the product, measuring
+its development against specific metrics established in previous phases.
+Each part of the execution has its own steps, which move the project to
+the next half-phase: testing. Just as important as the design phase,
+testing is where you discover and fix any glitches, whether it’s bugs in
+the software or poorly placed wiring in a construction project. After
+testing, anything that still needs work gets shifted back to the
+execution phase—round and round you’ll go, until the project is
+finished.</li>
+<li><strong>Monitoring and completion</strong> (or Management and
+Maintenance) <strong>phase</strong>: This phase is the long tail of your
+project, the work that never quite ends. You’re dedicated to keeping
+customers and users happy with your product by discovering ways to
+improve it, while simultaneously maintaining and providing support for
+the product.</li>
+</ul>
+<p>Dig deeper into traditional project management styles, and you’ll
+find a few variations on these phases. Not all projects need every stage
+of the traditional waterfall model—some may need only three, while
+others need an “iterative waterfall” where work is divided into sprints
+rather than blocks of start-to-finish subprojects. Either way, the idea
+is the same: your project is broken into phases, and one must be
+completed before the other.</p>
+<p>Since TPM is such a time-driven approach, common scheduling tools
+work great for traditional project management. You can list phases in a
+<a href="https://zapier.com/blog/best-todo-list-apps/">to-do list
+app</a>, or block out time on a <a
+href="https://zapier.com/blog/google-calendar-tips/">calendar</a>. The
+best TPM tool, though, is the trusty Gantt chart which helps visualize
+each phase of your project and the time it’ll take. You could make one
+in a spreadsheet like <a
+href="https://www.smartsheet.com/">Smartsheet</a>, or use traditional
+project management tools like <a
+href="https://products.office.com/en-us/project/project-and-portfolio-management-software">Microsoft
+Project</a> to build them.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5
+id="leanpub-auto-traditional-project-management-strengths">Traditional
+Project Management Strengths</h5>
+<p>True traditional project management is perhaps an old school model,
+but its strengths have allowed it to keep hold. It requires upper
+management to <em>clearly define</em> what it is they want, giving the
+project focus and consistency early on. The emphasis on customer review
+and testing is meant to catch (and attack) problems early, causing a
+small headache now so that teams can avoid a horrid migraine later. It
+ensures the project will be well planned and tested thoroughly before
+delivery—something crucial for many real-world projects.</p>
+<p>TPM can potentially cut down on stress and missed deadlines because
+each phase allows enough time for full completion and worst-case
+scenarios, meaning a disaster-free project can be delivered before
+deadline. With everything planned out, you’ll know the exact resources
+and time needed for the project—even if they may be over-estimated in
+rigidly-set estimates.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5
+id="leanpub-auto-traditional-project-management-weaknesses">Traditional
+Project Management Weaknesses</h5>
+<p>TPM’s rigidity is also its greatest downfall. It’s like an old, dry
+tree: it’s rigid, and doesn’t do well with change. Toyota, where Lean
+and Kanban project management were pioneered in their manufacturing
+departments, is even criticized for using <a
+href="http://blog.crisp.se/2010/03/16/henrikkniberg/1268757660000">TPM
+in their software development</a> since it makes them less flexible to
+changes.</p>
+<p>It’s perfect for places like the construction industry, where project
+scope and direction remains relatively unchanged throughout the project.
+But if time and resources aren’t your main constraint, or you need more
+flexibility to change your project as it’s under development, you might
+find that another project management method is better for you.</p>
+<hr />
+<h3 id="leanpub-auto-agile">Agile</h3>
+<p>Every project isn’t structured in a way that’d work well with the
+Traditional Project Management method. Think back to our meal example:
+while cooking one dish might work perfectly in a traditional, one step
+at a time model, serving a four-course meal would be <em>impossible</em>
+if you were waiting for each part of the meal to be fully finished
+before starting on another.</p>
+<p>That’s where Agile, or iterative, project management comes into play.
+Instead of breaking your project down into phases that each have to be
+done before the other, you split your project up into smaller projects
+and ship each one as steps towards reaching the full goal. You’ll plan
+the broad ideas of the project and divide it up, then plan, design,
+build, and test each part of the project individually. That lets you
+ship faster, and makes it easier to adapt the project to new needs
+before shipping it again.</p>
+<figure class="image center">
+<img src="images/ch2_img5.png" />
+</figure>
+<p>Agile isn’t a new concept—iterative project management, at any rate,
+has been a common idea since <a
+href="https://en.wikipedia.org/wiki/Agile_software_development#cite_note-craig2003-6">at
+least 1957</a>. In software development, however, Agile became popular
+with the release of the <a href="http://agilemanifesto.org">Agile
+Manifesto</a> in 2001. That document emphasized collaboration and the
+ability to respond to change, two practices TPM makes difficult.</p>
+<p>Agile on its own isn’t a full project management method—it’s more of
+an idea of how projects could be managed. Scrum, Lean, Kanban and other
+more structured project management methods came from the iterative or
+Agile ideas, improved on them, and gave teams a better foundation to
+start managing their own projects.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-agile-strengths">Agile Strengths</h5>
+<p>Agile’s greatest strength is its flexibility—it can be almost
+anything you want it to be. That’s why it’s the framework behind so many
+other project management systems. You can take the Agile idea of
+breaking your project into completable chunks and doing each at a time,
+and then customize the overall process to fit your needs.</p>
+<p>One of the main idea of Agile, as espoused in the Agile Manifesto, is
+“Responding to change over following a plan.” The flexibility you get
+from a less rigid system that still puts an emphasis on shipping parts
+of your project can be enough to make Agile worth adopting. Or, if your
+projects are usually open-ended where you need to continually ship new
+parts—say, a blog with new posts every day—Agile is a perfect way to
+break down your work.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-agile-weaknesses">Agile Weaknesses</h5>
+<p>As so often happens, Agile’s strength is its greatest weakness. A
+flexible system like Agile can make it difficult to focus and push your
+projects to completion if you’re not careful. There’s less set in stone,
+and no process to make sure the project is continuing smoothly, making
+it easy for projects to lose direction.</p>
+<p>You can add your own processes on top of Agile—or just make sure your
+team’s always communicating and pushing the project forward—or you might
+end up finding that one of Agile’s more focused derivatives are
+better.</p>
+<h4 id="leanpub-auto-scrum">Scrum</h4>
+<p>Arguably the most structured framework of the Agile methods, Scrum
+was first <a
+href="http://cb.hbsp.harvard.edu/cb/web/product_detail.seam;jsessionid=8D8BACDD4CC4F2F87B3CD58D2ED10332?R=86116-PDF-ENG&amp;conversationId=22181&amp;E=48834">introduced
+in the 1986</a> as a way for “teams to work as a unit to reach a common
+goal,” according to its inventors Hirotaka Takeuchi and Ikujiro Nonaka.
+Scrum takes parts of Traditional and Agile project management ideas, and
+combines them for a structured yet flexible way to manage projects.</p>
+<p>Like Agile, Scrum breaks projects up into tasks that are completable
+on their own, and then assigns each a “sprint”—two to four-week slots of
+time dedicated to ship that phase of the project, with daily sprints to
+ship some part of that phase. It’s that focus on time that makes Scrum a
+bit more like TPM, bringing more structure to the Agile idea.</p>
+<figure class="image center">
+<img src="images/ch2_img6.png" />
+</figure>
+<p>Then, to make sure the project is progressing as expected and meeting
+goals that may have changed along the way, Scrum requires a
+reassessment—and potential project changes—at the end of each sprint. It
+also divides responsibilities into three roles: the Product Owner (PO),
+the Scrum Master and the Team.</p>
+<p>The Product Owner, who should be deeply familiar with all aspects of
+development, makes sure that everything aligns with business goals and
+customer needs with a mile-high view of the overall project. The Scrum
+Master is the team cheerleader—a liaison between the PO and the rest of
+the team—who makes sure the team is on track in each individual sprint.
+The Team then is the people working in each sprint, dividing the tasks
+and making sure everything is shipped.</p>
+<p>With all this management and focus on deadlines, Scrum’s main
+structure revolves around 5 meetings: Backlog Refinement, Sprint
+Planning, Daily Scrum, Sprint Review and Sprint Retrospective.</p>
+<ul>
+<li><strong>Backlog Refinement Meeting</strong> (also called “Backlog
+Grooming”): This meeting is much like the planning phase of TPM, and is
+held on day one of each sprint—you’ll look over the tasks left in the
+project, things left behind from previous sprints, and will decide what
+to focus on. The PO makes the call on how to prioritize tasks, and this
+ultimately determines how efficient the sprints are.</li>
+<li><strong>Sprint Planning Meeting</strong>: Once the PO decides what
+to focus on, this meeting helps the team understand what they’ll be
+building and why. You could share “user stories,” describing features
+from the customer’s point of view, or could simply divide tasks for each
+team to work on during the sprint.</li>
+<li><strong>Daily Scrum Meetings</strong>: Simple daily meetings that
+should only last about 15 minutes, Scrum meetings are a way for team
+members to update each other on progress. This meeting is not the time
+or place to air issues—those will go to the Scrum master outside of the
+daily meetings—but instead is a place to keep the ball rolling.</li>
+<li><strong>Sprint Review</strong>: Since a potentially shippable item
+is expected at the end of each sprint, the Scrum framework naturally
+places an emphasis on review. Team members will present what they’ve
+completed to all stakeholders. While this meeting pushes accountability,
+its goal is to make sure that the sprint’s completed items match up with
+business and user goals.</li>
+<li><strong>Sprint Retrospective</strong>: Held immediately after the
+sprint review meeting, the Sprint retrospective is full of collaborative
+feedback. Looking at successes and hold ups, everyone decides what is
+working (what they should continue doing) and what isn’t working (what
+they should stop doing). This should inspire the focus of the next
+sprint.</li>
+</ul>
+<p>Where other project management systems might look like they simplify
+your projects and make them seem more manageable, Scrum can at first
+glance look overwhelming. You’ll need to delegate responsibilities and
+plan extra meetings—but that overhead can help ensure your projects are
+successful and stay on track. It’s a structured way to make sure
+everything gets done.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-scrum-strengths">Scrum Strengths</h5>
+<p>Scrum is designed for projects that need parts of the project shipped
+quickly, while still making it easy to respond to change during the
+development process. With so many meetings and ways to delegate tasks,
+it’s also great to use when parts of the team may not be as familiar
+with a product’s context (i.e. developers from different industry
+backgrounds working on a system for the financial sector). You’ll always
+have someone looking out for the project as a whole, so if each person
+on the team doesn’t understand the entire project, that’s OK.</p>
+<p>Netflix is a great example of <a
+href="http://www.uie.com/articles/fast_iterations/">Scrum’s ability to
+help you ship fast</a>. It updates its website every two weeks, and
+Scrum was a good match because it stresses the user experience,
+eliminates what doesn’t work, and leaves a small window of time to get
+things done.</p>
+<p>For each site iteration, the designers would test new features,
+forget the ones that didn’t work out and move on to new functionalities.
+Most of the benefits the Netflix team saw with Scrum was the ability to
+“fail fast.” As opposed to launching one massive redesign with many
+components, their bi-weekly incremental design changes were easy to
+track; if something went awry, they knew exactly what it was tied to—and
+could fix it, fast.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-scrum-weaknesses">Scrum Weaknesses</h5>
+<p>Like Netflix, you may experience downfalls of Scrum, such as upset
+designers who saw their beloved work chucked after testing showed it
+didn’t work—especially when the testing comes so quickly and some may
+feel that the new ideas would work with more time. You might also have
+trouble adjusting if your team is accustomed to long release cycles—or,
+depending on your work, you might find shipping so often isn’t
+necessary.</p>
+<p>Scrum’s meetings and management overhead can also be overkill for
+some projects, turning into something where you’re more focused on
+planning sprints than you are on actually getting work accomplished
+during them.</p>
+<h4 id="leanpub-auto-lean">Lean</h4>
+<p>Agile project management dictates that you break your work up into
+smaller, shippable portions, but it doesn’t say much about how to manage
+each of those portions of your project. Scrum tries to fix that with
+managers and meetings; Lean, on the other hand, adds workflow processes
+to Agile so you can ensure every part of your project is shipped with
+the same quality.</p>
+<p>With Lean project management, you’ll still break up your project into
+smaller pieces of work that can be completed individually. You’ll also
+define a workflow for each task, something that’s reminiscent of the
+Apollo project and its five box system. Perhaps you’ll have a planning,
+design, production, testing, and shipping phase—or any other workflow of
+phases that you need for your task. Cooking a meal might need a
+preparation and cooking step, while a writing workflow might need an
+editing and fact-checking step.</p>
+<figure class="image center">
+<img src="images/ch2_img7.png" />
+</figure>
+<p>Lean’s stages and their flexibility make it a great system for making
+sure each part of your project is done well. It doesn’t have Scrum’s
+strict deadlines, or force you to work on one thing at a time as TPM
+does—in fact, you could have various tasks in various phases of your
+Lean workflow at the same time. What it does do is let you build a
+system tailored to your team.</p>
+<p>Just like Agile, Lean is more of a concept than a set-in-stone
+project management system. You can use the Lean ideas, and build the
+system you need for your projects.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-lean-strengths">Lean Strengths</h5>
+<p>If you liked the idea of Agile, but wanted a way to make sure each
+part of your work is consistently finished with the same level of
+quality and oversight, Lean gives you the extra tools you need to make
+that happen. It’s still flexible—you can define the stages of your
+project portions as you want—but there’s enough structure to make your
+projects a bit more guided.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-lean-weaknesses">Lean Weaknesses</h5>
+<p>Every part of your project doesn’t necessarily need the same level of
+oversight or the same steps for completion, but lean treats everything
+the same. That can be one major downfall in using it to manage projects
+with diverse parts that all need completed.</p>
+<p>Lean also doesn’t have any process to make sure the final project is
+completed, making it easy as it is with Lean to let your projects drag
+on forever. It’s again something communication can clear up, but it is
+worth keeping in mind.</p>
+<h4 id="leanpub-auto-kanban">Kanban</h4>
+<p>Lean sounds a bit abstract on its own, but combine it with Kanban and
+it’s easy to build your own Lean project management system. Conceived by
+<a
+href="http://www.toyota-global.com/company/vision_philosophy/toyota_production_system/just-in-time.html">Toyota
+engineer Taiichi Ohno</a> and implemented in 1953, Kanban is set up much
+like a factory floor, where a part might start out as a piece of metal
+and then, one step at a time, is turned into a finished part through a
+series of steps. In the same way when using Kanban, you’ll do some work
+towards a project, then ship that item on down the line to the next
+station where something else is done.</p>
+<p>Kanban also pulls inspiration from the grocery store model: for
+maximum efficiency, carry just enough on your shelves to meet customers
+demand. So, in Kanban, instead of plowing ahead on shipping a complete
+project, you can leave tasks at various stages until they’re
+needed—whether that’s half-made, low-demand parts in a factory,
+un-edited blog posts in your queue without a publish date, or anything
+else that’s waiting for a need in your workflow.</p>
+<p>It’s a lot more laid back than Scrum—there’s no set time for sprints,
+no assigned roles outside of the product owner, and a zen-like focus on
+only the task at hand. You could have meetings about your overall
+projects, or not: it’s up to your team’s needs.</p>
+<figure class="image center">
+<img src="images/ch2_img8.png" />
+</figure>
+<p>All you have to do is define the stages of your workflow, then setup
+a way to move each task from one stage to the other. In a factory, you
+might have different boxes or shelves for each stage: raw materials in
+the first, half-made parts in the second, and completed parts in the
+third. For other projects, you might have a card—whether a note in a
+program, or a physical piece of paper on a board—where you list info
+about a task, and you’ll move that card to different lists as the task
+progresses.</p>
+<p>Your Kanban system can be as flexible as you want—it’s really just a
+way to visualize the Agile idea—but there’s four pillars of the Kanban
+philosophy that can help make sure your projects get shipped. These
+include:</p>
+<ul>
+<li><strong>Cards</strong> (Kanban translates to “visual card”): Each
+task has a card that includes all relevant info about it; this makes
+sure everything to complete the tasks is always at hand.</li>
+<li><strong>Cap on work in progress</strong>: Limit how many cards are
+in play at once; this prevents teams from over-committing.</li>
+<li><strong>Continuous Flow</strong>: Move down the list of backlogs in
+order of importance, and make sure something’s always being worked
+on.</li>
+<li><strong>Constant improvement</strong> (otherwise known as “<a
+href="https://zapier.com/blog/work-life-balance/">kaizen</a>”): Analyze
+the flow to determine how efficiently you’re working, and always strive
+to improve it.</li>
+</ul>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-kanban-strengths">Kanban Strengths</h5>
+<p>Like Scrum, Kanban fits best with a highly cohesive team that knows
+what it takes to keep the flow going—but unlike Scrum, it’s designed for
+teams that are self-motivated and don’t need as much management or
+deadlines. It’s great for those who lean toward seeing the entire
+project at a glance.</p>
+<p>While the two-week Scrum rule is absent and subprojects can take
+however long they’ve been given, you should still have an overall focus
+on efficiency—which should help save resources. If you’re careful to
+follow Kanban rules and only assign as much work as a team can handle,
+projects are less likely to go past deadline and team members are less
+likely to juggle other distractions. And because the product owner can
+change tasks that aren’t currently being worked on along the way, it
+allows for flexibility without frustration.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-kanban-weaknesses">Kanban Weaknesses</h5>
+<p>If only one of your team members has a certain in-demand skill, the
+individual can hold up everything. Kanban is ideal for teams that have
+members with overlapping skills, so that everyone can pitch in and help
+move the backlog list to zero. It’s also best for places where time on
+the overall project isn’t quite as crucial; if you <em>must</em> ship by
+certain deadlines, TPM or Scrum give you the time management structure
+you need.</p>
+<hr />
+<h3 id="leanpub-auto-six-sigma">Six Sigma</h3>
+<p>Motorola wasn’t about to let the auto industry take all the credit
+for project management innovation, so decades after Toyota’s
+introduction of Kanban, the mobile phone company’s engineer Bill Smith
+<a
+href="https://web.archive.org/web/20051106025733/http://www.motorola.com/content/0,,3079,00.html">created
+Six Sigma in 1986</a>. It’s a more structured version of Lean than
+Kanban, one that sets specific stages and adds in more planning to save
+resources, ship quality products, and eliminate bugs and problems along
+the way.</p>
+<p>The ultimate end goal is to make customers happy with a quality
+product, which is done through continuous improvement heavily reliant on
+data analysis. You ship parts of your project along the way, while at
+the same time address product pitfalls that come up—something very
+similar to the Apollo project’s workflow.</p>
+<figure class="image center">
+<img src="images/ch2_img9.png" />
+</figure>
+<p>This is accomplished through Six Sigma’s five steps, known as
+“DMEDI”: Define, Measure, Explore (or analyze), Develop (or improve) and
+Control.</p>
+<ul>
+<li><strong>Define</strong>: This first step is much like the initial
+steps in other project management frameworks. Everyone determines the
+scope of the project, gets information from all sides, and determines
+what the business goals are (for example, sales).</li>
+<li><strong>Measure</strong>: Because Six Sigma is big on data, the
+measurement stage establishes the nature in which the team will
+calculate progress—your overall goals. Seeing the rate of success—the
+value to the consumer as well as the business—as a quantifiable thing is
+at the core of Six Sigma.</li>
+<li><strong>Explore</strong>: During the exploration stage, it’s up to
+the project manager to figure out the ways in which the team can meet
+and exceed product requirements. This keeps you from going over budget
+and missing deadlines. If something didn’t work last time, it’s likely
+not going to work this time, so project managers (PMs) have to be adept
+at thinking outside of the box.</li>
+<li><strong>Develop</strong>: It’s only at this fourth step is a
+strategic plan is put in place. And it’s a detailed one—anything that
+will or might be needed to get the job done finds a place somewhere in
+this plan. Most of the project’s momentum occurs here, because you apply
+the plan, work on the next project map, and measure results as you
+go.</li>
+<li><strong>Control</strong>: The last stage is about long-term
+improvement, which is what a Six Sigma project strives for. A documented
+review full of lessons learned is applied throughout the company, and to
+future projects, as well.</li>
+</ul>
+<p>It’s much like a Kanban approach, only this time with set stages for
+the project that make you plan, define goals, and test for quality at
+each stage. You’ll likely end up with more meetings than Kanban calls
+for, but you’ll also have a far more structured way to approach each
+task. And just like Kanban, you can customize the phases for what your
+project needs—you’ll just need to keep the measure and control steps in
+place if you want to learn from past projects and continually improve
+your processes.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-six-sigma-strengths">Six Sigma Strengths</h5>
+<p>Six Sigma runs a tight ship, which can help you continually improve
+your processes and ship better results. By defining the goals and then
+reviewing them later, you’ll have objective data to measure project
+success with—something that’s far better than just going on intuition.
+While gathering and learning from data can take up a significant amount
+of time, you’ll be able to learn from what you’ve done and improve your
+work in the future—and that’s where time and quality savings should come
+in.</p>
+<p>There are plenty of scenarios in which the job is never really
+done—that’s where Six Sigma shines. It helps you ship your tasks, learn
+from them, and improve the next time around.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-six-sigma-weaknesses">Six Sigma Weaknesses</h5>
+<p>Project manager seem to have similar gripes about Six Sigma: cost
+savings are the goal but not guaranteed since customer satisfaction will
+take precedence. If you’re continually adjusting your goals with each
+task in the project, it’s easy to let things spiral out of control even
+while you’re trying to ship your best possible work.</p>
+<p>Then, Six Sigma’s underlying motto that good is never good enough can
+be frustrating for some, who may feel like the ghost of continuous
+improvement never brings them the satisfaction of finalizing a job well
+done. Some project may only be done once, and the focus on metrics and
+incremental improvements may seem unnecessary there.</p>
+<hr />
+<h3 id="leanpub-auto-prince2">PRINCE2</h3>
+<p>NASA wasn’t the only government organization working to improve
+project management. The British government has honed their project
+management methods for years, cumulating with <a
+href="http://webarchive.nationalarchives.gov.uk/20110822131357/http://www.ogc.gov.uk/methods_prince_2__overview.asp">PRINCE2</a>
+in 1989. An acronym for <em>PRojects IN Controlled Environments version
+2</em>, PRINCE2 throws sprints out the window, and instead approaches a
+project as one big sprint and stresses quality of delivery—like a
+traditional project management version of Six Sigma. The framework is
+more focused on the ends rather than the means; what’s expected of the
+end product will determine the scope and shape the planning.</p>
+<p>There are three interests at play with PRINCE2: the business interest
+(is it going to make money?), the user interest (will customers find
+this valuable?) and the the supplier interest (do we have what we need
+to make this happen?).</p>
+<figure class="image center">
+<img src="images/ch2_img10.png" />
+</figure>
+<p>PRINCE2 has a more clearly defined personnel structure than most
+project management systems, one that works for larger projects that
+governments and other large organizations must undertake. Each team
+member has specific roles, which carry through all 7 of PRINCE2’s
+stages: Startup, Direction, Initiation, Control, Boundary Management,
+Planning, Delivery and Closing.</p>
+<ul>
+<li><strong>Startup</strong>: First on the agenda: leadership chooses a
+project manager and clearly relays everything that they expect the
+product to be. The PM, whose main focus is the fine details, reports to
+the project board, which puts together the project’s direction. The
+project board steers the course of the project and is ultimately
+accountable for its success. The remaining members make up the
+team.</li>
+<li><strong>Initiation</strong>: During this step, the project manager
+writes the “initiation document,” a plan to bring the project into
+reality. Once the project board signs off, it’s time for the control
+stage, when the project is divided into phases. These phases don’t have
+to last the same amount of time; the duration of each is determined by
+what each realistically demands. Like waterfall, a phase must be
+completed before moving on to the next one.</li>
+<li><strong>Direction</strong>: It’s not enough to have oversight—you
+also need to know exactly <em>how</em> a project should be overseen and
+managed. The direction phase sets the overall management structure for
+the project, outlines how each stage should progress, and what should
+happen if something changes along the way.</li>
+<li><strong>Control</strong>: Some amount of change is inevitable, which
+is why PRINCE2’s per-stage review can be helpful. The roadmap for each
+phase is determined by the review of the previous one. So while there
+may have been a general plan, that can be manipulated if a review shows
+a need for something else. Once again, the project board has to sign off
+on this—bringing double the meaning to the “Boundary Management”
+stage.</li>
+<li><strong>Boundary Management</strong>: The management stage looks at
+product delivery: what is going out (for example, what features will an
+app keep or chuck?), how it’s going out, and asks, is the product that
+is going out exactly is what the business wanted, and meets all
+requirements?</li>
+<li><strong>Delivery</strong>: From a project manager’s perspective,
+this is where the most important oversight takes place. As work begins
+on product delivery, the project manager is in charge of making sure
+that everyone is doing a job that aligns with the project’s goals and
+getting approvals once parts of the project are completed.</li>
+<li><strong>Closing</strong>: After everything is said and done, the
+closing stage still remains. Closing is an in-depth analysis of how the
+project faired. This is put into a report, which also has to be approved
+by the project board.</li>
+</ul>
+<p>That may be a bit much for some projects, so you can still customize
+the stages for your needs, while still keeping the same general idea of
+PRINCE2’s structure, planning, and reporting back to upper management.
+Just like Scrum is a more structured version of Agile, PRINCE2 is a more
+structured TPM system, with some of the benefits of the Lean approach
+thrown in.</p>
+<figure class="image center">
+<img src="images/ch2_plus.png" />
+</figure>
+<h5 id="leanpub-auto-prince2-strengths">PRINCE2 Strengths</h5>
+<p>PRINCE2 works best when the stakes are high and there needs to be
+several pairs of authoritative eyes on the project every step of the
+way. If you’re big on feedback and <em>guaranteeing</em> nothing will go
+wrong, this might work well for you.</p>
+<p>That’s why PRINCE2 is so popular in government offices—it’s used in
+the United Kingdom’s government, and is the standard for project
+management for the United Nations. It’s been successfully used by
+VocaLink to streamline real-time money transfers between banks in
+Australia and the UK, something where there is zero tolerance for flaws
+and where communication is essential.</p>
+<figure class="image center">
+<img src="images/ch2_minus.png" />
+</figure>
+<h5 id="leanpub-auto-prince2s-weaknesses">PRINCE2’s Weaknesses</h5>
+<p>Despite PRINCE2’s success in governments, it isn’t without its
+drawbacks. If used in the wrong environment, there’s lots of opportunity
+for bottlenecks and politics. Because of the extensive reviews and
+sign-offs, you might end up wrestling for control or find that work is
+delayed because someone hasn’t signed off yet. And strictly defined
+roles can stave off a sense of true collaboration.</p>
+<hr />
+<h3 id="leanpub-auto-project-management-systems-in-play">Project
+Management Systems in Play</h3>
+<p>Every project and team are unique, and so the project management
+systems that work best for each team are different. There are teams
+around the world that use each of these systems in wide ranges of
+industries—you’ll surely find software developers using TPM, governments
+using Scrum, and grocery stores using Six Sigma if you look hard
+enough.</p>
+<p>More often, you’ll find teams using their own take on project
+management, using the best parts of different systems to fit their
+needs. Here are three stories where project management saved the
+day—stories that might help you figure out which system would work best
+in your team.</p>
+<h4 id="leanpub-auto-kanban-1">Kanban</h4>
+<p>Back in 2010, the Vienna-based startup <a
+href="http://tupalo.com">Tupalo</a>, a social network that lets users
+review restaurants and places of interest, was experiencing rapid
+growth. Dealing with a never-ending mountain of requests from both users
+and employees, the developers were faced with more tasks than they could
+process. Instead of prioritizing, they’d work on more than one thing at
+a time—all the time.</p>
+<figure class="image center">
+<img src="images/ch2_img11.png" alt="Tupalo&#39;s Kanban board" />
+<figcaption>Tupalo’s Kanban board</figcaption>
+</figure>
+<p>That’s not sustainable, but the time constraints of TPM and Scrum
+didn’t seem like they’d fit their team’s needs either. Instead, they <a
+href="http://leankanban.com/sites/all/themes/bootstrap_subtheme/pdf/Tupalo-dist.pdf">went
+the Kanban</a> route. Their project manager made a slight variation on
+the three status categories by adding a “deployment” category, and used
+color coded Post-its to assign a “class,” or value, to each task. Due
+dates were on red tasks only, so that in addition to seeing the whole
+project at once, developers could also instantly see priorities within
+each category.</p>
+<p>The results were huge: a reinvigorated team that saw better quality
+work and faster delivery times. And Tupalo still uses Kanban. ###
+Traditional + Agile</p>
+<p>Traditional Project Management isn’t typically used in software
+development, since teams prefer to be able to respond to changes
+throughout the development process and have more flexibility. But
+instead of skipping it altogether, you could combine TPM’s strengths
+with some Agile ideas for the best of both worlds.</p>
+<p>That’s what <a href="http://www.panopticdev.com/">Panoptic
+Development</a>, a software engineering agency, has done, <a
+href="http://www.panopticdev.com/blog2013/can-we-strike-balance-between-agile-and-waterfall-/">tweaking
+the traditional waterfall project management</a> to fit their team’s
+needs. The project manager, Shannon Lewis, had been so used to the
+waterfall model that she was familiar with it’s constraints—and knew
+that typically, either quality, functionality or timeframes would have
+to be sacrificed.</p>
+<figure class="image center">
+<img src="images/ch2_img12.jpg"
+alt="Panoptic Development&#39;s take on traditional project management" />
+<figcaption>Panoptic Development’s take on traditional project
+management</figcaption>
+</figure>
+<p>When Lewis started her own company, the tight budget,
+high-maintenance stakeholders, and unpredictable delays that a new firm
+brings wouldn’t allow for a rigid, traditional approach. She integrated
+agile practices into her methodology by blending TPM’s testing phase
+with Agile’s short iteration cycles. They kept their application in a
+state where it could always be tested, instead of completing something
+for delivery and then moving on to the next part.</p>
+<p>That let them be able to focus on quality while still adding
+functionality they needed over time <em>and</em> hitting their
+deadlines—something neither TPM or Agile could have done on its own.</p>
+<h4 id="leanpub-auto-six-sigma-1">Six Sigma</h4>
+<p>There are plenty of scenarios in which the job is never really done,
+and one example can be found in Kentucky’s recycling industry. The U.S.
+is the largest consumer of aluminum cans, which is why <a
+href="http://www.secat.net">Secat Inc</a>, a metallurgical research lab,
+teamed up with the University of Kentucky and the Sustainable Aluminum
+Industry to boost aluminum recycling rates.</p>
+<p>They <a
+href="http://www.secat.net/sustainablealuminum.org/pdf/publications/Six_Sigma_StudyJOM08-06.pdf">chose
+Six Sigma</a> because data would be plentiful—they had statistics on
+everything from resident demographics to aluminum recovery rates. Saving
+money was also priority—every time a can wasn’t recycled, it cost the
+local materials recycling facilities money, in addition to the costly
+effects on the environment.</p>
+<figure class="image center">
+<img src="images/ch2_img13.png"
+alt="Secat&#39;s detailed Six Sigma workflow" />
+<figcaption>Secat’s detailed Six Sigma workflow</figcaption>
+</figure>
+<p>Their strategy was to target the demographic that consumed the most
+aluminum, and then figure out where those people go. They identified
+places like sporting events, fraternity and sorority houses, and used
+them to spread awareness of recycling. Since the Six Sigma methodology
+looks at defects—and how to demolish them—every can that went in the
+regular trash was considered a defect.</p>
+<p>The team then measured the emerging statistics against their baseline
+to determine their campaign’s effectiveness. They found several steps
+missing in their process (there’s the continual improvement) that they
+then implemented, each time improving their collection rates. The
+control phase focused on keeping recycle rates up, and they made sure to
+monitor weekly charts, using data to verify the project control.</p>
+<p>Altogether, Six Sigma fit Secat’s ongoing work, and helped them
+continually improve a task that typically wouldn’t seem to need project
+management.</p>
+<hr />
+<h3 id="leanpub-auto-the-best-project-management-system-for-you">The
+Best Project Management System for You</h3>
+<p>Project management may be a science, but it’s not a precise
+science—there’s no set-in-stone, one-size-fits-all project management
+method. You might be lucky and have a project that exactly fits one of
+these methods, or you may need to build your own hybrid system—or a
+brand new one, as the Apollo team did in their quest to get humans to
+the moon and back safely. What’s important is that you use
+<em>something</em> to manage your projects, that gives your work
+structure and ensures you don’t miss anything crucial.</p>
+<hr />
+<p>With a project management system in hand, it’s time to start managing
+your projects. But being a project manager is a complicated job, one
+that requires a unique skill set that’s perhaps most similar to that of
+a politician.</p>
+<p>In the next chapter, you’ll learn <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/project-management-skills/">how
+to manage projects effectively</a>, with tips from project managers on
+what they’ve learned on the job.</p>
+<hr />
+<p><em>Enjoy this chapter? Read it online or share it at <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/project-management-systems/">https://zapier.com/learn/ultimate-guide-to-project-management/project-management-systems/</a>.</em></p>
+<hr />
+<p><em>Written by Zapier Marketer <a
+href="https://twitter.com/maguay">Matthew Guay</a>, with contribution
+from freelance writer <a href="https://twitter.com/JaneKCall">Jane
+Callahan</a>.</em></p>
+<p><em><strong>Image Credits:</strong> Kennedy at Cape Canaveral by <a
+href="https://www.flickr.com/photos/nasacommons/9458165675/">NASA</a>
+via <a href="https://www.flickr.com/photos/nasacommons/">Flickr</a>; GEM
+boxes photo via <a
+href="https://en.wikipedia.org/wiki/George_Mueller_(NASA)#/media/File:Gembox.jpg">Wikipedia</a>;
+Apollo 11 spacewalk image by <a
+href="https://www.flickr.com/photos/gsfc/4812876306/">NASA</a> via <a
+href="https://www.flickr.com/photos/gsfc/">Flickr</a>.</em></p>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Chapter 9: How to Manage your Personal Tasks with a Project
+Management App</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chapter 9: How to Manage your Personal Tasks with a
+Project Management App</h1>
+</header>
+<h2
+id="leanpub-auto-chapter-9-how-to-manage-your-personal-tasks-with-a-project-management-app">Chapter
+9: How to Manage your Personal Tasks with a Project Management App</h2>
+<figure class="image center">
+<img src="images/ch9_header.png" />
+</figure>
+<p>When Mike Chan tried to convince his wife, Vicky, to set up a <a
+href="https://zapier.com/zapbook/trello/review">Trello</a> board for
+their personal life, she was a bit skeptical at first. “You’re gonna
+make me sign up for another thing?” she asked.</p>
+<p>As <a href="http://www.thorntech.com/">CMO of Thorn Technologies</a>
+and host of the <a href="https://twitter.com/GoandGrowPod">Go and Grow
+Podcast</a>, Chan was already using <a
+href="https://zapier.com/blog/kanban-board/">kanban project
+management</a> app Trello to manage his work. He wanted to bring that
+kind of organization to the rest of his life.</p>
+<p>“We were just doing things over text messaging and email,” Chan says.
+“There wasn’t enough collaboration with those tools, and a lot of our
+conversations weren’t documented.” Thus, the “Mike and Vicky Life Stuff”
+Trello board was born.</p>
+<p>Project management apps are the default choice for work teams, as
+they break complex projects down into achievable goals. But you have
+personal projects, too: redecorating the house, planning a vacation to
+Bangkok, mapping out a dinner party, or whatever your next adventure is.
+You don’t stop being productive when we leave work.</p>
+<p><a href="https://zapier.com/blog/best-todo-list-apps/">To-do list
+apps</a> can help you tackle those tasks, but a full-featured project
+management app gives you the flexibility to manage smaller, low-hanging
+fruit <strong>and</strong> long-term, multi-layered projects.</p>
+<p>Putting everything in one place helps you coordinate your life and
+accomplish the things that <em>need</em> to get done so you have more
+time for the passion projects that really matter to you. Here’s how you
+can start using project management apps for life management.</p>
+<hr />
+<h3 id="leanpub-auto-why-use-a-project-management-app">Why Use a Project
+Management App?</h3>
+<p>To-do list apps can be great for checking off simple tasks. When
+you’re dealing with more complex projects that have a lot of moving
+parts and require more collaboration, asset storage and reporting, you
+might want something more robust. Project management apps may be
+designed for companies with large teams, but they can also work for
+personal projects—and are often free for a couple projects and
+collaborators.</p>
+<p>Chan was drawn to Trello versus a task management app because of the
+team-focused features. “The messaging is very helpful if you’re
+collaborating with a team and need to have that interaction about tasks
+and projects,” Chan says. “You can link everything to a task and have a
+conversation within that card in Trello and have a paper trail of
+everything that you referred to.”</p>
+<figure class="image center">
+<img src="images/ch9_img1.png"
+alt="Trello helps break projects down into tasks lists" />
+<figcaption aria-hidden="true">Trello helps break projects down into
+tasks lists</figcaption>
+</figure>
+<p>Eddie Park, assistant executive pastor at EvFree Fullerton Church in
+Fullerton, California, relies on <a
+href="https://zapier.com/zapbook/evernote/review">Evernote</a> for both
+his work and personal life. But when it came to the intern program at
+his church, he wanted something a little different, so he turned to
+Trello. Park creates a Trello board for each intern, where he stores
+paperwork, articles, activities and tasks. He also asks interns to post
+information about themselves—like their Myers–Briggs personality type
+and photos of themselves—to help Eddie get to know them as people.</p>
+<p>“The Trello boards are a one-stop-shop for each intern I work with,”
+Park says. “It’s super helpful because it gives me a bird’s-eye view of
+who this person is and what they’re working on.”</p>
+<p>Park then carried Trello over into his personal life, where he now
+has a board with his wife. They each have a to-do list for tasks and
+reminders, and also post encouraging notes for one another.</p>
+<p>Think about it this way: to-do apps help you tick off day-to-day
+tasks, but project management apps are about long-term goals. They’re a
+repository for your research, blueprints, and “someday” ideas. And if
+you want to pull a coconspirator into your project, PM apps are flexible
+enough to work for “us” instead of just “me”.</p>
+<h3 id="leanpub-auto-choose-a-project-management-app">Choose a Project
+Management App</h3>
+<p>There are a lot of <a
+href="https://zapier.com/blog/how-to-choose-project-management-software/">factors
+to consider when choosing a project management tool</a>, whether it’s
+just for yourself or a group.</p>
+<p>But you main consideration should be finding an app that works for
+your workflow. A tool that magically cures one team’s organizational
+woes might end up making you wish you never hit the “sign up” button.
+That’s ok—every project carries different requirements.</p>
+<p>Emily Stewart had to use different apps before she found the right
+one. To help manage the precious free time she spent building her
+side-project <a href="http://compeerapp.com/">Compeer</a>—an iOS app
+that lets people rate the ADA-friendliness of locations—Stewart and her
+co-creator first used <a href="https://basecamp.com/">Basecamp</a>.</p>
+<p>“It worked well for storing assets, conversations and big ideas for
+later,” Stewart says. ”You can say, ‘What was that thing we kind of
+talked about and put on hold?’ and search for it.”</p>
+<p>It worked great—until it didn’t. As development progressed, Stewart
+noticed they weren’t using Basecamp as much as before. “We noticed
+things that had been done weren’t getting checked off,” she says. “If
+you find yourself not using something, you might be wasting effort on a
+tool that isn’t working for you.”</p>
+<p>Because they only had nights and weekends to work on the app, they
+needed a tool that would maximize productivity. What they really needed
+was something that could better track feature requests and integrate
+with <a href="https://zapier.com/zapbook/github/review/">Github</a>.
+They tried <a
+href="https://zapier.com/zapbook/pivotal-tracker/review/">Pivotal
+Tracker</a> until a friend suggested <a
+href="https://waffle.io/">Waffle</a>, which they’re currently using.</p>
+<figure class="image center">
+<img src="images/ch9_img2.png"
+alt="Waffle helps you see which Github issues to focus on next" />
+<figcaption aria-hidden="true">Waffle helps you see which Github issues
+to focus on next</figcaption>
+</figure>
+<p>“When you have a backlog, and you’re trying to move one thing over at
+a time, having that linear left-to-right visual is really helpful,”
+Stewart says. “We needed to know status and where something was in the
+pipeline.”</p>
+<p>Chan, who was an Asana user before switching to Trello, says a big
+consideration for him was the user interface. “I think the first thing
+to consider is what you’re comfortable looking at,” he says. “There are
+so many options out there, you can get pretty nitpicky. If one doesn’t
+feel too good, there’s gonna be something out there you are comfortable
+with.”</p>
+<p>Fiona Silke—a sustainability consultant and co-founder of <a
+href="http://www.loopandco.com.au/">Loop &amp; Co</a>—most recently
+tried <a href="https://www.liquidplanner.com/">LiquidPlanner</a> and
+Trello.</p>
+<p>“Most of my projects—for better or worse—have moving deadlines, and
+most steps in the process are reliant on the previous step to be
+completed,” she says. “Trello helps me look longer term to map out what
+needs to be done. I also use Trello to capture tasks that I think of
+during one phase of the project but that don’t need to be done until
+another later phase.”</p>
+<p>Don’t be afraid to shop around until you find an app that feels
+right. Working on personal projects should be fun, and your project
+management tool should reflect that. Don’t force yourself to use an app
+that’s not up to snuff.</p>
+<h3 id="leanpub-auto-create-a-productivity-workflow">Create a
+Productivity Workflow</h3>
+<p>Once you’ve settled on a tool, you’ve got to make sure you’re using
+it effectively. You likely won’t need all of its features, as your
+“team” may just be yourself or a handful of people. But you’ll still
+need a way to effectively manage your tasks and get them completed.</p>
+<p>Here are a few tips for getting the most out of your new project
+management app:</p>
+<h4 id="leanpub-auto-follow-a-project-management-system">Follow a
+Project Management System</h4>
+<figure class="image center">
+<img src="images/ch9_img3.png"
+alt="Color coded tasks makes it easy to know where projects stand" />
+<figcaption aria-hidden="true">Color coded tasks makes it easy to know
+where projects stand</figcaption>
+</figure>
+<p>The problem with plain to-do lists is that they don’t give any
+structure to your tasks. That’s what a project management system
+offers—it helps you create a workflow to know what you need to work on
+next.</p>
+<p>There are a lot of <a
+href="https://zapier.com/blog/project-management-systems/">project
+management methods</a> to choose from: waterfall, lean, scrum, kanban,
+and more. Each have their own strengths and weaknesses. (And yeah, they
+have weird names, but they get real results.)</p>
+<p>Stewart and her co-creator decided to use Agile’s scoring method to
+estimate how much effort tasks will take to complete. “We assign points
+to features, so we’re able to see that this pull request is worth this
+many points,” she says. “The point system is helpful because it’s
+motivating.”</p>
+<p>Silke uses color-coding to quickly understand where her projects
+stand. “Red means urgent, green means completed,” she says. “This helps
+me and others know where we are all at.”</p>
+<p>Park, who follows the <a
+href="https://zapier.com/blog/task-management-strategies/#gtd">Getting
+Things Done</a> method, likens finding a method or system to eating:
+“When it comes to dieting, I’ve done Paleo, I’ve done Whole30, I’ve
+counted macros,” he says. “When I’m doing it, I can go for a little
+while, like 60 days, and I do really well, but it’s not a long-term
+solution. You wanna find something that can be a lifestyle.”</p>
+<p>Project management apps are all about planning, and mapping out a
+system before you get started will help you stay on track. You’ll know
+which tasks are up next—whether it’s mocking up a page or sending out
+dinner party invites—and which ones are the most time-sensitive.</p>
+<h4 id="leanpub-auto-make-sure-tasks-are-doable">Make Sure Tasks Are
+Doable</h4>
+<figure class="image center">
+<img src="images/ch9_img4.png"
+alt="Break large tasks down into steps" />
+<figcaption aria-hidden="true">Break large tasks down into
+steps</figcaption>
+</figure>
+<p>Creating tasks that are actionable is an important part of any
+project management system. It’s all about deciding on a direction: you
+need to pick a point to focus on if you want to nail your target. Define
+the task clearly, and it will be that much easier to complete.</p>
+<p>“When a task is too narrow, it’s hard to see how this one little
+thing is going to affect other cards later down the road,” Stewart says.
+“Or if it’s too vague, it can be really hard to get started.”</p>
+<p>Waffle’s Agile scoring feature allows Stewart to estimate how big a
+task is and make work more manageable. “If a card is an 11 or some other
+high number, you’d say, OK maybe we split that card up so it’s not so
+big.”</p>
+<p>For the Go and Grow Podcast, Chan coordinates production with his
+production manager through Trello, creating clear, actionable tasks that
+outline the making of an episode from start to finish. “There are 27
+steps to create a podcast,” he says. “We use the checklist and
+commenting features extensively to make sure we’re on top of the
+workflow to create an episode. We use cards to come up with the order
+and make sure everything is in line.”</p>
+<h4 id="leanpub-auto-set-up-integrations">Set up Integrations</h4>
+<p>Integrations can help reduce cognitive workload, allowing you to keep
+everything in one place rather than separately checking and updating a
+bunch of apps and tools.</p>
+<p>That’s what Silke loves about her LiquidPlanner calendar
+integrations. “I find that I don’t constantly check to-do lists,” Silke
+says. “I do, however, check my calendar all the time, so I run my
+immediate daily life through my calendar.”</p>
+<p>Chan saves time by automating repetitive tasks. He uses automation
+app <a href="https://zapier.com/">Zapier</a> to create repeating tasks
+in Trello, so he doesn’t have to add them manually himself each
+week.</p>
+<p><strong><em>Zapier Integration:</em></strong></p>
+<ul>
+<li><a
+href="https://zapier.com/app/min/32/start?embedded=true&amp;utm_source=widget&amp;utm_medium=embed&amp;utm_campaign=Widget&amp;referrer=None">Create
+Trello card weekly at scheduled time</a></li>
+</ul>
+<p>Stewart uses Waffle’s Github integration to attach code to specific
+cards or tasks in Waffle. “In Github, you’d say ‘Hey this chunk of code
+is related to this card,’” she says. “It helps keep things moving along
+because you don’t have to have as many conversations.”</p>
+<hr />
+<p>It’s been a few months, and Trello stuck for Mike Chan and his wife’s
+personal tasks—and it’s especially handy because Chan and his wife are
+planning a big move. “We’re organizing everything there, like the things
+we need to do to rent out our condo and all the documents and the
+ridiculous amount of paperwork that comes with that,” Chan says.</p>
+<p>“It’s been really good. My wife found it was worth signing up for one
+more thing.”</p>
+<p>Whether you’re looking to get on the same page as your spouse or
+tackle some bucket list items, using a project management app for life
+management and personal projects can help you avoid feeling overwhelmed
+or letting things slip through the cracks.</p>
+<p>Finding the right tool and using it effectively can help you stay
+organized, meet your goals faster, and improve communication with the
+different people you collaborate with.</p>
+<hr />
+<p><em>Enjoy this chapter? Read it online or share it at <a
+href="https://zapier.com/learn/ultimate-guide-to-project-management/personal-project-management-app/">https://zapier.com/learn/ultimate-guide-to-project-management/personal-project-management-app/</a>.</em></p>
+<hr />
+<p><em>Written by freelance writer <a
+href="https://twitter.com/jennygenevieve">Genevieve Conti</a>.</em></p>
+<p><em><strong>Image credits:</strong> To do image from <a
+href="https://www.pexels.com/breakingpic/">Breakingpic</a> via <a
+href="https://www.pexels.com/photo/postit-scrabble-to-do-todo-3299/">Pexels</a>.</em></p>
+</body>
+</html>
